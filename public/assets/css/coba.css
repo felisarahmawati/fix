@@ -1,0 +1,46 @@
+h1{
+    color: #888;
+    text-align: center;
+}
+
+.box{
+    background: #fff;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #c6c6c6;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+}
+
+.box label{
+    margin-right: 15px;
+}
+
+.box .button{
+    width: 37px;
+    height: 37px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.box input{
+    width: 60px;
+    padding: 5px 10px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.box .button:active{
+    background: #ccc;
+}

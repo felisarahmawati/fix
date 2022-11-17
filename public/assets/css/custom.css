@@ -1,0 +1,49 @@
+.chat-main{
+    bottom: 0;
+    right:70px;
+    position: fixed;
+}
+.chat-header{
+    background: #E5EFC1;
+    border:1px solid #D7DF71;
+}
+.image img{
+    height: 40px;
+    width: 40px;
+}
+.user-detail h6{
+    display: inline-block;
+}
+.user-detail .active{
+    color: #32B92D;
+    font-size: 12px;
+}
+.options i{
+    color: #a1a1a1;
+    font-size: 19px;
+    cursor: pointer;
+}
+.chat-content, .chat-content .sender, .user-detail h6{
+    font-size: 14px;
+}
+.chat-content ul{
+    height: 260px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+}
+.chat-content ul li{
+    list-style: none;
+    background: #F5F5F5;
+}
+.chat-content .msg-box{
+    background: #e1e1e1;
+}
+.chat-content .msg-box .send-btn{
+    background: #00B56A;
+}
+.chat-content .time{
+    font-size: 10px;
+    color: #a1a1a1;
+}
+
+
