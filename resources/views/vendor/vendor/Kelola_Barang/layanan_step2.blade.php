@@ -121,20 +121,10 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="">Masukan harga penitipan per kg</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000">
+                            <label for="">harga penitipan per kg</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000" disabled>
                         </div>
                     </div>
-
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label for="">Deskripsi Layanan</label>
-                            <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder=""></textarea>
-                        </div>
-
-                    </div>
-
 
                     <a href="/vendor/vendor/Kelola_Barang/layanan_step4"><button type="button"
                             class="btn btn-success col-md-12 mt-3" data-bs-toggle="modal"

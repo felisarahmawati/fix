@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <b>
-                                            <p class="mb-1">Order Id</p>
+                                            <p class="mb-1">Id Transaksi</p>
                                         </b>
                                     </div>
                                     <div class="col-md text-end">
@@ -233,7 +233,7 @@
                                         <p>Total</p>
                                     </div>
                                     <div class="col-10 text-end">
-                                        <p>Rp 250.000</p>
+                                        <p>Rp 250.014</p>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2 col-6 mx-auto">

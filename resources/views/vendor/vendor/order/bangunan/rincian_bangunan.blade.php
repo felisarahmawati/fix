@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <b>
-                                            <p class="mb-1">Order Id</p>
+                                            <p class="mb-1">Id Transaksi</p>
                                         </b>
                                     </div>
                                     <div class="col-md text-end">
@@ -105,7 +105,7 @@
                                         <p>Subtotal</p>
                                     </div>
                                     <div class="col-10 text-end">
-                                        <p>Rp 2.000.000
+                                        <p>Rp 2.000.012
                                     </div>
                                 </div>
                                 <div class="row">

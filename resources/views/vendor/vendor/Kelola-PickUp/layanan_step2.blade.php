@@ -88,9 +88,7 @@
                                             <a href="/vendor/vendor/Kelola-Pickup/layanan_step3" data-bs-toggle="modal" data-bs-target="#exampleModal"><button type="button" class="btn btn-success mb-3" >
                                                 Tambah
                                               </button></a>
-
                                         </div>
-
                                      </div>
                                     </div>
                                 </div>
@@ -102,7 +100,7 @@
 
         <!--modal pilih bangunan-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel" >Pilih Jenis Pick Up</h5>
@@ -150,8 +148,8 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
      </div>
      <div class="mb-3 mt-2">
-        <label for="">Masukan harga </label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000">
+        <label for="">harga pickup perhari</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000" disabled>
     </div>
         <a href="/vendor/vendor/Kelola-Pickup/layanan_step3"><button type="button" class="btn btn-success col-md-12 mt-3">Lanjutkan</button><br><br></a>
       </div>

@@ -213,14 +213,14 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="row mt-3 mb-3" style="font-size:15px;">
+                    {{-- <div class="row mt-3 mb-3" style="font-size:15px;">
                         <div class="col-md-6">
                             Biaya Admin
                         </div>
                         <div class="col-md-6 text-end">
                             Rp6.500
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="row mt-3 mb-3" style="font-size:25px; color:#00B56A">
                         <div class="col-md-6">
                             Total Penarikan

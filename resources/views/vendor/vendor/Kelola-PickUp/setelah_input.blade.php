@@ -62,54 +62,39 @@
                             <table class="table-borderless mt-3 w-auto">
                                 <thead class="text-start">
                                     <tr>
-                                        <td class="col-md-2">Jenis PickUp</td>
-                                        <td>Harga</td>
+                                        <td class="colsm-4">Jenis Barang</td>
+                                        <td>Link Drive</td>
                                         <td>Status</td>
-                                        <td>Action</td>
+                                        <td class="text-center">Action</td>
                                     </tr>
                                 </thead>
                                 <tbody class="text-start">
                                     <tr>
-                                        <td>Motor</td>
-                                        <td>Rp20.000</td>
+                                        <td>Truk</td>
+                                        <td>https://goo.gl/maps/Sj3P5U16kRrKPP2T9</td>
                                         <td style="color: rgb(205, 26, 26)">Ditolak</td>
                                         <td class="col-md-2 text-end">
-                                            <a href="" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle p-1"></i>Detail</a>
+                                            <a href="" class="btn btn-info " data-bs-toggle="modal"
+                                                data-bs-target="#Modal2"><i class="bi bi-info-circle p-1"></i>Detail</a>
                                         </td>
-                                        <!-- <td><span class="status return">Return</span></td> -->
                                     </tr>
                                     <tr>
-                                        <td>Truk</td>
-                                        <td>Rp20.000</td>
+                                        <td>Mobil</td>
+                                        <td>https://goo.gl/maps/Sj3P5U16kRrKPP2T9</td>
                                         <td style="color: rgb(181, 181, 11)">Menunggu Verifikasi</td>
                                         <td class="col-md-2 text-end">
-                                            <a href="" class="btn btn-info" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal1"><i class="bi bi-info-circle p-1"></i>Detail</a>
+                                            <a href="" class="btn btn-info " data-bs-toggle="modal"
+                                                data-bs-target="#Modal3"><i class="bi bi-info-circle p-1"></i>Detail</a>
                                         </td>
-                                        <!-- <td><span class="status return">Return</span></td> -->
                                     </tr>
                                     <tr>
-                                        <td>motor</td>
-                                        <td>Rp20.000</td>
+                                        <td>Motor</td>
+                                        <td>https://goo.gl/maps/Sj3P5U16kRrKPP2T9</td>
                                         <td style="color: rgb(67, 195, 89)">Aktif</td>
                                         <td class="col-md-2 text-end">
-                                            <a href="" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle p-1"></i>Detail</a>
-
+                                            <a href="" class="btn btn-info " data-bs-toggle="modal"
+                                                data-bs-target="#Modal4"><i class="bi bi-info-circle p-1"></i>Detail</a>
                                         </td>
-                                        <!-- <td><span class="status return">Return</span></td> -->
-                                    </tr>
-
-                                    <tr>
-                                        <td>Mobil PickUp</td>
-                                        <td>Rp20.000</td>
-                                        <td style="color: rgb(131, 148, 134)">Tidak Aktif</td>
-                                        <td class="col-md-2 text-end">
-                                            <a href="" class="btn btn-info" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal1"><i
-                                            class="bi bi-info-circle p-1"></i>Detail</a>
-
-                                        </td>
-                                        <!-- <td><span class="status return">Return</span></td> -->
                                     </tr>
                                 </tbody>
                             </table>
@@ -150,8 +135,7 @@
                                     <div class="modal-body">
                                         <div class="row">
                                             <div class="col-md-10 ">
-                                                <label for="faq" class="form-label"
-                                                    style="font-size: 20px"><b>Status
+                                                <label for="faq" class="form-label" style="font-size: 20px"><b>Status
                                                         Layanan</b></label>
                                             </div>
                                             <div class="col-md-2 text-end pe-2">
@@ -396,81 +380,205 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        {{-- modal detail jika layanan ditolak --}}
+        <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width:auto">
+                <div class="modal-content" style="width:auto">
+                    <div class="container mt-4 mb-4">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <div class="alert alert-success" role="alert">
+                                    Layanan Anda tidak memenuhi persyaratan!
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="mb-2" style="font-size: 23px; margin-bottom: 10px">
+                                            <b>Truk</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                        <b>Link drive</b>
+                                    </p>
+                                    <p>
+                                        https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                        <b>Link google Maps</b>
+                                    </p>
+                                    <p>
+                                        https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                    </p>
+                                </div>
 
-            {{-- modal detail --}}
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container mt-4 mb-4">
-                            <div class="">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-2">
 
-                                <div class="container">
-                                    <div class=" mt-3 mb-3" style="max-width: 100%;">
-                                        <div class="row g-0">
-                                            <div class="col-md-6 mt-3" style="padding-top:15px;">
-                                                <img src="{{ asset('assets/img/mobil pickup.png') }}"
-                                                    class="img-fluid rounded-start" style="width:400px; height:400px"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <p class="mb-2"
-                                                                style="font-size: 23px; margin-bottom: 10px">
-                                                                <b>Mobil PickUp</b>
-                                                            </p>
-                                                        </div>
+                                        <i class="bi bi-geo-alt-fill"
+                                            style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
 
-                                                    </div>
-                                                    <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
-                                                        <b>IDR 20.000 </b>
-                                                    </p>
+                                    </div>
 
-                                                    <div class="col-12">
-                                                        <p class="text-success"
-                                                            style="font-size: 18px; margin-bottom: 10px">
-                                                            <b>Deskripsi layanan</b>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-12 text-muted">
-                                                        <p>
-                                                            Wijaya - titipsini menyediakan layanan penitipan kendaraan
-                                                            kecil hingga kendaraan besar, dengan kapasitas lahan 250m x
-                                                            250m. Mampu menampung kendaraan hingga 20 kendaraan kecil
-                                                            dan besar. Wijaya - titipsini juga menyediakan layanan konsul
-                                                            untuk
-                                                            semua jenis kendaraan
-                                                        </p>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="row">
-                                                        <div class="col-md-2">
+                                    <div class="col-md-10">
+                                        <p class="mb-2 mt-2" style="font-size: 12px; margin-bottom: 10px">
+                                            Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan,
+                                            kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="footer text-center">
+                                    <button class="btn btn-success col-md-5">Ajukan Kembali</button>
+                                    <button class="btn btn-danger col-md-5 " data-bs-toggle="modal"
+                                        data-bs-target="#Modal">HAPUS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- modal detail jika layanan belum diverifikasi --}}
+        <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width:auto">
+                <div class="modal-content" style="width:auto">
+                    <div class="container mt-4 mb-4">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <div class="alert alert-danger" role="alert">
+                                    Menunggu layanan di verifikasi Admin!
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="mb-2" style="font-size: 23px; margin-bottom: 10px">
+                                            <b>Motor</b>
+                                        </p>
+                                    </div>
 
-                                                            <i class="bi bi-geo-alt-fill"
-                                                                style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
+                                    <div class="col-12">
+                                        <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                            <b>Link drive</b>
+                                        </p>
+                                        <p>
+                                            https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                            <b>Link google Maps</b>
+                                        </p>
+                                        <p>
+                                            https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                        </p>
+                                    </div>
 
-                                                        </div>
-
-                                                        <div class="col-md-10">
-                                                            <p class="mb-2 mt-2"
-                                                                style="font-size: 12px; margin-bottom: 10px">
-                                                                Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan,
-                                                                kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="footer">
-                                                        <button class="btn btn-success col-md-4 " data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i> EDIT</button>
-                                                    <button class="btn btn-danger col-md-4" data-bs-toggle="modal"
-                                                        data-bs-target="#Modal"><i class="bi bi-trash"></i>HAPUS</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <i class="bi bi-geo-alt-fill"
+                                                style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
                                         </div>
 
+                                        <div class="col-md-10">
+                                            <p class="mb-2 mt-2" style="font-size: 12px; margin-bottom: 10px">
+                                                Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan,
+                                                kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="footer text-center">
+                                        <button class="btn btn-secondary col-md-5">Edit</button>
+                                        <button class="btn btn-secondary col-md-5">HAPUS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            {{-- modal detail jika sudah diverifikasi --}}
+            <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" style="width:auto">
+                    <div class="modal-content" style="width:auto">
+                        <div class="container mt-4 mb-4">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-10 ">
+                                            <label for="faq" class="form-label" style="font-size: 20px"><b>Status
+                                                </b></label>
+                                        </div>
+                                        <div class="col-md-2 text-end pe-2">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                                <label class="switch ps-2 mt-2" for="checkbox">
+                                                    <b>Aktif</b>
+                                                </label>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="mb-2" style="font-size: 23px; margin-bottom: 10px">
+                                                <b>Mobil</b>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                            <b>Link drive</b>
+                                        </p>
+                                        <p>
+                                            https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                            <b>Link google Maps</b>
+                                        </p>
+                                        <p>
+                                            https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=drive
+                                        </p>
+                                    </div>
+
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-2">
+
+                                            <i class="bi bi-geo-alt-fill"
+                                                style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
+
+                                        </div>
+
+                                        <div class="col-md-10">
+                                            <p class="mb-2 mt-2" style="font-size: 12px; margin-bottom: 10px">
+                                                Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan,
+                                                kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="footer text-center">
+                                        <button class="btn btn-success col-md-5" data-bs-toggle="modal"
+                                            data-bs-target="#Edit">Edit</button>
+                                        <button class="btn btn-danger col-md-5 " data-bs-toggle="modal"
+                                            data-bs-target="#Modal">HAPUS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 @endsection

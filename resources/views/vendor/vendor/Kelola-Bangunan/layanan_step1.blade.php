@@ -32,7 +32,7 @@
             </div>
             <div class="card1">
                 <div>
-                    <a href="/vendor/vendor/Kelola_Barang/layanan_step1" style="text-decoration:none">
+                    <a href="/vendor/vendor/Kelola-Barang/layanan_step1" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
@@ -40,7 +40,7 @@
             </div>
             <div class="card1">
                 <div>
-                    <a href="/vendor/vendor/Kelola-Pickup/layanan_step1" style="text-decoration:none">
+                    <a href="/vendor/vendor/Kelola-PickUp/layanan_step1" style="text-decoration:none">
                         <div class="cardName1">Pick Up
                         </div>
                     </a>
@@ -64,9 +64,8 @@
                   alamat vendor</p>
                   </div>
                   <div class="col-md-2">
-                  <a href="/vendor/vendor/Kelola-Bangunan/atur_alamat" ><button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#staticBackdrop">
-                 Tambah
-                 </button></a>
+                        <a href="/vendor/vendor/Kelola-bangunan/atur_alamat"><button
+                                class="btn btn-success mb-3">Tambah</button></a>
                  </div>
                  </div>
                  <hr>

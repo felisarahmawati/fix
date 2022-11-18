@@ -59,7 +59,7 @@
                 <form action="">
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label"><b>Alamat</b><p>Isikan alamat vendor Anda dibawah ini</p></label>
-                      <input class="form-control text-center" type="text" placeholder="Pilih lokasi Anda" disabled  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <input class="form-control text-center" type="text" placeholder="Masukan link google maps alamatAnda">
                   </div>
 
 
@@ -121,64 +121,8 @@
 
                       <div class="row">
                         <label for=""><b>Upload foto fasilitas yang tersedia di layanan Anda</b></label>
-                        <div class="col-md-3">
-                          <div class="file-upload">
-                            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-
-                            <div class="image-upload-wrap">
-                              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                              <div class="drag-text">
-                                <h3>+</h3>
-                              </div>
-                            </div>
-                            <p class="text-center">Kanan</p>
-                            <div class="file-upload-content">
-                              <img class="file-upload-image" src="#" alt="your image" />
-                              <div class="image-title-wrap">
-                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="file-upload">
-                            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-
-                            <div class="image-upload-wrap">
-                              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                              <div class="drag-text">
-                                <h3>+</h3>
-                              </div>
-                            </div>
-                            <p class="text-center">Kiri</p>
-                            <div class="file-upload-content">
-                              <img class="file-upload-image" src="#" alt="your image" />
-                              <div class="image-title-wrap">
-                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="file-upload">
-                            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-
-                            <div class="image-upload-wrap">
-                              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                              <div class="drag-text">
-                                <h3>+</h3>
-                              </div>
-                            </div>
-                            <p class="text-center">Depan</p>
-                            <div class="file-upload-content">
-                              <img class="file-upload-image" src="#" alt="your image" />
-                              <div class="image-title-wrap">
-                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
+                        <input type="text" class="form-control text-center" id="exampleFormControlTextarea1" value="Masukan link google drive Anda">
+                      </div>
                       <a href="/Vendor/Kelola-Bangunan/layanan_step2"><button type="button" class="btn btn-success col-md-12 mt-3">Selanjutnya</button></a>
                 </form>
             </div>
@@ -187,26 +131,6 @@
         </div>
 
 </div>
-    <!-- Modal pilih alamat-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Pilih alamat </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="embed-responsive embed-responsive-1by1">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97055414067!2d110.37484495000001!3d-7.803250450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1659314278527!5m2!1sid!2sid"
-                 width="420" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" disabled ></iframe>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <a href="/Vendor/Kelola-Bangunan/atur_alamat"  class="btn btn-success col-sm-12">Simpan</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </section>
 @endsection

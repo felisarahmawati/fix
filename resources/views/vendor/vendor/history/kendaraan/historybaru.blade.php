@@ -98,7 +98,7 @@
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <b>
-                                                                    <p class="mb-1">Order Id</p>
+                                                                    <p class="mb-1">Id Transaksi</p>
                                                                 </b>
                                                             </div>
                                                             <div class="col-md text-end">
@@ -168,7 +168,7 @@
                                                         <p><b>Total</b></p>
                                                     </div>
                                                     <div class="col-10 text-end">
-                                                        <p><b>Rp 2.000.000</b></p>
+                                                        <p><b>Rp 2.000.012</b></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,7 +209,7 @@
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <b>
-                                                                    <p class="mb-1">Order Id</p>
+                                                                    <p class="mb-1">Id Transaksi</p>
                                                                 </b>
                                                             </div>
                                                             <div class="col-md text-end">
@@ -279,7 +279,7 @@
                                                         <p><b>Total</b></p>
                                                     </div>
                                                     <div class="col-10 text-end">
-                                                        <p><b>Rp 2.000.000</b></p>
+                                                        <p><b>Rp 2.000.012</b></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -320,7 +320,7 @@
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <b>
-                                                                    <p class="mb-1">Order Id</p>
+                                                                    <p class="mb-1">Id Transaksi</p>
                                                                 </b>
                                                             </div>
                                                             <div class="col-md text-end">
@@ -403,7 +403,7 @@
                                                         <p><b>Total</b></p>
                                                     </div>
                                                     <div class="col-10 text-end">
-                                                        <p><b>Rp 250.000</b></p>
+                                                        <p><b>Rp 250.013</b></p>
                                                     </div>
                                                 </div>
                                             </div>
