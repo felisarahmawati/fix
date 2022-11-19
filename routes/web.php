@@ -470,6 +470,12 @@ Route::get("/template_admin", function() {
 });
 
 Route::controller(VendorController::class)->group(function(){
+    Route::prefix("vendor")->group(function() {
+        Route::prefix("kelola")->group(function() {
+            Route::get("/{slug}/layanan_step1", "vendor_layanan");
+            Route::get("/{slug}/atur_alamat", "vendor_atur_alamat");
+        });
+    });
     Route::get('/vendor/homelagi', 'index')->middleware('role:vendor')->name('vendor.index');
     Route::get('/vendor/vendor/profilevendor/Notifikasi', 'Notifikasi');
     Route::get('/vendor/vendor/profilevendor/Kebijakan_privasi', 'KebijakanPrivasi');

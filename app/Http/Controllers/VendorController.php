@@ -2,13 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Master\Vendor\VendorJasa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VendorController extends Controller
 {
     public function dashboard_ven()
     {
         return view("vendor.vendor.dashboard_vendor");
+    }
+
+    public function vendor_layanan($slug)
+    {
+        $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
+        $data["slug"] = $slug;
+
+        return view("vendor.vendor.kelola_jasa.v_index", $data);
+    }
+
+    public function vendor_atur_alamat($slug)
+    {
+        $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
+        $data["slug"] = $slug;
+
+        return view("vendor.vendor.kelola_jasa.v_alamat", $data);
     }
 
     public function index()

@@ -12,4 +12,9 @@ class VendorJasa extends Model
     protected $table = "vendor_jasa";
 
     protected $guarded = [''];
+
+    public function jasaLayanan()
+    {
+        return $this->belongsTo("App\Models\Master\Jasa\JasaLayanan", "jasa_layanan_id", "id");
+    }
 }

@@ -1,3 +1,7 @@
+@php
+    use App\Models\Master\Vendor\VendorJasa;
+@endphp
+
 <div class="sidebar">
     <div class="logo-details">
         <div class="profile-content">
@@ -66,10 +70,14 @@
             </div>
             <div class="sub-menu">
                 <div class="drop-box">
-                    <a href="/vendor/vendor/Kelola-Kendaraan/layanan_step1">Kelola Kendaraan</a>
-                    <a href="/vendor/vendor/Kelola-Bangunan/layanan_step1">Kelola Bangunan</a>
-                    <a href="/vendor/vendor/Kelola_Barang/layanan_step1">Kelola Barang</a>
-                    <a href="/vendor/vendor/Kelola-Pickup/layanan_step1">Kelola PickUp</a>
+                    @php
+                        $m_vendor = VendorJasa::where("user_id", Auth::user()->id)->get();
+                    @endphp
+                    @foreach ($m_vendor as $item)
+                    <a href="{{ url('/vendor/kelola/'.$item->jasaLayanan->jasa.'/layanan_step1') }}">
+                        Kelola {{ $item->jasaLayanan->jasa }}
+                    </a>
+                    @endforeach
                 </div>
             </div>
         </li>
@@ -119,24 +127,24 @@
         </li>
 
 
-    <!-- Modal Logout -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <!-- Modal Logout -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                         <a class="btn btn-primary" href="{{ url('/logout') }}">Logout</a>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
     </ul>
 </div>
 
@@ -151,10 +159,10 @@
                 </button>
             </div>
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ url('/logout') }}">Logout</a>
-                </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="{{ url('/logout') }}">Logout</a>
+            </div>
         </div>
     </div>
 </div>
