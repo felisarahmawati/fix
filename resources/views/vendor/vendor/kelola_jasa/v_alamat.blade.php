@@ -9,7 +9,7 @@
                 <i class='bx bx-menu'></i>
             </div>
             <div class="cardHeader-title">
-                <h2>Kelola kendaraan</h2>
+                <h2>Kelola Kendaraan</h2>
             </div>
         </div>
         <div class="cardBox1">
@@ -44,4 +44,36 @@
         @endif
     </div>
 </section>
+@endsection
+
+@section("js")
+
+<script>
+    $(document).ready(function() {
+        $("#provinsi").change(function() {
+            let provinsi = $("#provinsi").val();
+            $.ajax({
+                url: "{{ url('/vendor/ambil_kota_kab') }}",
+                type: "GET",
+                data: { data : provinsi,},
+                success: function(res) {
+                    $("#kota_kab").html(res);
+                }
+            });
+        });
+
+        $("#kota_kab").change(function() {
+            let kota_kab = $("#kota_kab").val();
+            $.ajax({
+                url: "{{ url('/vendor/ambil_kecamatan') }}",
+                type: "GET",
+                data: { data : kota_kab,},
+                success: function(res) {
+                    $("#kecamatan").html(res);
+                }
+            });
+        });
+    });
+</script>
+
 @endsection

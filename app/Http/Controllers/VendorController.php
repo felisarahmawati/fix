@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Master\Jasa\JasaLayanan;
+use App\Models\Master\Vendor\KelolaLayanan;
 use App\Models\Master\Vendor\VendorJasa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class VendorController extends Controller
 {
@@ -21,12 +24,65 @@ class VendorController extends Controller
         return view("vendor.vendor.kelola_jasa.v_index", $data);
     }
 
+    public function vendor_layanan_dua($slug)
+    {
+        echo "Ada";
+    }
+
     public function vendor_atur_alamat($slug)
     {
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
         $data["slug"] = $slug;
 
-        return view("vendor.vendor.kelola_jasa.v_alamat", $data);
+        $data["data_jasa"] = JasaLayanan::where("jasa", $slug)->first();
+
+        $response = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/provinces.json");
+
+        $provinsi = $response->json();
+
+        return view("vendor.vendor.kelola_jasa.v_alamat", $data, compact('provinsi'));
+    }
+
+    public function ambil_kota_kab(Request $request)
+    {
+        $id_kota_kab = $request->data;
+
+        $res_kota_kab = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/".$id_kota_kab.".json");
+
+        $data = $res_kota_kab->json();
+
+        foreach ($data as $d) {
+            echo "<option value=".$d["id"].">".$d["name"]."</option>";
+        }
+    }
+
+    public function ambil_kecamatan(Request $request)
+    {
+        $id_kecamatan = $request->data;
+
+        $res_kecamatan = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/districts/".$id_kecamatan.".json");
+
+        $data = $res_kecamatan->json();
+
+        foreach ($data as $d) {
+            echo "<option value=".$d["id"].">".$d["name"]."</option>";
+        }
+    }
+
+    public function kelola_layanan(Request $request, $slug)
+    {
+        KelolaLayanan::create([
+            "jasa_layanan_id" => $slug,
+            "user_id" => Auth::user()->id,
+            "alamat" => $request->alamat,
+            "provinsi" => $request->provinsi,
+            "kota_kab" => $request->kota_kab,
+            "kecamatan" => $request->kecamatan,
+            "catatan" => $request->catatan,
+            "panjang" => $request->panjang,
+            "lebar" => $request->lebar,
+            "url_link" => $request->url_link
+        ]);
     }
 
     public function index()
