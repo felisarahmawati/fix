@@ -91,5 +91,20 @@ class UserSeeder extends Seeder
             "status" => "1",
         ]);
 
+        User::create([
+            "id_role" => 4,
+            "name" => "Hamkoo",
+            "email" => "hamko29@gmail.com",
+            "password" => bcrypt("hamko29"),
+            "alamat" => "jl.janti raya blok 12 no 08",
+            "kelurahan" => "karang jambe",
+            "kecamatan" => "Banguntapan",
+            "kota_kab" => "Bantul",
+            "id_kodepos" => "55198",
+            "tgl_lahir" => "2002-01-01",
+            "no_telp" => "085324237296",
+            "status" => "1",
+        ]);
+
     }
 }

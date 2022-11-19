@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Seeders\Master\Layanan\JasaLayananSeeder;
+use Database\Seeders\Master\Vendor\VendorJasaSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +24,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(KategoriSeeder::class);
         $this->call(LayananSeeder::class);
         $this->call(ProvinsiSeeder::class);
+        $this->call(JasaLayananSeeder::class);
+        $this->call(VendorJasaSeeder::class);
     }
 }
