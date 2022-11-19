@@ -172,21 +172,21 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md">
                             <p>Biaya Admin</p>
                         </div>
                         <div class="col-md-5 text-end">
                             Rp 10.000
                         </div>
-                    </div>
+                    </div> --}}
                     <hr>
                     <div class="row" style="font-size: 25px; color:rgb(58, 214, 108)">
                         <div class="col-md">
                             <p><b>Total</b></p>
                         </div>
                         <div class="col-md-5 text-end">
-                            <b>210.000</b>
+                            <b>200.000</b>
                         </div>
                     </div>
                 </div>
@@ -253,21 +253,21 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md">
                             <p>Biaya Admin</p>
                         </div>
                         <div class="col-md-5 text-end">
                             Rp 10.000
                         </div>
-                    </div>
+                    </div> --}}
                     <hr>
                     <div class="row" style="font-size: 25px; color:rgb(58, 214, 108)">
                         <div class="col-md">
                             <p><b>Total</b></p>
                         </div>
                         <div class="col-md-5 text-end">
-                            <b>210.000</b>
+                            <b>200.000</b>
                         </div>
                     </div>
                 </div>

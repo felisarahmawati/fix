@@ -10,10 +10,10 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="/vendor/homelagi">Home</a></li>
-                <li><a class="nav-link scrollto" href="/orderan_baru">Orderan</a></li>
+                <li><a class="nav-link scrollto" href="/vendor/dashboard_vendor">Home</a></li>
+                <li><a class="nav-link scrollto" href="/vendor/vendor/order/kendaraan/orderan_baru">Orderan</a></li>
                 <li class="nav-item dropdown">
-                    <a  href="/Vendor/Kelola-Kendaraan/kelola_kendaraan" >
+                    <a  href="/vendor/vendor/Kelola-Kendaraan/layanan_step1" >
                       Kelola
                     </a>
                 </li>
