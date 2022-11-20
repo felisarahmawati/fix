@@ -25,6 +25,7 @@ return new class extends Migration
             $table->integer("panjang")->nullable();
             $table->integer("lebar")->nullable();
             $table->string("url_link", 100);
+            $table->string("status", 20)->nullable();
             $table->timestamps();
         });
     }
