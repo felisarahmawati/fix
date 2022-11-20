@@ -475,6 +475,7 @@ Route::controller(VendorController::class)->group(function(){
         Route::get("/ambil_kecamatan", "ambil_kecamatan");
         Route::prefix("kelola")->group(function() {
             Route::get("/{slug}/layanan_step1", "vendor_layanan");
+            Route::post("/{slug}/layanan_step1", "vendor_post_layanan");
             Route::get("/{slug}/layanan_step2", "vendor_layanan_dua");
             Route::get("/{slug}/atur_alamat", "vendor_atur_alamat");
             Route::post("/{slug}/atur_alamat", "kelola_layanan");

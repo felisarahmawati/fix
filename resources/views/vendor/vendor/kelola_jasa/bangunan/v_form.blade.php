@@ -47,6 +47,18 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-10 ">
+                    <p class="">
+                        Mengatur jenis kendaraan yang dititipkan
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success mb-3">
+                        Tambah
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

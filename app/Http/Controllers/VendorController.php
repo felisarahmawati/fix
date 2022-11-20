@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Master\Jasa\JasaLayanan;
+use App\Models\Master\Jasa\PesanLayanan;
+use App\Models\Master\Paket\JenisPaket;
+use App\Models\Master\Paket\Paket;
 use App\Models\Master\Vendor\KelolaLayanan;
 use App\Models\Master\Vendor\VendorJasa;
 use Illuminate\Http\Request;
@@ -18,16 +21,27 @@ class VendorController extends Controller
 
     public function vendor_layanan($slug)
     {
+        if (session('kelola_layanan')) {
+            $data["kelola_layanan_id"] = session('kelola_layanan');
+        }
+
+
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
         $data["slug"] = $slug;
 
         $jasa = JasaLayanan::where("jasa", $slug)->first();
 
-        $data["step1"] = KelolaLayanan::where("jasa_layanan_id", $jasa->id)->where("status", "step1")->first();
+        $data["step1"] = KelolaLayanan::where("user_id", Auth::user()->id)
+            ->where("jasa_layanan_id", $jasa->id)
+            ->where("status", "step1")->first();
 
-        $data["step2"] = KelolaLayanan::where("jasa_layanan_id", $jasa->id)->where("status", "step2")->first();
+        $data["step2"] = KelolaLayanan::where("user_id", Auth::user()->id)
+            ->where("jasa_layanan_id", $jasa->id)
+            ->where("status", "step2")->first();
 
-        return view("vendor.vendor.kelola_jasa.v_index", $data);
+        $data["paket"] = Paket::get();
+
+        return view("vendor.vendor.kelola_jasa.v_index", $data, compact("jasa"));
     }
 
     public function vendor_layanan_dua($slug)
@@ -79,21 +93,47 @@ class VendorController extends Controller
     {
         $jasa = JasaLayanan::where("id", $slug)->first();
 
-        KelolaLayanan::create([
-            "jasa_layanan_id" => $slug,
-            "user_id" => Auth::user()->id,
-            "alamat" => $request->alamat,
-            "provinsi" => $request->provinsi,
-            "kota_kab" => $request->kota_kab,
-            "kecamatan" => $request->kecamatan,
-            "catatan" => $request->catatan,
-            "panjang" => $request->panjang,
-            "lebar" => $request->lebar,
-            "url_link" => $request->url_link,
-            "status" => "step1"
+        $kl = new KelolaLayanan();
+        $kl->jasa_layanan_id = $slug;
+        $kl->user_id = Auth::user()->id;
+        $kl->alamat = $request->alamat;
+        $kl->provinsi = $request->provinsi;
+        $kl->kota_kab = $request->kota_kab;
+        $kl->kecamatan = $request->kecamatan;
+        $kl->catatan = $request->catatan;
+        $kl->panjang = $request->panjang;
+        $kl->lebar = $request->lebar;
+        $kl->url_link = $request->url_link;
+        $kl->status = "step1";
+
+        $kl->save();
+
+        $var = $kl->id;
+
+        return redirect("/vendor/kelola/".$jasa->jasa."/layanan_step1")->with(["kelola_layanan" => $var]);
+    }
+
+    public function vendor_post_layanan(Request $request, $slug)
+    {
+        $jasa = JasaLayanan::where("jasa", $slug)->first();
+
+        foreach ($request->nama_paket as $d)
+        {
+            PesanLayanan::create([
+                "user_id" => Auth::user()->id,
+                "jasa_layanan_id" => $jasa->id,
+                "jenis_paket_id" => $d,
+                "kelola_layanan_id" => $request->kelola_layanan_id,
+                "qty" => 1,
+                "status" => "OK"
+            ]);
+        }
+
+        KelolaLayanan::where("id", $request->kelola_layanan_id)->update([
+            "status" => "step2"
         ]);
 
-        return redirect("/vendor/kelola/".$jasa->jasa.'/layanan_step1');
+        return back();
     }
 
     public function index()

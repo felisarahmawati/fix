@@ -9,7 +9,7 @@
                 <i class='bx bx-menu'></i>
             </div>
             <div class="cardHeader-title">
-                <h2>Kelola kendaraan</h2>
+                <h2>Kelola {{ $slug }}</h2>
             </div>
         </div>
         <div class="cardBox1">
@@ -27,9 +27,13 @@
 
         @include("vendor.vendor.kelola_jasa.kendaraan.v_form")
 
+        @include("vendor.vendor.kelola_jasa.kendaraan.v_form_paket")
+
         @elseif($slug == "Bangunan")
 
         @include("vendor.vendor.kelola_jasa.bangunan.v_form")
+
+        @include("vendor.vendor.kelola_jasa.bangunan.v_form_paket")
 
         @elseif($slug == "Barang")
 
