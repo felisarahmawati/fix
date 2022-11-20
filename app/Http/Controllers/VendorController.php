@@ -21,6 +21,12 @@ class VendorController extends Controller
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
         $data["slug"] = $slug;
 
+        $jasa = JasaLayanan::where("jasa", $slug)->first();
+
+        $data["step1"] = KelolaLayanan::where("jasa_layanan_id", $jasa->id)->where("status", "step1")->first();
+
+        $data["step2"] = KelolaLayanan::where("jasa_layanan_id", $jasa->id)->where("status", "step2")->first();
+
         return view("vendor.vendor.kelola_jasa.v_index", $data);
     }
 
@@ -71,6 +77,8 @@ class VendorController extends Controller
 
     public function kelola_layanan(Request $request, $slug)
     {
+        $jasa = JasaLayanan::where("id", $slug)->first();
+
         KelolaLayanan::create([
             "jasa_layanan_id" => $slug,
             "user_id" => Auth::user()->id,
@@ -81,8 +89,11 @@ class VendorController extends Controller
             "catatan" => $request->catatan,
             "panjang" => $request->panjang,
             "lebar" => $request->lebar,
-            "url_link" => $request->url_link
+            "url_link" => $request->url_link,
+            "status" => "step1"
         ]);
+
+        return redirect("/vendor/kelola/".$jasa->jasa.'/layanan_step1');
     }
 
     public function index()

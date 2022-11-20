@@ -21,13 +21,20 @@
                     <div class="col-md-10">
                         <p class="">Untuk mengatur lokasi dan detail alamat lahan parkir</p>
                     </div>
+                    @if ($step1)
+                    <div class="col-md-2">
+                        <i class="bi bi-check2-square" style="font-size: 37px; color:rgb(98, 212, 133);"></i>
+                    </div>
+                    @else
                     <div class="col-md-2">
                         <a href="{{ url('/vendor/kelola/'.$slug.'/atur_alamat') }}" class="btn btn-success mb-3">
                             Tambah
                         </a>
                     </div>
-                    <hr>
+                    @endif
                 </div>
+
+                <hr>
 
                 <div class="text-muted">
                     <h6>
@@ -44,6 +51,17 @@
                                 Mengatur jenis kendaraan yang dititipkan
                             </p>
                         </div>
+                        @if (!$step1)
+
+                        @else
+                        <div class="col-md-2">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button class="btn btn-success mb-3">
+                                    Tambah
+                                </button>
+                            </a>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
