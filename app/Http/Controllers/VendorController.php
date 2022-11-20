@@ -23,8 +23,9 @@ class VendorController extends Controller
     {
         if (session('kelola_layanan')) {
             $data["kelola_layanan_id"] = session('kelola_layanan');
+        } else if (session('id')) {
+            $data["id"] = session("id");
         }
-
 
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
         $data["slug"] = $slug;
@@ -125,7 +126,7 @@ class VendorController extends Controller
                 "jenis_paket_id" => $d,
                 "kelola_layanan_id" => $request->kelola_layanan_id,
                 "qty" => 1,
-                "status" => "OK"
+                "status" => "Pending"
             ]);
         }
 
@@ -133,7 +134,29 @@ class VendorController extends Controller
             "status" => "step2"
         ]);
 
-        return back();
+        return back()->with(["id" => $request->kelola_layanan_id]);
+    }
+
+    public function verifikasi($slug, $id)
+    {
+        KelolaLayanan::where("id", $id)->update([
+            "status" => "verifikasi"
+        ]);
+
+        return redirect("/vendor/kelola/" . $slug . "/detail");
+    }
+
+    public function detail_layanan($slug)
+    {
+        $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
+
+        $data["slug"] = $slug;
+
+        $jasa = JasaLayanan::where("jasa", $slug)->first();
+
+        $data["pesan_layanan"] = PesanLayanan::where("user_id", Auth::user()->id)->where("jasa_layanan_id", $jasa->id)->get();
+
+        return view("vendor.vendor.kelola_jasa.v_detail", $data);
     }
 
     public function index()

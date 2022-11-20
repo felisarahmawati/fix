@@ -479,6 +479,8 @@ Route::controller(VendorController::class)->group(function(){
             Route::get("/{slug}/layanan_step2", "vendor_layanan_dua");
             Route::get("/{slug}/atur_alamat", "vendor_atur_alamat");
             Route::post("/{slug}/atur_alamat", "kelola_layanan");
+            Route::get("/{slug}/{id}/verifikasi", "verifikasi");
+            Route::get("/{slug}/detail", "detail_layanan");
         });
     });
     Route::get('/vendor/homelagi', 'index')->middleware('role:vendor')->name('vendor.index');

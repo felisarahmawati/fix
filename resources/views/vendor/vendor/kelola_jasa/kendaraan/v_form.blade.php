@@ -76,7 +76,7 @@
                         Syarat & Ketentuan Umum
                     </b> Kebijakan Privasi
                 </p>
-                <a href="/vendor/vendor/Kelola-Bangunan/setelah_input" class="btn btn-success col-md-12 mt-3 mb-4">
+                <a href="{{ url('/vendor/kelola/' . $slug . '/' . $id . '/verifikasi') }}" class="btn btn-success col-md-12 mt-3 mb-4">
                     Selanjutnya
                 </a>
                 @endif
