@@ -77,7 +77,7 @@
         <!-- PAGE CONTENT -->
         <div class="content h-100">
             <div class="row h-100">
-                <div class="col-lg-12">
+                <div class="col-lg-12 mt-4">
                     <div class="register card auth-box mx-auto my-auto">
                         <div class="card-block">
                             @if (session('gagal'))
@@ -85,10 +85,18 @@
                                         {{ session('gagal')}}
                                     </div>
                                     @endif
-                            <h6 class="fw-bold text-start">LOG IN TO YOUR ACCOUNT</h6><hr>
-                            <form action="{{ url('/login') }}" method="POST">
+                            <h6 class="fw-bold text-start">DAFTAR AKUN BARU</h6><hr>
+                            <form action="" method="POST">
                                 {{ csrf_field() }}
                                 <div class="user-details">
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Nama</label>
+                                        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Masukkan nama anda">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">No Telp</label>
+                                        <input type="number" name="no_telp" class="form-control" id="formGroupExampleInput" placeholder="Masukkan no telepon anda">
+                                    </div>
                                     <div class="mb-3">
                                         <label for="formGroupExampleInput" class="form-label">Email</label>
                                         <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Type your email address">
@@ -98,12 +106,9 @@
                                         <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="************">
                                     </div>
                                 </div>
-                                <div class="user-links mb-3">
-                                    <a href="{{ url('/auth/lupa_password') }}" class="pull-left">Lupa Kata Sandi?</a>
-                                    <a href="{{url('daftar_akun')}}" class="pull-right">Belum punya akun? Daftar</a>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-success" type="submit">LOGIN</button>
+                                <br>
+                                <div class="d-grid gap-2 col-4 mx-auto">
+                                    <button class="btn btn-success" type="submit">DAFTAR</button>
                                 </div>
                             </form>
 {{--

@@ -72,46 +72,64 @@
 
         </div>
     </header>
-
+<br><br><br>
     <div class="page-container">
         <!-- PAGE CONTENT -->
         <div class="content h-100">
             <div class="row h-100">
                 <div class="col-lg-12">
-                    <div class="register card auth-box mx-auto my-auto">
-                        <div class="card-block">
-                            @if (session('gagal'))
-                                    <div class="alert alert-danger">
-                                        {{ session('gagal')}}
-                                    </div>
-                                    @endif
-                            <h6 class="fw-bold text-start">LOG IN TO YOUR ACCOUNT</h6><hr>
-                            <form action="{{ url('/login') }}" method="POST">
-                                {{ csrf_field() }}
-                                <div class="user-details">
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label">Email</label>
-                                        <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Type your email address">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="formGroupExampleInput2" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="************">
-                                    </div>
+                    <div class="register card auth-box mx-auto">
+                        <div class="card-block mt-2">
+                            @if (session('Proses'))
+                                <div class="alert alert-danger">
+                                    {{ session('Proses')}}
                                 </div>
-                                <div class="user-links mb-3">
-                                    <a href="{{ url('/auth/lupa_password') }}" class="pull-left">Lupa Kata Sandi?</a>
-                                    <a href="{{url('daftar_akun')}}" class="pull-right">Belum punya akun? Daftar</a>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-success" type="submit">LOGIN</button>
-                                </div>
-                            </form>
-{{--
-                            <div class="user-links">
-                                <a href="#" class="pull-left">Forgot Password?</a>
-                                <a href="{{url('/register')}}" class="pull-right">Register</a>
-                            </div> --}}
+                                @endif
+                                <h6 class="card-title fw-bold">Lengkapi Data Diri</h6><hr>
+                                <div class="row row-layanan">
+                                    <form action="" method="POST" class="row">
+                                        {{ csrf_field() }}
+                                        <div class="col-md-6">
+                                            <label for="inputNamaLengkap" class="form-label">Nama Lengkap</label>
+                                            <input type="text" class="form-control" id="inputNamaLengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap">
+                                        </div>
 
+                                        <div class="col-md-6">
+                                            <label for="inputNIK" class="form-label">NIK</label>
+                                            <input type="number" class="form-control" id="inputNIK" name="no_ktp" placeholder="Masukkan nik">
+                                        </div>
+
+                                        <div class="col-md-6 mt-2">
+                                            <label for="inputTempat" class="form-label">Tempat lahir</label>
+                                            <input type="text" class="form-control" id="inputTempat" name="tmpt_lahir" placeholder="Masukkan tempat lahir">
+                                        </div>
+
+                                        <div class="col-md-6 mt-2">
+                                            <p for="tanggalmasuk" class="form-label">Tanggal Lahir</p>
+                                            <input type="date" class="form-control" name="tgl_lahir" id="tanggal">
+                                        </div>
+
+                                        <div class="col-12 mt-2">
+                                            <label for="inputAlamat" class="form-label">Alamat</label>
+                                            <input type="text" class="form-control" name="alamat" id="inputAlamat" placeholder="Alamat lengkap">
+                                        </div>
+
+                                        <div class="col-12 mt-2">
+                                            <label for="inputLink" class="form-label">Lokasi</label>
+                                            <input type="text" class="form-control" id="inputLink" name="lokasi" placeholder="Masukkan link google maps">
+                                        </div>
+
+                                        <h6 class="card-title fw-bold mt-4">Lampirkan Dokumen Pendukung</h6><hr>
+                                        <div class="col-12 mt-2">
+                                            <label for="inputLink" class="form-label">Scan KTP & KK</label>
+                                            <input type="text" class="form-control" id="inputLink" name="ktp_kk" placeholder="Masukkan link google drive">
+                                        </div>
+
+                                        <div class="d-grid gap-2 col-2 mx-auto mt-2">
+                                            <button class="btn btn-success" type="submit">DAFTAR</button>
+                                        </div>
+                                    </form>
+                                </div>
                         </div>
                     </div>
                 </div>

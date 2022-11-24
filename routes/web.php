@@ -14,6 +14,7 @@ use App\Http\Controllers\Akun\RoleController;
 
 // use App\Http\Controllers\Vendor\VendorController;
 
+use App\Http\Controllers\KetentuanController;
 use App\Http\Controllers\Akun\LoginController;
 use App\Http\Controllers\Master\AppController;
 use App\Http\Controllers\SliderHomeController;
@@ -21,8 +22,8 @@ use App\Http\Controllers\TentangHomeController;
 use App\Http\Controllers\SliderKontakController;
 use App\Http\Controllers\Akun\PenggunaController;
 use App\Http\Controllers\SliderTentangController;
-use App\Http\Controllers\Layanan\DetailController;
 
+use App\Http\Controllers\Layanan\DetailController;
 use App\Http\Controllers\Admin\DataOrderController;
 use App\Http\Controllers\Layanan\LayananController;
 use App\Http\Controllers\Master\HomeAwalController;
@@ -30,14 +31,14 @@ use App\Http\Controllers\Master\KategoriController;
 use App\Http\Controllers\Master\ProvinsiController;
 use App\Http\Controllers\KebijakanPrivasiController;
 use App\Http\Controllers\Master\DataAdminController;
+
 use App\Http\Controllers\Admin\DataPaymentController;
 
+
 use App\Http\Controllers\Akun\DatapenggunaController;
-
-
 use App\Http\Controllers\Master\DataVendorController;
-use App\Http\Controllers\Admin\DataCustomerController;
 
+use App\Http\Controllers\Admin\DataCustomerController;
 use App\Http\Controllers\Layanan\SubLayananController;
 use App\Http\Controllers\Master\DataFinanceController;
 use App\Http\Controllers\User\UserPemesananController;
@@ -261,10 +262,23 @@ Route::group(["middleware" => ["guest"]], function() {
     Route::post("/register", [LoginController::class, "post_register"]);
     Route::post("/post_register", [LoginController::class, "post_register"]);;
 
+    route::get("/daftar_akun", [LoginController::class, "daftar_akun"]);
+    route::post("/daftar_akun", [LoginController::class, "post_daftar"]);
 });
 
 Route::get("/ambil_kecamatan", [LoginController::class, "kecamatan"]);
-    Route::get("/ambil_kelurahan", [LoginController::class, "kelurahan"]);
+Route::get("/ambil_kelurahan", [LoginController::class, "kelurahan"]);
+
+route::get("/lengkapi-datadiri", [LoginController::class, "lengkapi_datadiri"]);
+route::post("/lengkapi-datadiri", [LoginController::class, "post_datadiri"]);
+
+Route::get('/auth/lupa_password', function() {
+    return view('auth.lupa_password');
+});
+
+Route::get('/auth/forgotpassword', function() {
+    return view('auth.forgotpassword');
+});
 
 Route::group(["middleware" => ["autentikasi"]], function() {
     Route::controller(AppController::class)->group(function() {
@@ -315,6 +329,10 @@ Route::group(["middleware" => ["autentikasi"]], function() {
                 Route::get("/tentangtitipsini/edit", [SubTentangtitipsiniController::class, "edit"]);
                 Route::put("/tentangtitipsini/simpan", [SubTentangtitipsiniController::class, "update"]);
                 Route::resource("tentangtitipsini", SubTentangtitipsiniController::class);
+
+                Route::get("/ketentuan/edit", [KetentuanController::class, "edit"]);
+                Route::get("/ketentuan/simpan", [KetentuanController::class, "update"]);
+                Route::resource("ketentuan", KetentuanController::class);
 
                 Route::get('/tentanghome/edit', [TentangHomeController::class, "edit"]);
                 Route::get('/tentanghome/simpan', [TentangHomeController::class, "update"]);

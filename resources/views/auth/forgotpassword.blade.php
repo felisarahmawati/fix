@@ -62,7 +62,7 @@
                     <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li><a class="nav-link scrollto active" href="/login">Masuk<i class="bi bi-box-arrow-in-right"></i></a></li>
-                    {{-- <li><a class="nav-link scrollto" href="/register">Daftar<i class="bi bi-box-arrow-right"></i></a></li> --}}
+                    <li><a class="nav-link scrollto" href="/register">Daftar<i class="bi bi-box-arrow-right"></i></a></li>
 
                     </li>
                 </ul>
@@ -77,7 +77,7 @@
         <!-- PAGE CONTENT -->
         <div class="content h-100">
             <div class="row h-100">
-                <div class="col-lg-12">
+                <div class="col-lg-12 mt-4">
                     <div class="register card auth-box mx-auto my-auto">
                         <div class="card-block">
                             @if (session('gagal'))
@@ -85,33 +85,19 @@
                                         {{ session('gagal')}}
                                     </div>
                                     @endif
-                            <h6 class="fw-bold text-start">LOG IN TO YOUR ACCOUNT</h6><hr>
-                            <form action="{{ url('/login') }}" method="POST">
+                            <h6 class="fw-bold text-start">RESET PASSWORD</h6><hr>
+                            <form method="POST" action="">
                                 {{ csrf_field() }}
                                 <div class="user-details">
                                     <div class="mb-3">
                                         <label for="formGroupExampleInput" class="form-label">Email</label>
                                         <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Type your email address">
                                     </div>
-                                    <div class="mb-2">
-                                        <label for="formGroupExampleInput2" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="************">
-                                    </div>
                                 </div>
-                                <div class="user-links mb-3">
-                                    <a href="{{ url('/auth/lupa_password') }}" class="pull-left">Lupa Kata Sandi?</a>
-                                    <a href="{{url('daftar_akun')}}" class="pull-right">Belum punya akun? Daftar</a>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-success" type="submit">LOGIN</button>
+                                <div class="d-grid gap-2 col-4 mx-auto mb-4">
+                                    <button class="btn btn-success" type="submit">RESET PASSWORD</button>
                                 </div>
                             </form>
-{{--
-                            <div class="user-links">
-                                <a href="#" class="pull-left">Forgot Password?</a>
-                                <a href="{{url('/register')}}" class="pull-right">Register</a>
-                            </div> --}}
-
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {
@@ -61,9 +62,56 @@ class LoginController extends Controller
         return redirect("/login");
     }
 
+    public function daftar_akun()
+    {
+        return view("auth.daftar_akun");
+    }
+
+    public function lengkapi_datadiri()
+    {
+        return view("auth.lengkapi-datadiri");
+    }
+
     public function register()
     {
         return view("auth.register");
+    }
+
+    public function post_daftar(Request $request)
+    {
+        if($request->password != $request->password) {
+            return back();
+        } else {
+            User::create([
+                "name" => $request->name,
+                "tgl_lahir" => $request->tgl_lahir,
+                "email" => $request->email,
+                "password" => bcrypt($request->password),
+                "alamat" => $request->alamat,
+                "nama_lengkap" => $request->nama_lengkap,
+                "no_telp" => $request->no_telp,
+                "id_role" => 2,
+                "status" => 0,
+            ]);
+
+            return redirect("/lengkapi-datadiri");
+        }
+    }
+
+    public function post_datadiri(Request $request)
+    {
+        User::create([
+            "nama_lengkap" => $request->nama_lengkap,
+            'no_ktp' => $request->no_ktp,
+            'tmpt_lahir' => $request->tmpt_lahir,
+            'tgl_lahir' => $request->tgl_lahir,
+            "alamat" => $request->alamat,
+            'ktp_kk' =>$request->ktp_kk,
+            'lokasi' => $request->lokasi,
+
+        ]);
+
+        return redirect("/login")->with("proses", 'Kami akan memproses verifikasi kamu dalam waktu kurang lebih 1x 24 jam');
     }
 
     public function buat_akun()

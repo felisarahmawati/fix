@@ -149,6 +149,9 @@
                     <div class="drop-box">
                         <a href="{{ url('/superadmin/master/tentangtitipsini') }}">Tentang titipsini</a>
                     </div>
+                    <div class="drop-box">
+                        <a href="{{ url('/superadmin/master/ketentuan') }}">Tentang titipsini</a>
+                    </div>
                 </div>
             </li>
 
