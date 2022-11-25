@@ -23,7 +23,6 @@ return new class extends Migration
             $table->text('alamat')->nullable();
             $table->string("no_telp", 30);
             $table->date("tgl_lahir")->nullable();
-            $table->string("nama_lengkap")->nullable();
             $table->string("nama_vendor")->nullable();
             $table->string("tmpt_lahir")->nullable();
             $table->bigInteger("no_ktp")->nullable();

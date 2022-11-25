@@ -68,57 +68,38 @@ class LoginController extends Controller
 
     public function buat_akun()
     {
-        $response = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/34.json");
-
-        $kota_kab = $response->json();
-
-        return view("auth.buat_akun", compact('kota_kab'));
+        return view("auth.buat_akun");
     }
 
     public function post_register(Request $request)
     {
-        // dd($request->all());
-        $response = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/34.json");
+        $user = User::create([
+            "name" => $request->name,
+            "email" => $request->email,
+            "no_telp" => $request->no_telp,
+            "password" => bcrypt($request->password)
+        ]);
 
-        $kota_kab = $response->json();
+        session()->put("id", $user["id"]);
+        session()->put("nama", $user["name"]);
 
-        foreach ($kota_kab as $desa) {
-            if ($desa["id"] == $request->id_kota_kab) {
-                $nama_kab = $desa["name"];
-                $id = $desa["id"];
-            }
-        }
+        return redirect("/complete-data-personal");
+    }
 
-        $res_kelurahan = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/districts/".$id.".json");
+    public function post_complete_data_personal(Request $request)
+    {
+        User::where("id", $request->id_user)->update([
+            "no_ktp" => $request->no_ktp,
+            "tmpt_lahir" => $request->tmpt_lahir,
+            "tgl_lahir" => $request->tgl_lahir,
+            "alamat" => $request->alamat,
+            "lokasi" => $request->lokasi
+        ]);
 
-        $kelurahan = $res_kelurahan->json();
+        session()->forget("id");
+        session()->forget("nama");
 
-        foreach ($kelurahan as $kel) {
-            if ($kel["id"] == $request->id_kecamatan) {
-                $kecamatan = $kel["name"];
-            }
-        }
-
-        if($request->password != $request->password) {
-            return back();
-        } else {
-            User::create([
-                "name" => $request->name,
-                "tgl_lahir" => $request->tgl_lahir,
-                "email" => $request->email,
-                "password" => bcrypt($request->password),
-                "alamat" => $request->alamat,
-                "kelurahan" => $request->id_kelurahan,
-                "kecamatan" => $kecamatan,
-                "kota_kab" => $nama_kab,
-                "id_kodepos" => $request->id_kodepos,
-                "no_telp" => $request->no_telp,
-                "id_role" => 2,
-                "status" => 0,
-            ]);
-
-            return redirect("/login");
-        }
+        return redirect("/login");
     }
 
     public function kecamatan(Request $request)
@@ -139,5 +120,15 @@ class LoginController extends Controller
         foreach ($kelurahan as $kel) {
             echo "<option value='".$kel["name"]."'>".$kel["name"]."</option>";
         }
+    }
+
+    public function complete_data_personal(Request $request)
+    {
+        if ((empty(session()->get("id"))) && (empty(session()->get("nama")))) {
+            return redirect("/login");
+        } else {
+            return view("auth.complete_data_personal");
+        }
+
     }
 }

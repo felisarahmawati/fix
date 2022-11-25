@@ -254,14 +254,7 @@ Route::controller(AdminController::class)->group(function(){
     });
 });
 
-Route::group(["middleware" => ["guest"]], function() {
-    Route::get("/login", [LoginController::class, "login"]);
-    Route::post("/login", [LoginController::class, "post_login"]);
-    Route::get("/register", [LoginController::class, "buat_akun"]);
-    Route::post("/register", [LoginController::class, "post_register"]);
-    Route::post("/post_register", [LoginController::class, "post_register"]);;
-
-});
+require __DIR__ . '/user.php';
 
 Route::get("/ambil_kecamatan", [LoginController::class, "kecamatan"]);
     Route::get("/ambil_kelurahan", [LoginController::class, "kelurahan"]);
