@@ -21,7 +21,7 @@
                     <div class="cardHeader">
                         <h4>Home Titipsini</h4>
                         <a href="#" class="btn btn-thema"data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-primary fw-bold
-                        rounded-pill px-4 shadow float-end">Tambah</a>
+                        rounded-pill px-4 shadow float-end">Tambah +</a>
                     </div>
                     <br>
                     @if (session('berhasil'))
