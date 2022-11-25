@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Master;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Master\Jasa\JasaLayanan;
+use App\Models\Master\Vendor\VendorJasa;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -15,7 +17,9 @@ class DataDiriVendorController extends Controller
     {
         $user = User::findOrFail(Auth::id());
 
-        return view('vendor.login.datadiri', compact('user'));
+        $data["jasa_layanan"] = JasaLayanan::get();
+
+        return view('vendor.login.datadiri',$data ,compact('user'));
     }
 
     public function update(Request $request, $id)
@@ -79,6 +83,17 @@ class DataDiriVendorController extends Controller
         $user->save();
 
         return back()->with('status', 'Data Diri berhasil di updated!');
+    }
+
+    public function post(Request $request)
+    {
+        foreach ($request->id_jasa as $id)
+        {
+            echo !$id;
+
+        }
+
+        // return back();
     }
 
 }

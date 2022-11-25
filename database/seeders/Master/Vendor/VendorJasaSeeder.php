@@ -17,27 +17,32 @@ class VendorJasaSeeder extends Seeder
     {
         VendorJasa::create([
             "user_id" => 4,
-            "jasa_layanan_id" => 1
+            "jasa_layanan_id" => 1,
+            "status" => 1
         ]);
 
         VendorJasa::create([
             "user_id" => 4,
-            "jasa_layanan_id" => 2
+            "jasa_layanan_id" => 2,
+            "status" => 1
         ]);
 
         VendorJasa::create([
             "user_id" => 4,
-            "jasa_layanan_id" => 3
+            "jasa_layanan_id" => 3,
+            "status" => 1
         ]);
 
         VendorJasa::create([
             "user_id" => 4,
-            "jasa_layanan_id" => 4
+            "jasa_layanan_id" => 4,
+            "status" => 1
         ]);
 
         VendorJasa::create([
             "user_id" => 6,
-            "jasa_layanan_id" => 1
+            "jasa_layanan_id" => 1,
+            "status" => 1
         ]);
     }
 }

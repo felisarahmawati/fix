@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger("user_id");
             $table->bigInteger("jasa_layanan_id");
+            $table->integer("status");
             $table->timestamps();
         });
     }
