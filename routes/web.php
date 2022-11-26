@@ -133,8 +133,15 @@ Route::controller(VerifikasiVendorController::class)->group(function(){
 });
 
 Route::controller(VerifikasiPenggunaController::class)->group(function(){
-    Route::get('/admin/verifikasi/pengguna', 'index');
-    Route::put('/admin/verifikasi/pengguna/{id}/aktifkan', 'aktifkan');
+    Route::prefix("admin")->group(function() {
+        Route::prefix("verifikasi")->group(function() {
+            Route::prefix("pengguna")->group(function() {
+                Route::get('/', 'index');
+                Route::put('/{id}/aktifkan', 'aktifkan');
+                Route::put('/{id}/tolak', 'tolak');
+            });
+        });
+    });
 });
 
 

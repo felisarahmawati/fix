@@ -1,8 +1,9 @@
 @extends('layouts_admin.main')
+
 @section('content')
+
 <section class="home-section">
     <div class="main">
-
         <div class="topbar">
             <div class="home-content">
                 <i class='bx bx-menu'></i>
@@ -10,17 +11,13 @@
             <form action="/admin/verifikasi/pengguna">
                 <div class="search2" style="margin-top: 10px;">
                     <label>
-                        <label>
-                            <input type="text" class="form-control" name="search" placeholder="Cari Disini">
+                        <input type="text" class="form-control" name="search" placeholder="Cari Disini">
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
             </form>
         </div>
 
-        <!-- top nav -->
-
-        <!-- data list -->
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
@@ -39,34 +36,41 @@
                     </thead>
                     <tbody>
                         @foreach ($user as $pengguna)
-                            <tr>
-                                <td>{{ $pengguna->name }}</td>
-                                <td>{{ $pengguna->email }}</td>
-                                <td>{{ $pengguna->no_ktp }}</td>
-                                <td class="text-center">
-                                    @if ($pengguna->status == 0)
-                                    <span class="badge text-bg-y-danger">
-                                        Tidak Aktif
-                                    </span>
-                                    @else
-                                    <span class="badge text-bg-success">
-                                        Aktif
-                                    </span>
-                                    @endif
-                                </td>
-                                <td>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{$pengguna->id}}"
-                                        class="btndetail">
-                                        <i class='bx bx-detail'></i>
-                                    </button>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>{{ $pengguna->name }}</td>
+                            <td>{{ $pengguna->email }}</td>
+                            <td>{{ $pengguna->no_ktp }}</td>
+                            <td class="text-center">
+                                @if ($pengguna->status == 0)
+                                <span class="badge badge-danger" style="background-color: orange;">
+                                    Tidak Aktif
+                                </span>
+                                @elseif($pengguna->status == 1)
+                                <span class="badge badge-success" style="background-color: green;">
+                                    Aktif
+                                </span>
+                                @else
+                                <span class="badge badge-danger" style="background-color: red;">
+                                    Ditolak
+                                </span>
+                                @endif
+                            </td>
+                            <td>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{ $pengguna->id }}"
+                                    class="btndetail">
+                                    <i class='bx bx-detail'></i>
+                                </button>
+                            </td>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+</section>
 
+@foreach ($user as $pengguna)
 <div class="modal fade" id="exampleModalDetail{{$pengguna->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="width: 60%">
         <div class="modal-content">
@@ -134,65 +138,82 @@
                     {{-- <br> --}}
                     <div class="row">
                         <div class="col-md-6 text-end">
-                            <button onclick="verifikasi" type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
+                            <button type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi-{{ $pengguna->id }}">
                                 Verifikasi
                             </button>
                         </div>
                         <div class="col-md-6">
-                            <button onclick="tolak" type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak">
-                                 Tolak
+                            <button type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak-{{ $pengguna->id }}">
+                                Tolak
                             </button>
                         </div>
                     </div>
-                    {{-- @if ($pengguna->status == 1)
-                    @else
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-sm btn-block">
-                                <i class="fa fa-save"></i> Verifikasi
-                            </button>
-                        </div>
-                    @endif --}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endforeach
 
 {{-- Verifikasi --}}
-<div class="modal fade" id="verifikasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@foreach ($user as $pengguna)
+<div class="modal fade" id="verifikasi-{{ $pengguna->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="width:30%">
         <div class="modal-content">
             <h4 class="modal-title text-center" id="exampleModalLabel">Verifikasi Pengguna</h4>
             <div class="modal-body" id="modal-content-detail">
-                <div class="card-body text-center">
-                    <p><b> Yakin verifikasi Pengguna ini?</b></p>
-                    <button type="button" class="btn btn-success btn-sm" >verifikasi</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
-                </div>
+                <form action="{{ url('/admin/verifikasi/pengguna/'.$pengguna->id.'/aktifkan') }}" method="POST">
+                    @method("PUT")
+                    @csrf
+                    <div class="card-body text-center">
+                        <p>
+                            <b>
+                                Yakin Verifikasi Pengguna
+                                {{ $pengguna->name }} ?
+                            </b>
+                        </p>
+                        <button type="submit" class="btn btn-success btn-sm" >
+                            Verifikasi
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+@endforeach
 {{-- End --}}
 
 {{-- Tolak --}}
-<div class="modal fade" id="tolak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@foreach ($user as $pengguna)
+<div class="modal fade" id="tolak-{{ $pengguna->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="width:30%">
         <div class="modal-content">
             <h4 class="modal-title text-center" id="exampleModalLabel">Konfirmasi Tolak Pengguna</h4>
             <div class="modal-body" id="modal-content-detail">
-                <div class="card-body text-center">
-                    <p><b>Alasan menolak pengguna ini?</b></p>
-                    <form>
+                <form action="{{ url('/admin/verifikasi/pengguna/'.$pengguna->id.'/tolak') }}" method="POST">
+                    @method("PUT")
+                    @csrf
+                    <div class="card-body text-center">
+                        <p>
+                            <b>
+                                Alasan Menolak Pengguna {{ $pengguna->name }} ?
+                            </b>
+                        </p>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Alasan"></textarea>
-                    </form>
-                    <button type="button" class="btn btn-success btn-sm">Simpan</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
-                </div>
+                        <br>
+                        <button type="submit" class="btn btn-success btn-sm">
+                            Simpan
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+@endforeach
 {{-- End --}}
 
 @endsection

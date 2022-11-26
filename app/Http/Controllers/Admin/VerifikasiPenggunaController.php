@@ -21,12 +21,20 @@ class VerifikasiPenggunaController extends Controller
 
     public function aktifkan($id)
     {
-        $data = [
-            "verifikasi" => User::where("id", $id)
-                -> update(["status" => 1 ])
-        ];
+        User::where("id", $id)->update([
+            "status" => 1
+        ]);
 
-        return redirect("/admin/verifikasi/pengguna", $data);
+        return back();
+    }
+
+    public function tolak($id)
+    {
+        User::where("id", $id)->update([
+            "status" => 2
+        ]);
+
+        return back();
     }
 
 }
