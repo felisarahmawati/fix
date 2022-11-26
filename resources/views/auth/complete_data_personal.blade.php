@@ -169,7 +169,4 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
-<script>
-    swal("Verifikasi telah dikirim!", "Kami akan memproses dalam kurang waktu 1x24 jam!", "success");
-</script>
 </html>

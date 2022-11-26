@@ -101,7 +101,7 @@ class LoginController extends Controller
         session()->forget("id");
         session()->forget("nama");
 
-        return redirect("/login");
+        return redirect("/login")->with(["message" => '<script>swal("Verifikasi telah dikirim!", "Kami akan memproses dalam kurang waktu 1x24 jam!", "success");</script>' ]);
     }
 
     public function kecamatan(Request $request)
