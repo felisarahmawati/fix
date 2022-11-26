@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers\Master;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Companies;
 use App\Models\CompanyPic;
-use Faker\Provider\ar_EG\Company;
 use Illuminate\Http\Request;
+use Faker\Provider\ar_EG\Company;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class AppController extends Controller
 {
     public function dashboard()
     {
-        return view("superadmin.dashboard");
+        $data["counting_user_pengguna"] = User::all()->where("status", 1)->count();
+        return view("superadmin.dashboard", $data);
     }
 
     public function profile()

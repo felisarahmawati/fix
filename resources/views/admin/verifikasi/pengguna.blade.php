@@ -7,12 +7,15 @@
             <div class="home-content">
                 <i class='bx bx-menu'></i>
             </div>
-            <div class="search" data-aos="fade-left" data-aos-duration="1000">
-                <label>
-                    <input type="text" placeholder="Cari Disini">
-                    <ion-icon name="search-outline"></ion-icon>
-                </label>
-            </div>
+            <form action="/admin/verifikasi/pengguna">
+                <div class="search2" style="margin-top: 10px;">
+                    <label>
+                        <label>
+                            <input type="text" class="form-control" name="search" placeholder="Cari Disini">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </form>
         </div>
 
         <!-- top nav -->
@@ -29,10 +32,8 @@
                         <tr>
                             <td>Nama</td>
                             <td>Email</td>
-                            <td>Kota / Kabupaten</td>
-                            <td>Kecamatan</td>
-                            <td>Desa</td>
-                            <td>Status</td>
+                            <td>No KTP</td>
+                            <td class="text-center">Status</td>
                             <td>Aksi</td>
                         </tr>
                     </thead>
@@ -41,16 +42,14 @@
                             <tr>
                                 <td>{{ $pengguna->name }}</td>
                                 <td>{{ $pengguna->email }}</td>
-                                <td>{{ $pengguna->kota_kab }}</td>
-                                <td>{{ $pengguna->kecamatan }}</td>
-                                <td>{{ $pengguna->kelurahan }}</td>
+                                <td>{{ $pengguna->no_ktp }}</td>
                                 <td class="text-center">
                                     @if ($pengguna->status == 0)
-                                    <span class="badge badge-danger">
+                                    <span class="badge text-bg-y-danger">
                                         Tidak Aktif
                                     </span>
                                     @else
-                                    <span class="badge badge-success">
+                                    <span class="badge text-bg-success">
                                         Aktif
                                     </span>
                                     @endif
@@ -72,81 +71,129 @@
     <div class="modal-dialog modal-lg" style="width: 60%">
         <div class="modal-content">
             <div class="modal-header hader text-center">
-                <h3 class="modal-title" id="exampleModalLabel"></i> Data <b>{{ $pengguna->name }}</b></h3>
+                <h3 class="modal-title" id="exampleModalLabel">Detail {{ $pengguna->name }}</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-content-detail">
                 <div class="card-body">
                     <div class="row">
+                        <div class="col-md-6">
+                            <h5>
+                                Nama Lengkap
+                            </h5>
+
+                            <label>
+                                {{ $pengguna->name }}
+                            </label>
+
+                            <h5 class="mt-4">
+                                Username
+                            </h5>
+
+                            <label>
+                                {{ $pengguna->name }}
+                            </label>
+
+                            <h5 class="mt-4">
+                                Email
+                            </h5>
+
+                            <label>
+                                {{ $pengguna->email }}
+                            </label>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5>
+                                No KTP
+                            </h5>
+
+                            <label>
+                                {{ $pengguna->no_ktp }}
+                            </label>
+
+                            <h5 class="mt-4">
+                                Tempat, Tanggal Lahir
+                            </h5>
+
+                            <label>
+                                {{ $pengguna->tmpt_lahir }}, {{ $pengguna->tmpt_lahir }}
+                            </label>
+                        </div>
+
                         <div class="col-md-12">
-                                <form action="{{ url('/admin/verifikasi/pengguna/' . $pengguna->id . '/aktifkan') }}" method="POST">
-                                    {{ csrf_field() }}
-                                    @method('PUT')
-                                    <div class="card-body">
-                                        <div class="form-group row">
-                                            <label for="name" class="col-sm-2 col-form-label text-right">Nama</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="name" value="{{ $pengguna->name }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="email" class="col-sm-2 col-form-label text-right"> Email </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="email" value="{{ $pengguna->email }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="kecamatan" class="col-sm-2 col-form-label text-right"> Kecamatan </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kecamatan" value="{{ $pengguna->kecamatan }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="kota_kabupaten" class="col-sm-2 col-form-label text-right"> Kota / Kabupaten
-                                            </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kota_kab"
-                                                    value="{{ $pengguna->kota_kab }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="kelurahan" class="col-sm-2 col-form-label text-right"> Kelurahan
-                                            </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kelurahan"
-                                                    value="{{ $pengguna->kelurahan }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="no_telp" class="col-sm-2 col-form-label text-right">No. Telp</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="alamat" class="col-sm-2 col-form-label text-right">Alamat</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="alamat" value="{{ $pengguna->alamat }}" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @if ($pengguna->status == 1)
-                                    @else
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary btn-sm btn-block">
-                                                <i class="fa fa-save"></i> Aktifkan Akun
-                                            </button>
-                                        </div>
-                                    @endif
-                                </form>
-                            </div>
+                            <p class="text-center">
+                                <b>Link google drive</b>
+                            </p>
+                            <p class="text-center">
+                                {{ $pengguna->image_ktp }}
+                            </p>
                         </div>
                     </div>
+
+                    {{-- <br> --}}
+                    <div class="row">
+                        <div class="col-md-6 text-end">
+                            <button onclick="verifikasi" type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
+                                Verifikasi
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button onclick="tolak" type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak">
+                                 Tolak
+                            </button>
+                        </div>
+                    </div>
+                    {{-- @if ($pengguna->status == 1)
+                    @else
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success btn-sm btn-block">
+                                <i class="fa fa-save"></i> Verifikasi
+                            </button>
+                        </div>
+                    @endif --}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+{{-- Verifikasi --}}
+<div class="modal fade" id="verifikasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:30%">
+        <div class="modal-content">
+            <h4 class="modal-title text-center" id="exampleModalLabel">Verifikasi Pengguna</h4>
+            <div class="modal-body" id="modal-content-detail">
+                <div class="card-body text-center">
+                    <p><b> Yakin verifikasi Pengguna ini?</b></p>
+                    <button type="button" class="btn btn-success btn-sm" >verifikasi</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- End --}}
+
+{{-- Tolak --}}
+<div class="modal fade" id="tolak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:30%">
+        <div class="modal-content">
+            <h4 class="modal-title text-center" id="exampleModalLabel">Konfirmasi Tolak Pengguna</h4>
+            <div class="modal-body" id="modal-content-detail">
+                <div class="card-body text-center">
+                    <p><b>Alasan menolak pengguna ini?</b></p>
+                    <form>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Alasan"></textarea>
+                    </form>
+                    <button type="button" class="btn btn-success btn-sm">Simpan</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- End --}}
 
 @endsection
 

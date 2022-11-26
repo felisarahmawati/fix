@@ -9,12 +9,15 @@
                 <div class="cardHeader-title">
                     <h2>Finance</h2>
                 </div>
-                <div class="search2" style="margin-top: 10px;">
-                    <label>
-                        <input type="text" placeholder="Cari Disini">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
+                <form action="/superadmin/akun/pengguna/users/finance">
+                    <div class="search2" style="margin-top: 10px;">
+                        <label>
+                            <label>
+                                <input type="text" class="form-control" name="search" placeholder="Cari Disini">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                </form>
             </div>
 
             <!-- data list -->

@@ -77,7 +77,8 @@ class LoginController extends Controller
             "name" => $request->name,
             "email" => $request->email,
             "no_telp" => $request->no_telp,
-            "password" => bcrypt($request->password)
+            "password" => bcrypt($request->password),
+            'id_role' => 2,
         ]);
 
         session()->put("id", $user["id"]);
@@ -93,7 +94,8 @@ class LoginController extends Controller
             "tmpt_lahir" => $request->tmpt_lahir,
             "tgl_lahir" => $request->tgl_lahir,
             "alamat" => $request->alamat,
-            "lokasi" => $request->lokasi
+            "lokasi" => $request->lokasi,
+            "image_ktp" => $request->image_ktp
         ]);
 
         session()->forget("id");

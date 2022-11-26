@@ -9,10 +9,13 @@ use App\Http\Controllers\Controller;
 
 class DataCustomersuperController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->search;
         $data = [
-            "user" => User::where("id_role", 2)->get()
+            "user" => User::where("id_role", 2)
+                    ->where('name', 'LIKE', '%' . $search . '%')
+                    ->paginate(5)
         ];
 
         return view('superadmin.akun.pengguna.users.customer', $data);

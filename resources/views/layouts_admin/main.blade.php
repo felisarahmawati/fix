@@ -7,6 +7,7 @@
     <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/modal.css') }}" rel="stylesheet">
     <link href="{{ asset('style/loginview2.css') }}" rel="stylesheet">
+
     <!-- Boxiocns CDN Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>

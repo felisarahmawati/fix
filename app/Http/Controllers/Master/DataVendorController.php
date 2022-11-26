@@ -10,10 +10,13 @@ use PhpParser\Node\Expr\FuncCall;
 
 class DataVendorController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->search;
         $data = [
-            "user" => User::where("id_role", 4)->get()
+            "user" => User::where("id_role", 4)
+                        ->where('name', 'LIKE', '%' . $search . '%')
+                        ->paginate(5)
         ];
 
         return view('superadmin.akun.pengguna.users.vendor', $data);

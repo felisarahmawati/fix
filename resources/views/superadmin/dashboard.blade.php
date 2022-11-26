@@ -18,7 +18,7 @@
         <div class="cardBox" data-aos="fade-up" data-aos-delay="100">
             <div class="card border-0">
                 <div class="card-body">
-                    <div class="numbers">5</div>
+                    <div class="numbers">{{ $counting_user_pengguna }}</div>
                     <div class="cardName">Pengguna</div>
                 </div>
                 <div class="iconBx card-img-overlay">

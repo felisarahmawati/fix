@@ -75,15 +75,12 @@
                             <i class="bi bi-box-arrow-in-right"></i>
                         </a>
                     </li>
-
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-
-    </div>
-</header>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+        </div>
+    </header>
 <!-- End Header -->
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">

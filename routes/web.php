@@ -289,6 +289,7 @@ Route::group(["middleware" => ["autentikasi"]], function() {
                 Route::resource("role", RoleController::class);
                 Route::get('/pengguna/edit', [PenggunaController::class, "edit"]);
                 Route::get('/pengguna/simpan', [PenggunaController::class, "update"]);
+                Route::get('/pengguna/print_pdf',[PenggunaController::class, "pdf"]);
                 Route::resource("pengguna", PenggunaController::class);
 
             });

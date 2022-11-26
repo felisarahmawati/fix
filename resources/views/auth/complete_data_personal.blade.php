@@ -138,7 +138,7 @@
                                 <hr>
                                 <div class="col-12 mt-2">
                                     <label for="inputLink" class="form-label">Scan KTP & KK</label>
-                                    <input type="text" class="form-control" id="inputLink" name="ktp_kk" placeholder="Masukkan link google drive">
+                                    <input type="text" class="form-control" id="inputLink" name="image_ktp" placeholder="Masukkan link google drive">
                                 </div>
 
                                 <div class="d-grid gap-2 col-2 mx-auto mt-2">
@@ -166,5 +166,10 @@
 
 <!-- Template Main JS File -->
 <script src="{{ url('/assets') }}/js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
+<script>
+    swal("Verifikasi telah dikirim!", "Kami akan memproses dalam kurang waktu 1x24 jam!", "success");
+</script>
 </html>

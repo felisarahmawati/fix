@@ -10,6 +10,12 @@
                 </div>
             </div>
 
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status')}}
+                </div>
+            @endif
+
             <div class="container-fluid mt-4">
                 <div class="row">
                     <div class="col-8 ms-4">

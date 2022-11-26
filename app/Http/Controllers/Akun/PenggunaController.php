@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Akun;
 
+use PDF;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 Use App\Models\Akun\Role;
@@ -10,10 +11,13 @@ use Illuminate\Http\Request;
 
 class PenggunaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->search;
         $data = [
-            "user" => User::paginate(5),
+            "user" => User::where('name', 'LIKE', '%' . $search . '%')
+                        ->orWhere('id_role', 'LIKE', '%' . $search . '%')
+                        ->paginate(5),
             "role" => Role::all()
         ];
         return view('superadmin.akun.pengguna.index', $data);
@@ -33,7 +37,7 @@ class PenggunaController extends Controller
                 'id_role' => 3,
                 "status"=> 1
             ]);
-            return redirect("/superadmin/akun/pengguna");
+            return redirect("/superadmin/akun/pengguna")->with('status', 'Pengguna baru berhasil ditambahkan!');
         }
     }
 
@@ -60,6 +64,15 @@ class PenggunaController extends Controller
             ]);
             return redirect("/superadmin/akun/pengguna");
         }
+    }
+
+    public function pdf()
+    {
+        $data = User::all();
+
+        $pdf = PDF::loadView('superadmin.akun.pengguna.print_pdf', ['user' => $data]);
+
+        return $pdf->download('Pengguna.pdf');
     }
 
     public function destroy(User $user)

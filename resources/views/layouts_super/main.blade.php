@@ -82,7 +82,7 @@
                 </div>
                 <div class="sub-menu">
                     <div class="drop-box">
-                        <a href="/superadmin/verifikasi/data_vendor">Verifikasi Pengguna</a>
+                        <a href="/superadmin/verifikasi/data_vendor">Verifikasi Vendor</a>
                         <a href="/superadmin/verifikasi/verifikasi_layanan">Verifikasi layanan</a>
 
                         {{-- <a href="/superadmin/data/pengaturan-user">Pengaturan User</a> --}}
