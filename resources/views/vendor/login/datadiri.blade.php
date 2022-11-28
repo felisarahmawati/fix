@@ -292,8 +292,8 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th class="text-center">#</th>
                                                 <th class="text-center">Jasa</th>
+                                                <th class="text-center">Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -301,26 +301,35 @@
                                                 @php
                                                     $vendor_jasa = VendorJasa::where("user_id", Auth::user()->id)
                                                                 ->where("jasa_layanan_id", $data->id)
-                                                                ->where("status", 1)
                                                                 ->first();
                                                 @endphp
                                                 <tr>
-                                                    <td class="text-center">
-                                                        <input type="checkbox" name="id_jasa[]" {{ empty($vendor_jasa) ? '' : 'checked' }} value="{{ $data->id }}">
-                                                    </td>
                                                     <td class="text-center">{{ $data->jasa }}</td>
+                                                    <td class="text-center">
+                                                        @if ($vendor_jasa->status == 1)
+                                                            <form action="{{ url('/vendor/lengkapi-data/non_aktifkan') }}" method="POST">
+                                                                @method("PUT")
+                                                                @csrf
+                                                                <input type="hidden" name="jasa_layanan_id" value="{{ $vendor_jasa->jasa_layanan_id }}">
+                                                                <button type="submit" class="btn btn-danger btn-sm">
+                                                                    Non - Aktifkan
+                                                                </button>
+                                                            </form>
+                                                        @elseif($vendor_jasa->status == 0)
+                                                            <form action="{{ url('/vendor/lengkapi-data/aktifkan') }}" method="POST">
+                                                                @method("PUT")
+                                                                @csrf
+                                                                <input type="hidden" name="jasa_layanan_id" value="{{ $vendor_jasa->jasa_layanan_id }}">
+                                                                <button type="submit" class="btn btn-success btn-sm">
+                                                                    Aktifkan
+                                                                </button>
+                                                            </form>
+                                                        @endif
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="reset" class="btn btn-danger">
-                                        Kembali
-                                    </button>
-                                    <button type="submit" class="btn btn-primary">
-                                        Tambah
-                                    </button>
                                 </div>
                             </form>
                         </div>

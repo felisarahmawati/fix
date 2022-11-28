@@ -24,13 +24,10 @@
         </li>
 
         <li class="list {{ Request::segment(2) == 'login' ? 'active' : '' }}">
-            <a href="/vendor/login/datadiri">
+            <a href="{{ url('/vendor/lengkapi-data') }}">
                 <i class="bi bi-file-earmark"></i>
                 <span class="link_name">Lengkapi Data</span>
             </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="/vendor/login/datadiri">Lengkapi Data</a></li>
-            </ul>
         </li>
 
         <li class="list {{ Request::segment(2) == 'profile' ? 'active' : '' }}">

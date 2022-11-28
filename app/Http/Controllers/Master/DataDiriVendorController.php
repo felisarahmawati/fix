@@ -96,4 +96,22 @@ class DataDiriVendorController extends Controller
         // return back();
     }
 
+    public function non_aktifkan(Request $request)
+    {
+        VendorJasa::where("user_id", Auth::user()->id)->where("jasa_layanan_id", $request->jasa_layanan_id)->update([
+            "status" => 0
+        ]);
+
+        return back();
+    }
+
+    public function aktifkan(Request $request)
+    {
+        VendorJasa::where("user_id", Auth::user()->id)->where("jasa_layanan_id", $request->jasa_layanan_id)->update([
+            "status" => 1
+        ]);
+
+        return back();
+    }
+
 }
