@@ -45,6 +45,8 @@
 
         @include("vendor.vendor.kelola_jasa.pickup.v_form")
 
+        @include("vendor.vendor.kelola_jasa.pickup.v_form_paket")
+
         @else
         -
         @endif

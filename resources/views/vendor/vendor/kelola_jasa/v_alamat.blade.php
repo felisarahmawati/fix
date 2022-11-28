@@ -9,7 +9,7 @@
                 <i class='bx bx-menu'></i>
             </div>
             <div class="cardHeader-title">
-                <h2>Kelola Kendaraan</h2>
+                <h2>Kelola {{ $slug }}</h2>
             </div>
         </div>
         <div class="cardBox1">
