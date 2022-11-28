@@ -39,6 +39,8 @@
 
         @include("vendor.vendor.kelola_jasa.barang.v_form")
 
+        @include("vendor.vendor.kelola_jasa.barang.v_form_paket")
+
         @elseif($slug == "Pickup")
 
         @include("vendor.vendor.kelola_jasa.pickup.v_form")

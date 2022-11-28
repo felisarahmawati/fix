@@ -21,7 +21,6 @@ class VendorController extends Controller
 
     public function vendor_layanan($slug)
     {
-
         $data["session"] = session()->get("kelola_layanan");
 
         $data["id"] = session()->get("id");

@@ -14,14 +14,14 @@
                     </label>
                     <input class="form-control text-center" type="text" placeholder="Masukan link google maps alamatAnda" id="alamat" name="alamat">
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 mb-3">
                     <label for="provinsi" class="form-label">Provinsi</label>
                     <select id="provinsi" name="provinsi" class="form-select">
                         <option value="">- Pilih Provinsi -</option>
                         @foreach ($provinsi as $p)
-                            <option value="{{ $p["id"] }}">
-                                {{ $p["name"] }}
-                            </option>
+                        <option value="{{ $p["id"] }}">
+                            {{ $p["name"] }}
+                        </option>
                         @endforeach
                     </select>
                 </div>
@@ -48,6 +48,25 @@
                         </small>
                     </p>
                     <textarea class="form-control" id="catatan" name="catatan" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="">
+                        <b>Ukuran gudang</b>
+                    </label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="panjang">Panjang</label>
+                            <input type="text" class="form-control" id="panjang" name="panjang" placeholder="25">
+                        </div>
+                        <div class="col-md-1 mt-5 text-center">
+                            X
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lebar">Lebar</label>
+                            <input type="text" class="form-control" id="lebar" name="lebar" placeholder="25">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row">

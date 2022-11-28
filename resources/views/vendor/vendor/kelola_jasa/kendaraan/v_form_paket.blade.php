@@ -10,7 +10,7 @@
             <div class="modal-content" style="width:530px">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Pilih Jenis Mohammad
+                        Pilih Jenis Kendaraan
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
