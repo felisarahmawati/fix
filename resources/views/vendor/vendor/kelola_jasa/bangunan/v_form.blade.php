@@ -1,3 +1,4 @@
+
 <div class="container mt-4 mb-4">
     <div class="row justify-content-center">
         <div class="card" style="background-color: #fff; width:80% ">
@@ -21,43 +22,69 @@
                 </svg>
                 <b>Alamat lahan gudang</b>
             </h6>
+
             <div class="row">
                 <div class="col-md-10">
                     <p class="">Untuk mengatur lokasi dan detail alamat gudang Anda</p>
                 </div>
+                @if ($step1)
+                    <div class="col-md-2">
+                        <i class="bi bi-check2-square" style="font-size: 37px; color:rgb(98, 212, 133);"></i>
+                    </div>
+                @else
+                @if ($step2)
+
+                @else
                 <div class="col-md-2">
                     <a href="{{ url('/vendor/kelola/'.$slug.'/atur_alamat') }}" class="btn btn-success mb-3">
                         Tambah
                     </a>
-
-                    </div>
-                    <hr>
                 </div>
-                <div class="text-muted">
-                    <h6><svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px"
-                        fill="currentColor" class="bi bi-2-circle-fill p-2" viewBox="0 0 16 16"
-                        style="color:rgb(255, 221, 0)">
-                        <path
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
-                    </svg><b>Jenis barang</b></h6>
-                    <div class="row">
-                        <div class="col-md-10 ">
-                            <p class="">Mengatur jenis barang yang dititipkan</p>
-                        </div>
-                    </div>
-                </div>
+                @endif
+                @endif
             </div>
-            <div class="row">
-                <div class="col-md-10 ">
-                    <p class="">
-                        Mengatur jenis kendaraan yang dititipkan
-                    </p>
+
+            <hr>
+
+            <div class="text-muted">
+                <h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px" fill="currentColor" class="bi bi-2-circle-fill p-2" viewBox="0 0 16 16" style="color:rgb(255, 221, 0)">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
+                    </svg>
+                    <b>
+                        Jenis barang
+                    </b>
+                </h6>
+                <div class="row">
+                    <div class="col-md-10 ">
+                        <p class="">
+                            Mengatur jenis barang yang dititipkan
+                        </p>
+                    </div>
+                    @if (!$step1)
+
+                    @else
+                    <div class="col-md-2">
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success mb-3">
+                            Tambah
+                        </button>
+                    </div>
+                    @endif
                 </div>
-                <div class="col-md-2">
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success mb-3">
-                        Tambah
-                    </button>
-                </div>
+
+                @if ($step2)
+                <hr>
+                <p>
+                    <i class="bi bi-check-circle-fill p-2 mt-5" style="font-size: 25px; color:rgb(98, 212, 133);"></i>
+                    Dengan mengisi data ini, maka Anda setuju dengan
+                    <b>
+                        Syarat & Ketentuan Umum
+                    </b> Kebijakan Privasi
+                </p>
+                <a href="{{ url('/vendor/kelola/' . $slug . '/' . $id . '/verifikasi') }}" class="btn btn-success col-md-12 mt-3 mb-4">
+                    Selanjutnya
+                </a>
+                @endif
             </div>
         </div>
     </div>

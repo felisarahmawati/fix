@@ -482,6 +482,16 @@ Route::controller(VendorController::class)->group(function(){
             Route::post("/{slug}/atur_alamat", "kelola_layanan");
             Route::get("/{slug}/{id}/verifikasi", "verifikasi");
             Route::get("/{slug}/detail", "detail_layanan");
+
+            //Bangunan
+            Route::get("/{slug}/layanan_step1", "vendor_layanan_bangunan");
+            Route::post("/{slug}/layanan_step1", "vendor_post_layanan_bangunan");
+            Route::post("/{slug}/atur_alamat", "kelola_layanan_bangunan");
+
+            //Barang
+            Route::get("/{slug}/layanan_step1", "vendor_layanan_barang");
+            Route::post("/{slug}/layanan_step1", "vendor_post_layanan_barang");
+            Route::post("/{slug}/atur_alamat", "kelola_layanan_barang");
         });
     });
     Route::get('/vendor/homelagi', 'index')->middleware('role:vendor')->name('vendor.index');
