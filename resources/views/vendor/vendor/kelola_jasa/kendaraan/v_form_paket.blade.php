@@ -6,11 +6,11 @@
     <div class="modal-dialog modal-lg">
         <form action="{{ url('/vendor/kelola/'.$slug.'/layanan_step1') }}" method="POST">
             @csrf
-            <input type="hidden" name="kelola_layanan_id" value="{{ empty($kelola_layanan_id) ? '' : $kelola_layanan_id }}">
+            <input type="hidden" name="kelola_layanan_id" value="{{ $session }}">
             <div class="modal-content" style="width:530px">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Pilih Jenis Paket
+                        Pilih Jenis Mohammad
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

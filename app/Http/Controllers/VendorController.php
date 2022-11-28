@@ -21,11 +21,10 @@ class VendorController extends Controller
 
     public function vendor_layanan($slug)
     {
-        if (session('kelola_layanan')) {
-            $data["kelola_layanan_id"] = session('kelola_layanan');
-        } else if (session('id')) {
-            $data["id"] = session("id");
-        }
+
+        $data["session"] = session()->get("kelola_layanan");
+
+        $data["id"] = session()->get("id");
 
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
         $data["slug"] = $slug;
@@ -111,7 +110,9 @@ class VendorController extends Controller
 
         $var = $kl->id;
 
-        return redirect("/vendor/kelola/".$jasa->jasa."/layanan_step1")->with(["kelola_layanan" => $var]);
+        $session = session()->put("kelola_layanan", $var);
+
+        return redirect("/vendor/kelola/".$jasa->jasa."/layanan_step1")->with($session);
     }
 
     public function vendor_post_layanan(Request $request, $slug)
@@ -134,7 +135,11 @@ class VendorController extends Controller
             "status" => "step2"
         ]);
 
-        return back()->with(["id" => $request->kelola_layanan_id]);
+        session()->forget("kelola_layanan");
+
+        $id_kelola_layanan = session()->put("id", $request->kelola_layanan_id);
+
+        return back()->with($id_kelola_layanan);
     }
 
     public function verifikasi($slug, $id)
@@ -142,6 +147,8 @@ class VendorController extends Controller
         KelolaLayanan::where("id", $id)->update([
             "status" => "verifikasi"
         ]);
+
+        session()->forget("id");
 
         return redirect("/vendor/kelola/" . $slug . "/detail");
     }
