@@ -61,9 +61,7 @@
                     <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
                     <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-                    <li><a class="nav-link scrollto active" href="/login">Masuk<i class="bi bi-box-arrow-in-right"></i></a></li>
-                    {{-- <li><a class="nav-link scrollto" href="/register">Daftar<i class="bi bi-box-arrow-right"></i></a></li> --}}
-
+                    <li><a class="nav-link scrollto active" href="/login">Login<i class="bi bi-box-arrow-in-right"></i></a></li>
                 </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>

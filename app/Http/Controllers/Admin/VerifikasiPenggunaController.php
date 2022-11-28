@@ -34,7 +34,7 @@ class VerifikasiPenggunaController extends Controller
             "status" => 2
         ]);
 
-        return back();
+        return redirect()->route('login');
     }
 
 }
