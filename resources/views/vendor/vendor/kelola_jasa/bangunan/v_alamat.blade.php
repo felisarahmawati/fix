@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">
-                Atur Alamat
+                Atur Mohammad
             </h5>
             <hr width="100%" color="#c0c0c0">
             <form action="{{ url('/vendor/kelola/'.$data_jasa->id.'/atur_alamat') }}" method="POST">
@@ -16,7 +16,7 @@
                     </label>
                     <input class="form-control text-center" type="text" placeholder="Masukan link google maps alamatAnda" id="alamat" name="alamat">
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 mb-3">
                     <label for="provinsi" class="form-label">Provinsi</label>
                     <select id="provinsi" name="provinsi" class="form-select">
                         <option value="">- Pilih Provinsi -</option>

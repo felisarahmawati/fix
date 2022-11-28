@@ -29,7 +29,7 @@
 
         @elseif($slug == "Bangunan")
 
-
+        @include("vendor.vendor.kelola_jasa.bangunan.v_detail_bangunan")
 
         @elseif($slug == "Barang")
 

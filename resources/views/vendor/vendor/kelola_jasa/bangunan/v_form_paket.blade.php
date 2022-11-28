@@ -6,7 +6,7 @@
     <div class="modal-dialog modal-lg">
         <form action="{{ url('/vendor/kelola/'.$slug.'/layanan_step1') }}" method="POST">
             @csrf
-            <input type="hidden" name="kelola_layanan_id" value="{{ empty($kelola_layanan_id) ? '' : $kelola_layanan_id }}">
+            <input type="hidden" name="kelola_layanan_id" value="{{ $session }}">
             <div class="modal-content" style="width:530px">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
@@ -28,8 +28,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-check" style="font-size:20px">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="{{ $jp->id }}" name="nama_paket[]" id="nama_paket">
+                            <label class="form-check-label" for="nama_paket">
                                 {{ $jp->nama_paket }}
                             </label>
                         </div>
