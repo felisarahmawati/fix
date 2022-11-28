@@ -43,11 +43,6 @@ class VendorController extends Controller
         return view("vendor.vendor.kelola_jasa.v_index", $data, compact("jasa"));
     }
 
-    public function vendor_layanan_dua($slug)
-    {
-        echo "Ada";
-    }
-
     public function vendor_atur_alamat($slug)
     {
         $data["vendor_jasa"] = VendorJasa::where("user_id", Auth::user()->id)->orderBy("created_at", "DESC")->get();
