@@ -22,6 +22,11 @@ class UserLandingpageController extends Controller
         return view("user.landingpage.tentang");
     }
 
+    public function vendor_center()
+    {
+        return view("user.landingpage.vendor_center");
+    }
+
     public function layanan()
     {
         return view("user.layanan.layanan");
@@ -61,6 +66,11 @@ class UserLandingpageController extends Controller
         return view("user.pemesanan.struk");
     }
 
+    public function cod()
+    {
+        return view("user.pemesanan.cod");
+    }
+
     public function baru()
     {
         return view("user.pemesanan.baru");
@@ -97,6 +107,11 @@ class UserLandingpageController extends Controller
         return view("user.profil.kebijakanprivasi");
     }
 
+    public function ketentuan()
+    {
+        return view("user.profil.ketentuan_layanan");
+    }
+
     public function tentangtitipsini()
     {
         return view("user.profil.tentang.tentang");
@@ -112,25 +127,25 @@ class UserLandingpageController extends Controller
         return view('user.profil.bantuan.Jawaban1');
     }
 
-    public function jwb2()
-    {
-        return view('user.profil.bantuan.Jawaban2');
-    }
+    // public function jwb2()
+    // {
+    //     return view('user.profil.bantuan.Jawaban2');
+    // }
 
-    public function jwb3()
-    {
-        return view('user.profil.bantuan.Jawaban3');
-    }
+    // public function jwb3()
+    // {
+    //     return view('user.profil.bantuan.Jawaban3');
+    // }
 
-    public function jwb4()
-    {
-        return view('user.profil.bantuan.Jawaban4');
-    }
+    // public function jwb4()
+    // {
+    //     return view('user.profil.bantuan.Jawaban4');
+    // }
 
-    public function jwb5()
-    {
-        return view('user.profil.bantuan.Jawaban5');
-    }
+    // public function jwb5()
+    // {
+    //     return view('user.profil.bantuan.Jawaban5');
+    // }
 
     public function subbaru()
     {

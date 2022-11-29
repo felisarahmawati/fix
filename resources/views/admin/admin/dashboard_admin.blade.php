@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <div class="numbers">40</div>
                         <div class="cardName">Total Pesanan</div>
-                        <a href="" class="text-end mt-2">Lihat semua</a>
+                        <a href="" class="text-end mt-2" style="text-decoration:none">Lihat semua</a>
                     </div>
                     <div class="iconBx card-img-overlay">
                         <i class="bi bi-cart-fill"></i>

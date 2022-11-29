@@ -1,16 +1,21 @@
 @extends('layouts_user.main')
+@section('container')
 
 <section id="services" class="services section-bg" style="padding-top: 100px;" data-aos-delay="50">
     <div class="container mt-4 mb-4" data-aos="fade-up">
         <div class="row row-layanan">
-            <div class="bg-success p-2 text-white bg-opacity-75 text-center">JANGAN BAGIKAN BUKTI PEMBAYARAN KEPADA SIAPA PUN</div>
 
             <figure class="figure">
-                <img src="{{ asset('assets/img/titip.png') }}" class="figure-img img-fluid rounded" alt="..." style="width: 120px; margin-left: 45%; margin-top: 25px">
+                <img src="{{ asset('assets/img/centanghijauuu.png') }}" class="figure-img img-fluid rounded" alt="..." style="width: 150px; margin-left: 43%; margin-top: 25px">
             </figure>
 
-            <p class="text-center fs-5 mb-5">
-                TERIMAKASIH ATAS KONFIRMASI PEMBAYARAN ANDA
+            <p class="text-center fs-4 fw-bold">
+                PEMBAYARAN ANDA BERHASIL
+            </p>
+
+            <p class="text-center">
+                <small class="fw-bold">Terimakasih atas kepercayaannya kepada Titipsini.com.<br>
+                    Layanan Anda akan kami proses secepatnya</small>
             </p>
 
             <div class="container">
@@ -21,25 +26,27 @@
 
                             <dt class="col-sm-3">Tanggal : </dt>
                             <dd class="col-sm-9">22/10/2022</dd>
-
+                          
                             <dt class="col-sm-3">Id Pembayaran :</dt>
                             <dd class="col-sm-9">1241241414141</dd>
-
+                          
                             <dt class="col-sm-3">Pembayaran dari Bank :</dt>
                             <dd class="col-sm-9">Bank BRI/Alvi Nurbaetri</dd>
-
+                          
                             <dt class="col-sm-3 text-truncate">Rekening tujuan :</dt>
-                            <dd class="col-sm-9">Bank BCA/Leon Penitipan</dd>
-
+                            <dd class="col-sm-9">Bank BCA/Pepi Penitipan</dd>
+                          
                             <dt class="col-sm-3">Total pembayaran :</dt>
-                            <dd class="col-sm-9">Rp 155.000</dd>
+                            <dd class="col-sm-9">Rp 155.000.851</dd>
                         </dl>
                         <div class="d-grid gap-2 col-4 mx-auto">
                             <a class="btn btn btn-success" href="/user/layanan" role="button">Pesan Lagi</a>
+                            <a class="btn btn-outline-success btn-sm" href="/user/pemesanan/History/onn" role="button">Pesanan Saya</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
+@endsection

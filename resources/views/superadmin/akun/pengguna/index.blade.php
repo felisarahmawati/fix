@@ -91,16 +91,7 @@
                     @enderror
                 </div>
 
-                {{-- <div class="form-group">
-                    <label>
-                        Tanggal Lahir :
-                    </label>
-                    <div class="col mb-6">
-                        <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="Masukkan tgl_lahir" required>
-                    </div>
-                </div> --}}
-
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label>Email</label>
                     <input type="email" name="email" class="form-control @error('nama') is-invalid @enderror" placeholder="E-Mail" aria-describedby="basic-addon1">
                     @error('email')
@@ -108,14 +99,14 @@
                     @enderror
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label>Alamat</label>
                     <div class="col mb-6">
                         <textarea name="alamat" class="form-control" id="alamat" rows="2" placeholder="Masukkan Alamat" required></textarea>
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label>
                         No. Telepon
                     </label>
@@ -124,9 +115,8 @@
                     </div>
                 </div>
 
-
-                <div class="col mb-7">
-                    <label for="password" class="col-sm-2 col-form-label">{{ __('New Password') }}</label>
+                <div class="form-group mt-2">
+                    <label for="password" class="col-sm-3 col-form-label">{{ __('New Password') }}</label>
                     <div class="col mb-6">
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                         @error('password')
@@ -137,24 +127,12 @@
                     </div>
                 </div>
 
-                <div class="col mb-7">
-                    <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Confirm Password') }}</label>
+                <div class="form-group mt-2">
+                    <label for="password-confirm" class="col-sm-3 col-form-label">{{ __('Confirm Password') }}</label>
                     <div class="col mb-6">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                     </div>
                 </div>
-
-                {{-- <div class="form-group mb-3">
-                    <label>Jabatan</label>
-                    <div>
-                        <select class="form-select" name="id_role" id="id_role">
-                            <option value="">-- Pilih --</option>
-                            @foreach ($user as $pengguna)
-                         <option value="">{{ $pengguna->id_role }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div> --}}
             </div>
 
             <div class="modal-footer d-md-block">
@@ -201,30 +179,28 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-content-detail">
-                <div class="card-body">
-                    <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label text-right">Nama</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" value="{{ $pengguna->name }}" readonly>
-                        </div>
+                <div class="mb-3 row">
+                    <label for="name">Nama</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="name" value="{{ $pengguna->name }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-sm-2 col-form-label text-right"> Email </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="email" value="{{ $pengguna->email }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="email">Email</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="email" value="{{ $pengguna->email }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="no_telp" class="col-sm-2 col-form-label text-right">No Telp</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="no_telp">No Telepon</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="alamat" class="col-sm-2 col-form-label text-right">Alamat</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alamat" value="{{ $pengguna->alamat }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="alamat">Alamat</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="alamat" value="{{ $pengguna->alamat }}" readonly>
                     </div>
                 </div>
             </div>

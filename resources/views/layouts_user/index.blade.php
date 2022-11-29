@@ -43,8 +43,6 @@
         @yield('container')
     </div>
 
-    @include('partials.footer')
-
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
@@ -59,33 +57,6 @@
 <!-- Template Main JS File -->
 <script src="../../../assets/js/main.js"></script>
 
-<script>
-    const plus = document.querySelector(".plus"),
-      minus = document.querySelector(".minus"),
-      num = document.querySelector(".num");
-
-      let a = 1;
-
-      plus.addEventListener("click", ()=>{
-        a++;
-        a = (a < 10) ? "0" + a : a;
-        num.innerText = a;
-        console.log(a);
-      });
-
-      minus.addEventListener("click", ()=>{
-        if(a > 1){
-          a--;
-          a = (a < 10) ? "0" + a : a;
-          num.innerText = a;
-        }
-        else {
-          a = 0;
-          num.innerText = a;
-          alert("Anda yakin menghapus layanan ini ?");
-        }
-      });
-</script>
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 </body>
