@@ -15,6 +15,7 @@
                 <thead class="text-start">
                     <tr>
                         <td>Jenis Kendaraan</td>
+                        <td>Kategori</td>
                         <td class="col-md-2">link drive</td>
                         <td>Status</td>
                         <td class="text-center">Action</td>
@@ -23,6 +24,7 @@
                 <tbody class="text-start">
                     @forelse($pesan_layanan as $data)
                     <tr>
+                        <td>{{ $data->getPaket->paket }}</td>
                         <td>{{ $data->getJenisPaket->nama_paket }}</td>
                         <td>
                             {{ $data->getKelolaLayanan->url_link }}

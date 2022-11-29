@@ -24,11 +24,6 @@
                         </p>
                     </label>
                 </div>
-                {{-- @foreach ($paket as $p)
-                <p>
-                    <b>
-                        {{ $p->paket }}
-                    </b> --}}
                     @php
                         $jenis_paket = JenisPaket::where("jasa_layanan_id", $jasa->id)->get();
                     @endphp
@@ -52,16 +47,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="view_harga">harga penitipan perhari </label>
-                        <input type="text" class="form-control" id="view_harga" value="{{ $jp->harga }}"
-                        disabled>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="view_harga">harga penitipan perhari </label>
+                            <input type="text" class="form-control" id="view_harga" value="{{ $jp->harga }}"
+                            disabled>
+                        </div>
+                        <input type="hidden" name="harga" value="{{ $jp->harga }}">
                     </div>
                     <br>
                     @endforeach
-                {{-- </p>
-                @endforeach --}}
-
                 <button type="submit" class="btn btn-success col-md-12 mt-3">
                     Lanjutkan
                 </button>
