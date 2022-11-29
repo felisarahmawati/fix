@@ -146,6 +146,7 @@ Route::controller(VerifikasiPenggunaController::class)->group(function(){
             Route::get("/tentang", "tentang");
             Route::get("/vendor_center", "vendor_center");
             Route::get("/lengkapi_vendor", "lengkapi_vendor");
+            Route::get("/pilih_layanan", "pilih_layanan");
             Route::prefix("layanan")->group(function() {
                 Route::get("/", "layanan");
                 Route::get("/barang", "barang");

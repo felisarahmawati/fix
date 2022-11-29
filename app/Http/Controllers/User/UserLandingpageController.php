@@ -32,6 +32,11 @@ class UserLandingpageController extends Controller
         return view("user.landingpage.lengkapi_vendor");
     }
 
+    public function pilih_layanan()
+    {
+        return view("user.landingpage.pilih_layanan");
+    }
+
     public function layanan()
     {
         return view("user.layanan.layanan");
