@@ -59,5 +59,36 @@ class JenisPaketSeeder extends Seeder
             "nama_paket" => "Kantor",
             "harga" => 20000
         ]);
+
+        JenisPaket::create([
+            "jasa_layanan_id" => 3,
+            "nama_paket" => "Semua barang",
+            "harga" => 20000
+        ]);
+
+        JenisPaket::create([
+            "jasa_layanan_id" => 4,
+            "nama_paket" => "Motor",
+            "harga" => 20000
+        ]);
+
+        JenisPaket::create([
+            "jasa_layanan_id" => 4,
+            "nama_paket" => "Mobil",
+            "harga" => 20000
+        ]);
+
+        JenisPaket::create([
+            "jasa_layanan_id" => 4,
+            "nama_paket" => "Mobil Pick Up",
+            "harga" => 20000
+        ]);
+
+        JenisPaket::create([
+            "jasa_layanan_id" => 4,
+            "nama_paket" => "Truk",
+            "harga" => 20000
+        ]);
+
     }
 }

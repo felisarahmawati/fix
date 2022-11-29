@@ -4,10 +4,10 @@
             <div class="card-body mt-3">
                 <p>
                     <b>
-                        Tambah Layanan Bangunan!
+                        Tambah layanan penitipan barang!!
                     </b>
                     <p class="text-muted">
-                        Daftarkan layanan bangunan dengan mengisi data dibawah ini
+                        Daftarkan gudang / tempat anda dengan mengisi data dibawah ini!
                     </p>
                 </p>
                 <br>
@@ -45,12 +45,12 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px" fill="currentColor" class="bi bi-2-circle-fill p-2" viewBox="0 0 16 16" style="color:rgb(255, 221, 0)">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"/>
                             </svg>
-                            <b>Jenis bangunan</b>
+                            <b>Jenis barang</b>
                         </h6>
                         <div class="row">
                             <div class="col-md-10 ">
                                 <p class="">
-                                    Mengatur jenis bangunan yang bisa dititipkan.
+                                    Mengatur jenis barang yang bisa dititipkan.
                                 </p>
                             </div>
                             @if (!$step1)
