@@ -14,7 +14,6 @@
             <table class="table-borderless mt-3 w-auto">
                 <thead class="text-start">
                     <tr>
-                        <td>Jenis Kendaraan</td>
                         <td>Kategori</td>
                         <td class="col-md-2">link drive</td>
                         <td>Status</td>
@@ -24,7 +23,6 @@
                 <tbody class="text-start">
                     @forelse($pesan_layanan as $data)
                     <tr>
-                        <td>{{ $data->getPaket->paket }}</td>
                         <td>{{ $data->getJenisPaket->nama_paket }}</td>
                         <td>
                             {{ $data->getKelolaLayanan->url_link }}
@@ -88,9 +86,9 @@
                             </div>
 
                             <div class="col-md-6">
-                                <p class="mb-2 mt-2" style="font-size: 18px; margin-bottom: 10px">
+                                {{-- <p class="mb-2 mt-2" style="font-size: 18px; margin-bottom: 10px">
                                     | {{ $pl->getPaket->paket }}
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                         <div class="col-6">

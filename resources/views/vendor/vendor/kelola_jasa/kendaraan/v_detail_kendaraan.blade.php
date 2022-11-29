@@ -24,7 +24,7 @@
                 <tbody class="text-start">
                     @forelse($pesan_layanan as $data)
                     <tr>
-                        <td>{{ $data->getPaket->paket }}</td>
+                        <td>{{ $data->getJenisPaket->getPaket->paket }}</td>
                         <td>{{ $data->getJenisPaket->nama_paket }}</td>
                         <td>
                             {{ $data->getKelolaLayanan->url_link }}
@@ -89,7 +89,7 @@
 
                             <div class="col-md-6">
                                 <p class="mb-2 mt-2" style="font-size: 18px; margin-bottom: 10px">
-                                    | {{ $pl->getPaket->paket }}
+                                    | {{ $data->getJenisPaket->getPaket->paket }}
                                 </p>
                             </div>
                         </div>

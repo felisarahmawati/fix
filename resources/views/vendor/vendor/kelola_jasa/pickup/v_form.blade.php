@@ -28,11 +28,15 @@
                         <i class="bi bi-check2-square" style="font-size: 37px; color:rgb(98, 212, 133);"></i>
                     </div>
                     @else
-                    <div class="col-md-2">
-                        <a href="{{ url('/vendor/kelola/'.$slug.'/atur_alamat') }}" class="btn btn-success mb-3">
-                            Tambah
-                        </a>
-                    </div>
+                        @if ($step2)
+
+                        @else
+                        <div class="col-md-2">
+                            <a href="{{ url('/vendor/kelola/'.$slug.'/atur_alamat') }}" class="btn btn-success mb-3">
+                                Tambah
+                            </a>
+                        </div>
+                        @endif
                     @endif
                     <hr>
                 </div>
@@ -49,13 +53,30 @@
                                 Untuk mengatur jenis dan jumlah kendaraan pick up Anda
                             </p>
                         </div>
+                        @if (!$step1)
+
+                        @else
                         <div class="col-md-2">
                             <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success mb-3">
                                 Tambah
                             </button>
                         </div>
+                        @endif
                     </div>
                 </div>
+                @if ($step2)
+                <hr>
+                <p>
+                    <i class="bi bi-check-circle-fill p-2 mt-5" style="font-size: 25px; color:rgb(98, 212, 133);"></i>
+                    Dengan mengisi data ini, maka Anda setuju dengan
+                    <b>
+                        Syarat & Ketentuan Umum
+                    </b> Kebijakan Privasi
+                </p>
+                <a href="{{ url('/vendor/kelola/' . $slug . '/' . $id . '/verifikasi') }}" class="btn btn-success col-md-12 mt-3 mb-4">
+                    Selanjutnya
+                </a>
+                @endif
             </div>
         </div>
     </div>

@@ -12,4 +12,9 @@ class JenisPaket extends Model
     protected $table = "jenis_paket";
 
     protected $guarded = [''];
+
+    public function getPaket()
+    {
+        return $this->belongsTo("App\Models\Master\Paket\Paket", "paket_id", "id");
+    }
 }

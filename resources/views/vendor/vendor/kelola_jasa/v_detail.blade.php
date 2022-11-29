@@ -37,7 +37,7 @@
 
         @elseif($slug == "Pickup")
 
-        @include("vendor.vendor.kelola_jasa.pickup.v_detail_barang")
+        @include("vendor.vendor.kelola_jasa.pickup.v_detail_pickup")
 
         @else
         -
