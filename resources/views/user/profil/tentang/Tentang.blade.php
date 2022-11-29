@@ -1,14 +1,13 @@
 @extends("layouts_user.main")
-
 @section('container')
+
     <section id="services" class="services " style="padding-top: 100px;">
         <div class="container mt-4 mb-4">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 @include('user.partials.p_customer')
-                <div class="" style="width: 700px">
-                    <div class="card col-sm-12">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="bi bi-arrow-left px-2 "></i>Tentang</h5>
+                <div class="" style="width: 730px">
+                    <div class="shadow p-3 mb-5 bg-body rounded">
+                        <h5 class="card-title"><i class="bi bi-arrow-left px-2 "></i>Tentang</h5>
                             <hr width="100%" color="#c0c0c0">
                             <div class="row">
                                 <div class="col-md-10">
@@ -37,6 +36,5 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 @endsection

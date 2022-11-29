@@ -22,34 +22,35 @@ class UserLandingpageController extends Controller
         return view("user.landingpage.tentang");
     }
 
+    public function vendor_center()
+    {
+        return view("user.landingpage.vendor_center");
+    }
+
+    public function lengkapi_vendor()
+    {
+        return view("user.landingpage.lengkapi_vendor");
+    }
+
     public function layanan()
     {
         return view("user.layanan.layanan");
     }
+
+    public function cod()
+    {
+        return view("user.pemesanan.cod");
+    }
+
     public function kendaraan()
     {
         return view("user.layanan.kendaraan");
     }
-    // public function barang()
-    // {
-    //     return view("user.layanan.barang");
-    // }
-    // public function bangunan()
-    // {
-    //     return view("user.layanan.bangunan");
-    // }
+
     public function d_kendaraan()
     {
         return view("user.layanan.detail_layanan.kendaraan");
     }
-    // public function d_bangunan()
-    // {
-    //     return view("user.layanan.detail_layanan.bangunan");
-    // }
-    // public function d_barang()
-    // {
-    //     return view("user.layanan.detail_layanan.barang");
-    // }
 
     public function i_pembayaran()
     {
@@ -95,6 +96,11 @@ class UserLandingpageController extends Controller
     public function kebijakan()
     {
         return view("user.profil.kebijakanprivasi");
+    }
+
+    public function ketentuan()
+    {
+        return view("user.profil.ketentuan_layanan");
     }
 
     public function tentangtitipsini()

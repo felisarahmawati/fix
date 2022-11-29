@@ -9,8 +9,13 @@
                 <img src="{{ asset('assets/img/titip.png') }}" class="figure-img img-fluid rounded" alt="..." style="width: 120px; margin-left: 45%; margin-top: 25px">
             </figure>
 
-            <p class="text-center fs-5 mb-5">
-                TERIMAKASIH ATAS KONFIRMASI PEMBAYARAN ANDA
+            <p class="text-center fs-4 fw-bold">
+                PEMBAYARAN ANDA BERHASIL
+            </p>
+
+            <p class="text-center">
+                <small class="fw-bold">Terimakasih atas kepercayaannya kepada Titipsini.com.<br>
+                    Layanan Anda akan kami proses secepatnya</small>
             </p>
 
             <div class="container">
@@ -32,10 +37,11 @@
                             <dd class="col-sm-9">Bank BCA/Leon Penitipan</dd>
 
                             <dt class="col-sm-3">Total pembayaran :</dt>
-                            <dd class="col-sm-9">Rp 155.000</dd>
+                            <dd class="col-sm-9">Rp 155.000.851</dd>
                         </dl>
                         <div class="d-grid gap-2 col-4 mx-auto">
                             <a class="btn btn btn-success" href="/user/layanan" role="button">Pesan Lagi</a>
+                            <a class="btn btn-outline-success btn-sm" href="/user/pemesanan/history/on_progress" role="button">Pesanan Saya</a>
                         </div>
                     </div>
                 </div>

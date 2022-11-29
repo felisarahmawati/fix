@@ -105,15 +105,6 @@
                     @enderror
                 </div>
 
-                {{-- <div class="form-group">
-                    <label>
-                        Tanggal Lahir :
-                    </label>
-                    <div class="col mb-6">
-                        <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="Masukkan tgl_lahir" required>
-                    </div>
-                </div> --}}
-
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" name="email" class="form-control @error('nama') is-invalid @enderror" placeholder="E-Mail" aria-describedby="basic-addon1">
@@ -137,7 +128,6 @@
                         <input type="number" class="form-control" id="no_telp" name="no_telp" placeholder="0" required min="1">
                     </div>
                 </div>
-
 
                 <div class="col mb-7">
                     <label for="password" class="col-sm-2 col-form-label">{{ __('New Password') }}</label>
@@ -215,30 +205,28 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-content-detail">
-                <div class="card-body">
-                    <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label text-right">Nama</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" value="{{ $pengguna->name }}" readonly>
-                        </div>
+                <div class="mb-3 row">
+                    <label for="name">Nama</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="name" value="{{ $pengguna->name }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-sm-2 col-form-label text-right"> Email </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="email" value="{{ $pengguna->email }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="email">Email</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="email" value="{{ $pengguna->email }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="no_telp" class="col-sm-2 col-form-label text-right">No Telp</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="no_telp">No Telepon</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
                     </div>
-                    <div class="form-group row">
-                        <label for="alamat" class="col-sm-2 col-form-label text-right">Alamat</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alamat" value="{{ $pengguna->alamat }}" readonly>
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="alamat">Alamat</label>
+                    <div class="col">
+                      <input type="text" readonly class="form-control-plaintext" id="alamat" value="{{ $pengguna->alamat }}" readonly>
                     </div>
                 </div>
             </div>

@@ -38,11 +38,6 @@
                                 <input class="form-control" type="text" name="catatan" placeholder="catatan : masuk gang depan" aria-label="Disabled input example" >
                             </div>
 
-                        {{--<div>
-                                <p href=""><i class="bi bi-geo-alt px-1"></i>Pilih Lokasi Kamu</p>
-                                <iframe style="width:100%" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Jalan%20Janti%2C%20Gang%20Arjuna%2059%2C%20Karangjambe%2C%20Banguntapan%2C%20Bantul&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="%3$s" aria-label="%3$s" frameborder="0"></iframe>
-                            </div> --}}
-
                             <div class="cardHeader1" style="margin-top: 30px;">
                                 <h6>
                                     Pilih sebagai alamat utama

@@ -9,23 +9,6 @@
                     <div class="col-lg-5 mt-5">
                         <figure class="figure">
                             <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 450px">
-                            <figcaption class="figure-caption d-flex justify-content-evenly">
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 100px">
-                                </a>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 100px">
-                                </a>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 100px">
-                                </a>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 100px">
-                                </a>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/z.png') }}" class="figure-img img-fluid" style="border-radius: 5px; width: 100px">
-                                </a>
-                            </figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-4">
@@ -50,15 +33,15 @@
 
                             <div class="list-detail row">
                                 <dd class="col-sm-3 text-muted" style="font-size: 13px">Kategori</dd>
-                                <dd class="col-sm-9 text-success" style="font-size: 13px">Layanan Kendaraan Motor</dd>
+                                <dd class="col-sm-9 text-success" style="font-size: 13px">Layanan Kendaraan Roda 2</dd>
                                 <dd class="col-sm-3 text-muted" style="font-size: 13px">Alamat</dd>
                                 <dd class="col-sm-9 text-success" style="font-size: 13px"><span class="d-inline-block text-truncate text-muted" style="max-width: 250px;">
-                                    Jl.sukaria No.62A, RT.15/RW.19, Nanggulan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55282
+                                    Jl. Perkutut Gg. Rumah Pengadilan No.1, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221
                                   </span></dd>
                             </div>
 
                             <div class="deskripsi">
-                                <p>Layanan penitipan motor golongan 1 dari vendor Penitipan Motor Abah
+                                <p>Layanan penitipan kendaraan roda 2 dari Pepi Penitipan dengan
                                 </p>
                                 <ul class="list-unstyled">
                                     <li>Spesifikasi layanan:
@@ -101,16 +84,12 @@
                                     </div>
                                     <div class="col-sm-12 mt-2">
                                         <label for="Note" style="font-size: 14px">Catatan</label>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text bg-white"><i class="bi bi-bookmark-plus"></i></span>
-                                            <input type="text" class="form-control bg-white" placeholder="eg.skooter" name="skooter">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                                         </div>
                                     </div>
-                                    <div class="d-grid gap-2 col-12 mx-auto">
+                                    <div class="d-grid gap-2 col-12 mx-auto mt-3">
                                         <a class="btn btn-outline-success btn-sm" href="/user/pemesanan/baru" role="button">Pesan</a>
-                                    </div>
-                                    <div class="kolom mt-3 text-center text-muted">
-                                        <a class="btn btn-light" href="/user/pemesanan/wishlist" role="button"><i class="bi bi-heart-fill"></i> Wishlist</a>
                                     </div>
                                 </div>
                             </div>
@@ -120,3 +99,4 @@
             </div>
     </section>
 @endsection
+

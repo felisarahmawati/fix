@@ -151,6 +151,8 @@ Route::controller(VerifikasiPenggunaController::class)->group(function(){
             Route::get("/home", "home");
             Route::get("/kontak", "kontak");
             Route::get("/tentang", "tentang");
+            Route::get("/vendor_center", "vendor_center");
+            Route::get("/lengkapi_vendor", "lengkapi_vendor");
             Route::prefix("layanan")->group(function() {
                 Route::get("/", "layanan");
                 Route::get("/barang", "barang");
@@ -182,6 +184,7 @@ Route::controller(VerifikasiPenggunaController::class)->group(function(){
         });
         //User profil
         Route::get("/user/profil/kebijakanprivasi", [UserLandingpageController::class, 'kebijakan']);
+        Route::get("/user/profil/ketentuan_layanan", [UserLandingpageController::class, 'ketentuan']);
         Route::get("/user/profil/tentang/tentang", [UserLandingpageController::class, 'tentangtitipsini']);
         Route::get("/user/profil/bantuan/bantuan", [UserLandingpageController::class, 'bantuan']);
         Route::get("/user/profil/bantuan/Jawaban1", [UserLandingpageController::class, 'jwb1']);

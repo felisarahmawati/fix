@@ -14,6 +14,7 @@
                 <li><a class="nav-link {{ Request::is('tentang') ? 'active' :'' }}" href="/user/tentang">Tentang</a></li>
                 <li><a class="nav-link {{ Request::is('layanan') ? 'active' :'' }}" href="/user/layanan">Layanan</a></li>
                 <li><a class="nav-link {{ Request::is('kontak') ? 'active' :'' }}" href="/user/kontak">Kontak</a></li>
+                <li><a class="nav-link {{ Request::is('vendor_center') ? 'active' :'' }}" href="/user/vendor_center">Vendor Center</a></li>
                 <li><a class="nav-link {{ Request::is('login') ? 'active' :'' }}" href="/login"></a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -11,13 +11,13 @@
 
         </div>
         <div class="person-name">
-            <h2 class="text-center fs-4 my-2">{{ Auth::user()->name }}</h2>
+            <h2 class="text-center fs-5 my-2">{{ Auth::user()->name }}</h2>
         </div>
         <div class="person-email">
-            <h3 class="text-center fs-5 fw-normal mb-3">{{ Auth::user()->email }}</h3>
+            <h3 class="text-center fs-6 fw-normal mb-3">{{ Auth::user()->email }}</h3>
         </div>
-        <div class="bt mb-2">
-            <button onclick=""  data-bs-toggle="modal" data-bs-target="#exampleModalEdit" class="btn btn-success fw-bold rounded-pill px-4 shadow float-end">
+        <div class="d-grid gap-2 col-6 mx-auto mb-3">
+            <button onclick="" data-bs-toggle="modal" data-bs-target="#exampleModalEdit" class="btn btn-success fw-bold rounded-pill px-4 shadow">
                 Update
             </button>
         </div>
@@ -36,12 +36,12 @@
                 </div>
             </div>
 
-            <div class="row" style="width: 350px">
+            <div class="row">
                 <div class="col-md">
-                    <p href=""><i class="bi bi-bell px-1"></i>Notifikasi</p>
+                    <p href=""><i class="bi bi-bell px-1"></i>Ketentuan Layanan</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="text-end"><a href="/user/Notifikasi"><i class="bi bi-chevron-right"></i></a></p>
+                    <p class="text-end"><a href="/user/profil/ketentuan_layanan"><i class="bi bi-chevron-right"></i></a></p>
                 </div>
             </div>
             <h5 class="card-title"><b>Privasi</b></h5>

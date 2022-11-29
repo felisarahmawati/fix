@@ -1,82 +1,43 @@
 @extends("layouts_user.main")
 @section('container')
 
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
-    <div class="container mt-4 mb-4" style="padding-left:70px">
+<section id="services" class="services section-bg" style="padding-top: 100px; padding-left:100px">
+    <div class="container mt-4 mb-4 row-layanan">
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col" style="width: 500px">
-                <div class="row ">
-                    <div class="col-md-12">
-                        <div class="card" style="background-color: #fff;">
-                            <div class="card-body">
-                                <nav aria-label="breadcrumb " class="card-header" style="height: 40px; width:100%">
-                                    <ol class="breadcrumb ">
-                                        <li class="breadcrumb-item"><a href="/user/profil/profil">Profile</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">FAQ</li>
-                                    </ol>
-                                </nav>
-                                <form action="/signup/index" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                       
-                                        <div class="card">
-                                            <div class="card-body">
-                                            <p>Apa itu titipsini.com ?</P>
-                                            </div>
-                                        </div>
-
-                                        <div class="card mt-2">
-                                            <div class="card-body">
-                                                <p><a href="/user/profil/bantuan/Jawaban2">Bagaimana cara membayar ?</a></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="card mt-2">
-                                            <div class="card-body">
-                                                <p><a href="/user/profil/bantuan/Jawaban3">Bagaimana melihat profil anda ?</a></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="card mt-2">
-                                            <div class="card-body">
-                                                <p><a href="/user/profil/bantuan/Jawaban4">bagaimana cara pesan penitipan ?</a></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="card mt-2">
-                                            <div class="card-body">
-                                            <p><a href="/user/profil/bantuan/Jawaban5">Mengapa saya tidak menerima kode OTP?</a></p>
-                                            </div>
-                                        </div><br>
-
-                                        <label for="faq" class="form-label">Hubungi Kami</label><br>
-                                        <a href="#" class="btn btn-success"><i class="bi bi-envelope"></i> Send E-mail</a>
-                                        <a href="#" class="btn btn-success"><i class="bi bi-telephone"></i> Call Us</a>
-
-                                        <div class="d-grid gap-2 mt-2">
-                                            <button class="btn btn-success" type="button"  href="#"><i class="bi bi-whatsapp" style="font-size: 20px"></i><b> WhatsApp</b></button>
-                                        </div>
-                                </form>
-                            </div>
-                        </div>
+            <div class="col" style="width: 400px; margin-left:10px">
+                <div class="shadow p-3 mb-5 bg-body rounded">
+                    <h5 class="card-title fw-bold">Pusat Bantuan</h5>
+                    <hr width="100%" color="#c0c0c0">
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action" href="/user/profil/bantuan/Jawaban1" role="button">Apa itu titipsini.com ?</a>
+                        <a class="list-group-item list-group-item-action" href="#" role="button">Bagaimana cara membayar ?</a>
+                        <a class="list-group-item list-group-item-action" href="#" role="button">Bagaimana melihat profile anda ?</a>
+                        <a class="list-group-item list-group-item-action" href="#" role="button">Bagaimana cara pesan penitipan ?</a>
+                        <a class="list-group-item list-group-item-action" href="#" role="button">Mengapa saya tidak menerima kode OTP ?</a>
                     </div>
                 </div>
             </div>
-
             <div class="col" style="width: 730px">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="/user/profil/bantuan/bantuan"></a> Apa itu titipsini.com?</h5>
-                        <hr width="100%" color="#c0c0c0">
-                        <div class="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa. Mauris nunc velit donec porta sem ipsum tortor facilisis mauris. Facilisis elit magna venenatis, enim, diam aenean luctus. Integer dictum ullamcorper urna mollis augue rhoncus, ac.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa. Mauris nunc velit donec porta sem ipsum tortor facilisis mauris. Facilisis elit magna venenatis, enim, diam aenean luctus. Integer dictum ullamcorper urna mollis augue rhoncus, ac.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa. Mauris nunc velit donec porta sem ipsum tortor facilisis mauris. Facilisis elit magna venenatis, enim, diam aenean luctus. Integer dictum ullamcorper urna mollis augue rhoncus, ac.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa. Mauris nunc velit donec porta sem ipsum tortor facilisis mauris. Facilisis elit magna venenatis, enim, diam aenean luctus. Integer dictum ullamcorper urna mollis augue rhoncus, ac.</p>
+                <div class="shadow p-3 mb-5 bg-body rounded">
+                    <h5 class="card-title fw-bold">Bagaimana cara membayar pesanan ?</h5>
+                    <div class="p-2">
+                        <p class="text-middle" style="font-size: 13px">
+                            <p style="font-size: 15px">Untuk membayar pesanan dengan Transfer Bank, pilih <strong>Metode Pembayaran</strong> > pada halaman
+                                <strong>Detail Pemesanan</strong > > pilih <strong>Transfer Bank</strong > > pilih <strong>bank yang kamu gunakan</strong > > Pilih <strong>Konfirmasi</strong > > pilih <strong>Bayar</strong > >
+                                lakukan pembayaran mengikuti petunjuk transfer yang tertera sesuai dengan metode transfer yang dipilih.
+                            </p>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            1. <img src="{{ asset('assets/img/metod1.png') }}" alt="" style="width: 90%;" class="border">
                         </div>
-
-                        <p class="text-success">Apakah jawaban ini membantu?</p>
-                        <a class="btn btn-outline-success col-md-2" href="#" role="button"><i class="bi bi-hand-thumbs-up-fill"></i> Iya</a>
-                        <a class="btn btn-outline-success col-md-2" href="#" role="button"><i class="bi bi-hand-thumbs-down-fill"></i> Tidak</a>
+                        <div class="col-6">
+                            2. <img src="{{ asset('assets/img/metod2.png') }}" alt="" style="width: 90%;" class="border">
+                        </div>
+                        <div class="col-6 mt-3">
+                            3. <img src="{{ asset('assets/img/metod3.png') }}" alt="" style="width: 90%;" class="border">
+                        </div>
                     </div>
                 </div>
             </div>
