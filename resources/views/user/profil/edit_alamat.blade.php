@@ -10,11 +10,12 @@
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-arrow-left px-2 "></i>Edit Alamat</h5>
                         <hr width="100%" color="#c0c0c0">
-                        {{-- <form action="{{ url('/user/profil/tambah_alamat') }}" method="POST">
-                            @csrf --}}
+                        <form action="{{ url('/user/profil/tambah_alamat') }}" method="POST" enctype="multipart/form-data">
+                            @method('PUT')
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                                <input class="form-control" type="text" name="nama_lengkap" value="{{  }}" aria-label="Disabled input example">
+                                <input class="form-control" type="text" name="nama_lengkap" aria-label="Disabled input example">
                             </div>
 
                             <div class="mb-3">
@@ -24,18 +25,11 @@
 
                             <div class="mb-3">
                                 <label for="text" class="col-sm-2 col-form-label">Alamat </label>
-                                <select class="form-control mb-3" name="id_provinsi">
-                                    <option value="1">Jawa Barat</option>
-                                    <option value="2">Jawa Tengah</option>
-                                    <option value="3">Jawa Timur</option>
-                                    <option value="4">Papua</option>
-                                    <option value="5">Lampung</option>
-                                </select>
-
-                                <input class="form-control" type="text" name="kota_kabupaten" placeholder="Kota / Kabupaten" aria-label="Disabled input example">
-                                <input class="form-control" type="text" name="kecamatan" placeholder="Kecamatan" aria-label="Disabled input example">
-                                <input class="form-control" type="text" name="detail_alamat" placeholder="Nama Jalan" aria-label="Disabled input example">
-                                <input class="form-control" type="text" name="catatan" placeholder="catatan : masuk gang depan" aria-label="Disabled input example" >
+                                <input class="form-control mt-3" type="text" name="provinsi" placeholder="Provinsi" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="kota_kabupaten" placeholder="Kota / Kabupaten" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="kecamatan" placeholder="Kecamatan" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="detail_alamat" placeholder="Nama Jalan" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="catatan" placeholder="catatan : masuk gang depan" aria-label="Disabled input example" >
                             </div>
 
                             <div class="cardHeader1" style="margin-top: 30px;">
@@ -51,7 +45,7 @@
                             <button type="submit" class="btn btn-outline-success col-md-12 mt-3">
                                 Simpan
                             </button>
-                        {{-- </form> --}}
+                        </form>
                     </div>
                 </div>
             </div>

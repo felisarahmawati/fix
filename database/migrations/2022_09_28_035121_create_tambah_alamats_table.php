@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('users_id');
             $table->string('nama_lengkap');
             $table->bigInteger('no_telp');
-            $table->integer('id_provinsi');
+            $table->string('provinsi');
             $table->string('kota_kabupaten');
             $table->string('kecamatan');
             $table->longText('detail_alamat');

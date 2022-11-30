@@ -131,7 +131,6 @@
                                             <b>Lengkapi data diri untuk mempercepat verifikasi</b> <p>Kami melindungi informasi dan penggunaan data diri yang
                                                 telah anda kirimkan untuk kenyaman pengguna.
                                             </div>
-                                            <label for="scan" class="form-label">Scan KTP, Scan KK & SKCK </label>
                                             <div class="input-group col-md-8">
                                                 <div class="input-group">
                                                     <div class="row">

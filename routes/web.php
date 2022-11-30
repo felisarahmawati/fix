@@ -18,11 +18,12 @@ use App\Http\Controllers\Akun\LoginController;
 use App\Http\Controllers\Master\AppController;
 use App\Http\Controllers\SliderHomeController;
 use App\Http\Controllers\TentangHomeController;
+use App\Http\Controllers\User\AlamatController;
 use App\Http\Controllers\SliderKontakController;
 use App\Http\Controllers\Akun\PenggunaController;
 use App\Http\Controllers\SliderTentangController;
-use App\Http\Controllers\Layanan\DetailController;
 
+use App\Http\Controllers\Layanan\DetailController;
 use App\Http\Controllers\Admin\DataOrderController;
 use App\Http\Controllers\Layanan\LayananController;
 use App\Http\Controllers\Master\HomeAwalController;
@@ -30,14 +31,15 @@ use App\Http\Controllers\Master\KategoriController;
 use App\Http\Controllers\Master\ProvinsiController;
 use App\Http\Controllers\KebijakanPrivasiController;
 use App\Http\Controllers\Master\DataAdminController;
+
+use App\Http\Controllers\Master\KetentuanController;
+
+
 use App\Http\Controllers\Admin\DataPaymentController;
-
 use App\Http\Controllers\Akun\DatapenggunaController;
-
 
 use App\Http\Controllers\Master\DataVendorController;
 use App\Http\Controllers\Admin\DataCustomerController;
-
 use App\Http\Controllers\Layanan\SubLayananController;
 use App\Http\Controllers\Master\DataFinanceController;
 use App\Http\Controllers\User\UserPemesananController;
@@ -176,10 +178,9 @@ Route::controller(VerifikasiPenggunaController::class)->group(function(){
             });
             Route::prefix("profil")->group(function() {
                 Route::resource("profil", ProfilCustomerController::class);
-                // Route::get("/profil/edit", ProfilCustomerController::class);f
-                // Route::get("/profil/simpan", ProfilCustomerController::class);
-                Route::get("alamat", [TambahAlamatCustomerController::class, "alamat"]);
-                Route::resource("/tambah_alamat", TambahAlamatCustomerController::class);
+                Route::get("alamat", [AlamatController::class, "alamat"]);
+                Route::resource("tambah_alamat", AlamatController::class);
+                Route::resource("edit_alamat", AlamatController::class);
             });
         });
         //User profil
@@ -323,6 +324,10 @@ Route::group(["middleware" => ["autentikasi"]], function() {
                 Route::get('/tentanghome/edit', [TentangHomeController::class, "edit"]);
                 Route::get('/tentanghome/simpan', [TentangHomeController::class, "update"]);
                 Route::resource('tentanghome', TentangHomeController::class);
+
+                Route::get("/ketentuan/edit", [KetentuanController::class, "edit"]);
+                Route::get("/ketentuan/simpan", [KetentuanController::class, "update"]);
+                Route::resource("ketentuan", KetentuanController::class);
 
                 Route::get('/sliderhome/edit', [SliderHomeController::class, "edit"]);
                 Route::put('/sliderhome/simpan', [SliderHomeController::class, "update"]);

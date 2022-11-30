@@ -144,6 +144,9 @@
                         <a href="/superadmin/master/kebijakanprivasi/index">Kebijakan Privasi</a>
                     </div>
                     <div class="drop-box">
+                        <a href="{{ url('/superadmin/master/ketentuan') }}">Ketentuan Layanan</a>
+                    </div>
+                    <div class="drop-box">
                         <a href="/superadmin/master/faq/index">Pusat Bantuan</a>
                     </div>
                     <div class="drop-box">

@@ -32,7 +32,7 @@
                             <p class="card-text"><small class="text-muted">Catatan :{{ $item->catatan}}</small></p>
                         </div>
                         <div class="col-1 text-end" style="font-size: 25px">
-                            <p><a href="/user/profil/edit_alamat"><i class="bi bi-pencil-square"></i></a></p>
+                            <p><a href="{{ url('/user/profil/edit_alamat') }}/{{ $item->id }}"><i class="bi bi-pencil-square"></i></a></p>
                         </div>
 
                         <div class="col-1 text-end" style="font-size: 25px">

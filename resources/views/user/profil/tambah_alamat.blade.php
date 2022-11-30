@@ -23,24 +23,12 @@
 
                             <div class="mb-3">
                                 <label for="text" class="col-sm-2 col-form-label">Alamat </label>
-                                <select class="form-control mb-3" name="id_provinsi">
-                                    <option value="1">Jawa Barat</option>
-                                    <option value="2">Jawa Tengah</option>
-                                    <option value="3">Jawa Timur</option>
-                                    <option value="4">Papua</option>
-                                    <option value="5">Lampung</option>
-                                </select>
-
-                                <input class="form-control mt-1" type="text" name="kota_kabupaten" placeholder="Kota / Kabupaten" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="provinsi" placeholder="Provinsi" aria-label="Disabled input example">
+                                <input class="form-control mt-3" type="text" name="kota_kabupaten" placeholder="Kota / Kabupaten" aria-label="Disabled input example">
                                 <input class="form-control mt-3" type="text" name="kecamatan" placeholder="Kecamatan" aria-label="Disabled input example">
                                 <input class="form-control mt-3" type="text" name="detail_alamat" placeholder="Nama Jalan" aria-label="Disabled input example">
                                 <input class="form-control mt-3" type="text" name="catatan" placeholder="catatan : masuk gang depan" aria-label="Disabled input example" >
                             </div>
-
-                        {{--<div>
-                                <p href=""><i class="bi bi-geo-alt px-1"></i>Pilih Lokasi Kamu</p>
-                                <iframe style="width:100%" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Jalan%20Janti%2C%20Gang%20Arjuna%2059%2C%20Karangjambe%2C%20Banguntapan%2C%20Bantul&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="%3$s" aria-label="%3$s" frameborder="0"></iframe>
-                            </div> --}}
 
                             <div class="cardHeader1" style="margin-top: 30px;">
                                 <h6>
