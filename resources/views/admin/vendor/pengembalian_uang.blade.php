@@ -2,7 +2,6 @@
 @section('content')
 <section class="home-section">
     <div class="main">
-
         <div class="topbar">
             <div class="home-content">
                 <i class='bx bx-menu'></i>
@@ -15,24 +14,19 @@
             </div>
         </div>
 
-        <!-- top nav -->
-
         <!-- data list -->
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Data Pemesanan PickUp</h2>
+                    <h2>Data Transaksi Pengembalian Uang</h2>
                     <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#exampleModal">Filter By </a>
                 </div>
-
                 <table class="table-borderless mt-3 w-auto">
                     <thead>
                         <tr>
-                            <td>Nama Pemesanan</td>
-                            <td>No Telpon</td>
-                            <td>Jenis Layanan</td>
+                            <td>Nama Vendor</td>
+                            <td>Total Transaksi</td>
                             <td>Tanggal</td>
-                            <td>Pembayaran</td>
                             <td>Alamat</td>
                             <td>Aksi</td>
                         </tr>
@@ -40,79 +34,78 @@
                     <tbody>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <td>Rebbecca Abadi</td>
-                            <td>0895648980</td>
-                            <td>Mobil PickUp</td>
-                            <td>22-02-2022</td>
-                            <td>Jl.Yos Sudarso No.123</td>
-                            <td>Rp 2.300.343</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
                             <td>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                                    Detail
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rebbecca Abadi</td>
+                            <td>Rp 200.000</td>
+                            <td>27-10-2022</td>
+                            <td>Planet Mars</td>
+                            <td>
+                                <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Done
                                 </button>
                             </td>
                         </tr>
@@ -142,10 +135,10 @@
                     </div>
                 </div>
                 <button type="button" class="btn btn-success btn-sm" style="width: 100%">OK</button>
+                <br>
             </div>
         </div>
     </div>
-
 </section>
 @endsection
 

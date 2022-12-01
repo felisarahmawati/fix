@@ -89,10 +89,10 @@
                 </div>
                 <div class="sub-menu" style="font-size: 13px">
                     <div class="drop-box">
-                        {{-- <a href="/data/data_customer">Data Customer</a> --}}
-                        <a href="/data/data_order/kendaraan">Data Order</a>
+                        <a href="/data/data_customer">Data Customer</a>
+                        <a href="/data/data_order/order">Data Order</a>
                         <a href="/data/data_payment">Data Payment</a>
-                        <a href="/vendor/data_vendor/kendaraan">Data Vendor</a>
+                        {{-- <a href="/vendor/data_vendor/kendaraan">Data Vendor</a> --}}
                     </div>
                 </div>
             </li>
@@ -113,14 +113,16 @@
                 <div class="iocn-link">
                     <a>
                         <i class='bx bxs-shopping-bags'></i>
-                        <span class="link_name dropBtn">Penarikan Vendor</span>
+                        <span class="link_name dropBtn">Vendor</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <div class="sub-menu" style="font-size: 13px">
                     <div class="drop-box">
                         <a href="/vendor/transaksi_pengambilan_uang/berlangsung">Penarikan Dana</a>
-                        <a href="">-</a>
+                        <a href="/vendor/pengembalian_uang">Pengembalian Uang</a>
+                        <a href="/vendor/pemesanan_pickup">Pemesanan Pick Up</a>
+                        <a href="/vendor/pengembalian_barang">Pengembalian Barang</a>
                     </div>
                 </div>
             </li>

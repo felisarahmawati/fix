@@ -26,57 +26,62 @@
                             <tr>
                                 <td>Username</td>
                                 <td>ID Transaksi</td>
+                                <td>Jenis Layanan</td>
                                 <td>Tanggal</td>
-                                <td>Metode Pembayaran</td>
+                                <td>Jumlah</td>
                                 <td>Alamat</td>
                                 <td>Aksi</td>
                             </tr>
                         </thead>
                         <tbody class="text-start">
                             <tr>
-                                <td>Robecca</td>
-                                <td>42312345657</td>
-                                <td>15/05/2022</td>
-                                <td>Transfer Bank</td>
-                                <td>2118 Thornridge cir. Syracuse connecticut 35624</td>
-                                <td class="td" style="size: 30px;">
-                                    <button onclick="detail" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Detail">
+                                <td>Pepy Yanto</td>
+                                <td>KD123</td>
+                                <td>Kendaraan</td>
+                                <td>22-02-2022</td>
+                                <td>Rp 200.000</td>
+                                <td>DI Yogyakarta</td>
+                                <td>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                                         Detail
                                     </button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Howard</td>
-                                <td>42312345657</td>
-                                <td>15/05/2022</td>
-                                <td>COD</td>
-                                <td>2118 Thornridge cir. Syracuse connecticut 35624</td>
-                                <td class="td" style="size: 30px;">
-                                    <button onclick="detail" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Detail">
+                                <td>Pepy Yani</td>
+                                <td>KD124</td>
+                                <td>Barang</td>
+                                <td>22-02-2022</td>
+                                <td>Rp 200.000</td>
+                                <td>DI Yogyakarta</td>
+                                <td>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                                         Detail
                                     </button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>becca Howa</td>
-                                <td>42312345657</td>
-                                <td>15/05/2022</td>
-                                <td>COD</td>
-                                <td>2118 Thornridge cir. Syracuse connecticut 35624</td>
-                                <td class="td" style="size: 30px;">
-                                    <button onclick="detail" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Detail">
+                                <td>Pepy Ule</td>
+                                <td>KD123</td>
+                                <td>Pick up</td>
+                                <td>22-02-2022</td>
+                                <td>Rp 200.000</td>
+                                <td>DI Yogyakarta</td>
+                                <td>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                                         Detail
                                     </button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Rocca How</td>
-                                <td>42312345657</td>
-                                <td>15/05/2022</td>
-                                <td>Transfer Bank</td>
-                                <td>2118 Thornridge cir. Syracuse connecticut 35624</td>
-                                <td class="td" style="size: 30px;">
-                                    <button onclick="detail" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Detail">
+                                <td>Pepy Sule</td>
+                                <td>KD123</td>
+                                <td>Bangunan</td>
+                                <td>22-02-2022</td>
+                                <td>Rp 200.000</td>
+                                <td>DI Yogyakarta</td>
+                                <td>
+                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                                         Detail
                                     </button>
                                 </td>

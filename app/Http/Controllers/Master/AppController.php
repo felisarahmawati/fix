@@ -83,23 +83,9 @@ class AppController extends Controller
         return view("superadmin.transaksi.transaksi");
     }
 
-    public function order_barang()
+    public function order_data()
     {
-        return view("superadmin.data.data_order.barang");
-    }
-
-    public function order_pickup()
-    {
-        return view("superadmin.data.data_order.pickup");
-    }
-
-    public function order_kendaraan()
-    {
-        return view("superadmin.data.data_order.kendaraan");
-    }
-    public function order_bangunan()
-    {
-        return view("superadmin.data.data_order.bangunan");
+        return view("superadmin.data.data_order.order");
     }
 
     public function data_payment()

@@ -50,8 +50,10 @@ use App\Http\Controllers\Admin\PemesananPickupController;
 use App\Http\Controllers\Layanan\LayananSliderController;
 use App\Http\Controllers\Master\DataDiriVendorController;
 use App\Http\Controllers\UserKonfirmPembayaranController;
+use App\Http\Controllers\Admin\PengembalianUangController;
 use App\Http\Controllers\Admin\VerifikasiVendorController;
 use App\Http\Controllers\Admin\DataLayananVendorController;
+use App\Http\Controllers\Admin\PengembalianBarangController;
 use App\Http\Controllers\Admin\VerifikasiPenggunaController;
 use App\Http\Controllers\Master\DataCustomersuperController;
 use App\Http\Controllers\Master\UpdatephotoAdminnController;
@@ -92,10 +94,7 @@ Route::controller(AdminController::class)->group(function(){
         Route::resource("data_payment", DataPaymentController::class);
         Route::controller(DataOrderController::class)->group(function(){
             Route::prefix("data_order")->group(function(){
-                Route::get("/kendaraan", "kendaraan");
-                Route::get("/bangunan", "bangunan");
-                Route::get("/barang", "barang");
-                Route::get("/pickup", "pickup");
+                Route::get("/order", "order");
             });
         });
     });
@@ -112,6 +111,8 @@ Route::controller(AdminController::class)->group(function(){
         Route::resource("verifikasi_layanan", VerifikasiLayananVendorController::class);
         Route::resource("data_vendor", VerifikasiDataVendorController::class);
         Route::resource("pemesanan_pickup", PemesananPickupController::class);
+        Route::resource("pengembalian_uang", PengembalianUangController::class);
+        Route::resource("pengembalian_barang", PengembalianBarangController::class);
         Route::controller(DataLayananVendorController::class)->group(function(){
             Route::prefix("data_vendor")->group(function(){
                 Route::get("/kendaraan", "kendaraan");
@@ -281,10 +282,7 @@ Route::group(["middleware" => ["autentikasi"]], function() {
             Route::prefix("data")->group(function() {
                 Route::get("/data_payment", "data_payment");
                 Route::prefix("data_order")->group(function() {
-                    Route::get("/kendaraan", "order_kendaraan");
-                    Route::get("/barang", "order_barang");
-                    Route::get("/bangunan", "order_bangunan");
-                    Route::get("/pickup", "order_pickup");
+                    Route::get("/order", "order_data");
                 });
             });
             Route::prefix("penarikan")->group(function() {

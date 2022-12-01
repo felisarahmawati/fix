@@ -19,22 +19,22 @@
             <div class="details1 ">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Data Verifikasi Layanan</h2>
+                        <h2>Verifikasi Layanan</h2>
                     </div>
                     <table class="table-borderless mt-3 w-auto">
                         <thead class="text-start">
                             <tr>
                                 <td>Nama Vendor</td>
-                                <td>Layanan</td>
+                                <td>Jenis Layanan</td>
                                 <td>Alamat</td>
-                                <td>Aksi</td>
+                                <td style="text-align: center">Aksi</td>
                             </tr>
                         </thead>
                         <tbody class="text-start">
                             @foreach ( $user as $lynvendor )
                                 <tr>
-                                    <td>{{ $lynvendor->nama_vendor }}</td>
-                                    <td>{{ $lynvendor->layanan }}</td>
+                                    <td>Hamko Maju</td>
+                                    <td>Barang</td>
                                     <td>{{ $lynvendor->alamat }}</td>
                                     <td class="td" style="text-align: center">
                                         <button onclick="detail" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Bangunan{{ $lynvendor->id }}">
@@ -56,8 +56,13 @@
     <div class="modal-dialog modal-lg" style="width: 60%">
         <div class="modal-content">
             <div class="modal-header hader text-center">
-                <h3 class="modal-title" id="exampleModalLabel">Detail Vendor</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="modal-title" id="exampleModalLabel">Verifikasi Layanan</h3>
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <a href="#" class="btn btn-thema">Barang</a>
+                    </div>{{-- <button>Barang</button> --}}
+                </div>
+                {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
             </div>
             <div class="modal-body" id="modal-content-detail">
                 <div class="card-body">
@@ -70,39 +75,26 @@
                             <h5 class="mt-4">Username</h5>
                             <label for="">{{ $lynvendor->name }}</label>
 
-                            <h5 class="mt-4">Email</h5>
-                            <label for="">{{ $lynvendor->email }}</label>
+                            <h5 class="mt-4">Barang yang dilayani</h5>
+                            <label for=""></label>
                         </div>
                         <div class="col-md-6">
                             <h5>Nama Pemilik</h5>
-                            <label for="">{{ $lynvendor->nama_lengkap }}</label>
+                            <label for=""></label>
 
-                            <h5 class="mt-4">NIK</h5>
-                            <label for="">{{ $lynvendor->no_ktp }}</label>
+                            <h5 class="mt-4">Alamat Penitipan</h5>
+                            <label for=""></label>
 
-                            <h5 class="mt-4">Tempat, Tanggal Lahir</h5>
-                            <label for="">{{ $lynvendor->tmpt_lahir }}, {{ $lynvendor->tgl_lahir }}</label>
+                            <h5 class="mt-4">Luas Tempat</h5>
+                            <label for=""></label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3 mt-4">
-                            <p class="text-center">Depan</p>
-                            <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 100%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2">
-                        </div>
-
-                        <div class="col-md-3 mt-4">
-                            <p class="text-center">Kiri</p>
-                            <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 100%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2">
-                        </div>
-                        <div class="col-md-3 mt-4">
-                            <p class="text-center">Kanan</p>
-                            <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 100%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2">
-                        </div>
-                        <div class="col-md-3 mt-4">
-                            <p class="text-center">Dalam</p>
-                            <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 100%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2">
-                        </div>
-                    </div>
+                   <div class="col-md-6">
+                    <h5>
+                        Foto Tempat
+                    </h5>
+                    <label for="">Link google drive</label>
+                   </div>
                     <div class="row">
                         <div class="col-md-6 text-end">
                             <button onclick="verifikasi" type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
@@ -116,9 +108,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer d-md-block">
-                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" aria-label="Close">Kembali</button>
             </div>
         </div>
     </div>

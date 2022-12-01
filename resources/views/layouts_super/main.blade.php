@@ -184,20 +184,6 @@
                     </div>
                 </div>
             </li>
-            {{-- <li class="list {{ Request::segment(2) == 'super ' ? 'active' : '' }}">
-                <div class="iocn-link">
-                    <a>
-                        <i class="bi bi-grid-fill"></i>
-                        <span class="link_name dropBtn">Super</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <div class="sub-menu">
-                    <div class="drop-box">
-                        <a href="{{ url('/superadmin/master/provinsi')}}">Provinsi</a>
-                    </div>
-                </div>
-            </li> --}}
 
             <li class="list {{ Request::segment(2) == 'data' ? 'active' : '' }}">
                 <div class="iocn-link">
@@ -209,9 +195,8 @@
                 </div>
                 <div class="sub-menu">
                     <div class="drop-box">
-                        <a href="/superadmin/data/data_order/kendaraan">Order</a>
+                        <a href="/superadmin/data/data_order/order">Order</a>
                         <a href="/superadmin/data/data_payment">Payment</a>
-                        {{-- <a href="/superadmin/data/pengaturan-user">Pengaturan User</a> --}}
                     </div>
                 </div>
             </li>

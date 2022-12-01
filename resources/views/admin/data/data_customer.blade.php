@@ -28,6 +28,7 @@
                             <td>Email</td>
                             <td>No Telpon</td>
                             <td>Alamat</td>
+                            <td>Aksi</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +38,11 @@
                             <td>beca@gmail.com</td>
                             <td>0895648980</td>
                             <td>Planet Mars</td>
+                            <td>
+                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                                    Detail
+                                </button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
