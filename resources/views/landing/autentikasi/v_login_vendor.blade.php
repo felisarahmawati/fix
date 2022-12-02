@@ -25,16 +25,16 @@
                         LOG IN TO YOUR ACCOUNT
                     </h6>
                     <hr>
-                    <form action="{{ url('/login') }}" method="POST">
+                    <form action="{{ url('/login/vendor') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="user-details">
                             <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Type your email address">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Type your email address">
                             </div>
                             <div class="mb-2">
-                                <label for="formGroupExampleInput2" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="************">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="************">
                             </div>
                         </div>
                         <div class="user-links mb-3">

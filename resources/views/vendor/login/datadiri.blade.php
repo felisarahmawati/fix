@@ -305,6 +305,9 @@
                                                 <tr>
                                                     <td class="text-center">{{ $data->jasa }}</td>
                                                     <td class="text-center">
+                                                        @if (empty($venodr_jasa->status))
+
+                                                        @else
                                                         @if ($vendor_jasa->status == 1)
                                                             <form action="{{ url('/vendor/lengkapi-data/non_aktifkan') }}" method="POST">
                                                                 @method("PUT")
@@ -323,6 +326,7 @@
                                                                     Aktifkan
                                                                 </button>
                                                             </form>
+                                                        @endif
                                                         @endif
                                                     </td>
                                                 </tr>

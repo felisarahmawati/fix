@@ -41,17 +41,21 @@
                             <tr>
                                 <td>{{ $vendor->name }}</td>
                                 <td>{{ $vendor->email }}</td>
-                                <td>{{ $vendor->kota_kab }}</td>
-                                <td>{{ $vendor->kecamatan }}</td>
-                                <td>{{ $vendor->kelurahan }}</td>
+                                <td>{{ empty($vendor->kota_kab) ? "Kosong" : $vendor->kota_kab }}</td>
+                                <td>{{ empty($vendor->kecamatan) ? "Kosong" : $vendor->kecamatan }}</td>
+                                <td>{{ empty($vendor->kelurahan) ? "Kosong" : $vendor->kelurahan }}</td>
                                 <td class="text-center">
                                     @if ($vendor->status == 0)
-                                    <span class="badge badge-danger">
+                                    <span class="badge badge-danger" style="background-color: red;">
                                         Tidak Aktif
                                     </span>
-                                    @else
-                                    <span class="badge badge-success">
+                                    @elseif($vendor->status == 1)
+                                    <span class="badge badge-success" style="background-color: green;">
                                         Aktif
+                                    </span>
+                                    @else
+                                    <span class="badge badge-success" style="background-color: orange;">
+                                        Ditolak
                                     </span>
                                     @endif
                                 </td>
@@ -130,7 +134,7 @@
                                         <div class="form-group row">
                                             <label for="kecamatan" class="col-sm-2 col-form-label text-right"> Kecamatan </label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kecamatan" value="{{ $vendor->kecamatan }}" readonly>
+                                                <input type="text" class="form-control" id="kecamatan" value="{{ empty($vendor->kecamatan) ? 'Kosong' : $vendor->kecamatan }}" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -138,7 +142,7 @@
                                             </label>
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="kota_kab"
-                                                    value="{{ $vendor->kota_kab }}" readonly>
+                                                    value="{{ empty($vendor->kota_kab) ? "Kosong" : $vendor->kota_kab }}" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -146,7 +150,7 @@
                                             </label>
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="kelurahan"
-                                                    value="{{ $vendor->kelurahan }}" readonly>
+                                                    value="{{ empty($vendor->kelurahan) ? "Kosong" : $vendor->kelurahan }}" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row">
