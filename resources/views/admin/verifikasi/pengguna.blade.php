@@ -56,8 +56,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{$pengguna->id}}"
-                                        class="btndetail">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{$pengguna->id}}" class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>
                                 </td>
@@ -69,7 +68,7 @@
         </div>
 
 <div class="modal fade" id="exampleModalDetail{{$pengguna->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" style="width: 60%">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header hader text-center">
                 <h3 class="modal-title" id="exampleModalLabel"></i> Data <b>{{ $pengguna->name }}</b></h3>
@@ -82,52 +81,48 @@
                                 <form action="{{ url('/admin/verifikasi/pengguna/' . $pengguna->id . '/aktifkan') }}" method="POST">
                                     {{ csrf_field() }}
                                     @method('PUT')
-                                    <div class="card-body">
-                                        <div class="form-group row">
-                                            <label for="name" class="col-sm-2 col-form-label text-right">Nama</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="name" value="{{ $pengguna->name }}" readonly>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5>Nama</h5>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="email" class="col-sm-2 col-form-label text-right"> Email </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="email" value="{{ $pengguna->email }}" readonly>
-                                            </div>
+                                        <div class="col-8">
+                                            <label>{{ $pengguna->name }}</label>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="kecamatan" class="col-sm-2 col-form-label text-right"> Kecamatan </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kecamatan" value="{{ $pengguna->kecamatan }}" readonly>
-                                            </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>Email</h5>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="kota_kabupaten" class="col-sm-2 col-form-label text-right"> Kota / Kabupaten
-                                            </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kota_kab"
-                                                    value="{{ $pengguna->kota_kab }}" readonly>
-                                            </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->email }}</label>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="kelurahan" class="col-sm-2 col-form-label text-right"> Kelurahan
-                                            </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="kelurahan"
-                                                    value="{{ $pengguna->kelurahan }}" readonly>
-                                            </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>Kecamatan</h5>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="no_telp" class="col-sm-2 col-form-label text-right">No. Telp</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
-                                            </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->kecamatan }}</label>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="alamat" class="col-sm-2 col-form-label text-right">Alamat</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="alamat" value="{{ $pengguna->alamat }}" readonly>
-                                            </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>Kota/Kabupaten</h5>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->kota_kab }}</label>
+                                        </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>Kelurahan</h5>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->kelurahan }}</label>
+                                        </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>No. Telp</h5>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->no_telp }}</label>
+                                        </div>
+                                        <div class="col-4 mt-3">
+                                            <h5>Alamat</h5>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <label>{{ $pengguna->alamat }}</label>
                                         </div>
                                     </div>
                                     @if ($pengguna->status == 1)

@@ -179,28 +179,30 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-content-detail">
-                <div class="mb-3 row">
-                    <label for="name">Nama</label>
-                    <div class="col">
-                      <input type="text" readonly class="form-control-plaintext" id="name" value="{{ $pengguna->name }}" readonly>
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Nama</h5>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="email">Email</label>
-                    <div class="col">
-                      <input type="text" readonly class="form-control-plaintext" id="email" value="{{ $pengguna->email }}" readonly>
+                    <div class="col-8">
+                        <label>{{ $pengguna->name }}</label>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="no_telp">No Telepon</label>
-                    <div class="col">
-                      <input type="text" readonly class="form-control-plaintext" id="no_telp" value="{{ $pengguna->no_telp }}" readonly>
+                    <div class="col-4 mt-3">
+                        <h5>Email</h5>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="alamat">Alamat</label>
-                    <div class="col">
-                      <input type="text" readonly class="form-control-plaintext" id="alamat" value="{{ $pengguna->alamat }}" readonly>
+                    <div class="col-8 mt-3">
+                        <label>{{ $pengguna->email }}</label>
+                    </div>
+                    <div class="col-4 mt-3">
+                        <h5>No Telp</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <label>{{ $pengguna->no_telp }}</label>
+                    </div>
+                    <div class="col-4 mt-3">
+                        <h5>Alamat</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <label>{{ $pengguna->alamat }}</label>
                     </div>
                 </div>
             </div>
