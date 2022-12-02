@@ -79,8 +79,10 @@ use App\Http\Controllers\Master\HomeAwalController as MasterHomeAwalController;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('landing.dashboard');
 });
+
+require __DIR__ . '/vendor.php';
 
 // Tampilan Admin
 Route::controller(AdminController::class)->group(function(){
