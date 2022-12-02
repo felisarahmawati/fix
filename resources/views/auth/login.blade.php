@@ -137,5 +137,9 @@
     {!! session('message') !!}
     @endif
 
+    @if (session('tolak'))
+    {!! session('tolak') !!}
+    @endif
+
 </body>
 </html>
