@@ -21,7 +21,10 @@
                         {{ session('gagal')}}
                     </div>
                     @endif
-                    <h6 class="fw-bold text-start">LOG IN TO YOUR ACCOUNT</h6><hr>
+                    <h6 class="fw-bold text-start">
+                        LOG IN TO YOUR ACCOUNT
+                    </h6>
+                    <hr>
                     <form action="{{ url('/login') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="user-details">
@@ -36,7 +39,7 @@
                         </div>
                         <div class="user-links mb-3">
                             <a href="#" class="pull-left">Forgot Password?</a>
-                            <a href="{{url('/register')}}" class="pull-right">Create An Account</a>
+                            <a href="{{url('/register/vendor')}}" class="pull-right">Create An Account</a>
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <button class="btn btn-primary" type="submit">LOGIN</button>
@@ -54,5 +57,16 @@
         </div>
     </div>
 </div>
+
+@endsection
+
+@section("js")
+
+<script src="{{ url('/assets') }}/js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@if (session('message'))
+{!! session('message') !!}
+@endif
 
 @endsection

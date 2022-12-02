@@ -34,6 +34,8 @@
 
     @include('landing.js.style_js')
 
+    @yield("js")
+
 </body>
 
 </html>
