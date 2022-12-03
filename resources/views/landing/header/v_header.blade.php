@@ -7,22 +7,22 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
-                    <a class="nav-link scrollto active" href="#hero">
+                    <a class="nav-link scrollto active" href="{{ url('') }}#hero">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="#about">
+                    <a class="nav-link scrollto" href="{{ url('') }}#about">
                         Tentang
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="#services">
+                    <a class="nav-link scrollto" href="{{ url('') }}#services">
                         Layanan
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="#contact">
+                    <a class="nav-link scrollto" href="{{ url('') }}#contact">
                         Kontak
                     </a>
                 </li>

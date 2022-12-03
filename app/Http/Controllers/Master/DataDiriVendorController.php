@@ -15,11 +15,9 @@ class DataDiriVendorController extends Controller
 {
     public function indexp()
     {
-        $user = User::findOrFail(Auth::id());
-
         $data["jasa_layanan"] = JasaLayanan::get();
 
-        return view('vendor.login.datadiri',$data ,compact('user'));
+        return view('vendor.login.datadiri', $data);
     }
 
     public function update(Request $request, $id)
@@ -108,6 +106,17 @@ class DataDiriVendorController extends Controller
     public function aktifkan(Request $request)
     {
         VendorJasa::where("user_id", Auth::user()->id)->where("jasa_layanan_id", $request->jasa_layanan_id)->update([
+            "status" => 1
+        ]);
+
+        return back();
+    }
+
+    public function tambah_layanan(Request $request)
+    {
+        VendorJasa::create([
+            "user_id" => Auth::user()->id,
+            "jasa_layanan_id" => $request->jasa_layanan_id,
             "status" => 1
         ]);
 

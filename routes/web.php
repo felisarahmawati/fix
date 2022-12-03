@@ -569,15 +569,3 @@ Route::controller(VendorController::class)->group(function(){
 Route::get('/vendor/vendor/setting', [VendorController::class, 'setting']);
 
 //Lengkapi Data
-Route::controller(DataDiriVendorController::class)->group(function(){
-    Route::prefix("vendor")->group(function() {
-        Route::prefix("lengkapi-data")->group(function() {
-            Route::get('/', 'indexp');
-            Route::put("/non_aktifkan", "non_aktifkan");
-            Route::put("/aktifkan", "aktifkan");
-            Route::post("/login/datadiri", "post");
-        });
-    });
-
-    Route::patch('/vendor/login/datadiri/{id}','update')->name('datadiri.update');
-});
