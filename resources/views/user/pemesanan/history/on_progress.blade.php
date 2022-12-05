@@ -6,10 +6,10 @@
         <div class="row row-layanan">
             <ul class="nav nav-pills nav-fill mb-3">
                 <li class="nav-item">
-                  <a class="nav-link text-success" aria-current="page" href="/user/pemesanan/history/on_progress">Layanan Berlangsung</a>
+                  <a class="nav-link text-success fw-bold" aria-current="page" href="/user/pemesanan/history/on_progress">Layanan Berlangsung</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark" href="/user/pemesanan/history/last_progress">Layanan Selesai</a>
+                  <a class="nav-link text-dark fw-bold" href="/user/pemesanan/history/last_progress">Layanan Selesai</a>
                 </li>
             </ul>
         </div>
@@ -20,7 +20,7 @@
                     <div class="mt-2" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-3 p-4">
-                                <img src="{{ asset('assets/img/mtor4.jpg') }}" class="img-fluid rounded-start" alt="..." style="width: 100%; margin-left: 10px">
+                                <img src="{{ asset('assets/img/parkirmotor.jpg') }}" class="img-fluid rounded-start" alt="..." style="width: 100%; margin-left: 10px">
                             </div>
                             <div class=" col-md-9">
                                 <div class="card-body">

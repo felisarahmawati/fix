@@ -16,7 +16,7 @@
                     </p>
                 </div>
                 <div class="d-grid gap-2 col-2 mx-auto">
-                    <a class="btn btn-success" href="/user/lengkapi_vendor" role="button">Mulai Pendaftaran</a>
+                    <a class="btn btn-success" href="/user/landingpage/lengkapi_vendor" role="button">Mulai Pendaftaran</a>
                 </div>
             </div>
         </div>

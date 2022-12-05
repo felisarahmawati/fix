@@ -97,7 +97,7 @@
                               <div class="col">
                                   <div class="card mt-4 card-layanan">
                                       <figure class="figure">
-                                              <a href="/user/kategori/detail"><img src="{{ asset('assets/img/mtor4.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
+                                              <a href="/user/kategori/detail"><img src="{{ asset('assets/img/parkirmotor.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
                                       </figure>
                                       <div class="card-body">
                                           <p class="card-title fw-bold fs-6">Pepi Kendaraan</p>
@@ -117,7 +117,7 @@
                               <div class="col">
                                   <div class="card mt-4 card-layanan">
                                       <figure class="figure">
-                                              <a href="/user/kategori/detail"><img src="{{ asset('assets/img/toyota.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
+                                              <a href="/user/kategori/detail"><img src="{{ asset('assets/img/parkirmo.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
                                       </figure>
                                       <div class="card-body">
                                           <p class="card-title fw-bold fs-6">Abah Titipsini</p>
@@ -137,7 +137,7 @@
                               <div class="col">
                                   <div class="card mt-4 card-layanan">
                                       <figure class="figure">
-                                          <a href="/user/kategori/detail"><img src="{{ asset('assets/img/bronco2.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
+                                          <a href="/user/kategori/detail"><img src="{{ asset('assets/img/parkirmotor.jpg') }}" class="figure-img img-fluid rounded" alt="kendaraan" style="border-radius: 5px; width:300px"></a>
                                       </figure>
                                       <div class="card-body">
                                         <a href="/user/kategori/detail"><p class="card-title fw-bold fs-6 text-dark">Leon Penitipan</p></a>

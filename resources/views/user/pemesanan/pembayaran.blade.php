@@ -1,9 +1,8 @@
 @extends('layouts_user.main')
 @section('container')
-    <!-- card pemesanan barang -->
-    <section id="services" class="services section-bg" style="padding-top: 100px;" data-aos-delay="50">
 
-
+<section id="services" class="services section-bg" style="padding-top: 100px;" data-aos-delay="50">
+    
     <div class="container mt-4 mb-4" data-aos="fade-up">
         <div class="row row-layanan">
             <p class="text-center fs-3">
@@ -37,7 +36,7 @@
                 </div>
             </div>
             <!-- Button trigger modal -->
-
+            
         <div class="d-grid gap-2 col-6 mx-auto mb-3">
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="bi bi-cloud-arrow-up-fill p-2"></i>Konfirmasi Pembayaran

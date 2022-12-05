@@ -77,10 +77,10 @@
                 <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="img mb-3">
-                            <a href="/user/sub/baru"><img src="{{ asset('assets/img/icon_bangunann.png') }}" alt="..."></a>
+                            <a href="/user/sub/bangunan"><img src="{{ asset('assets/img/icon_bangunann.png') }}" alt="..."></a>
                         </div>
                         <h4 class="title">
-                            <a href="/user/sub/baru">
+                            <a href="/user/sub/bangunan">
                                 Bangunan
                             </a>
                         </h4>
@@ -102,10 +102,10 @@
                 <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="img mb-3">
-                            <a href="/user/sub/baru"><img src="{{ asset('assets/img/icon_barang.png') }}" alt="..."></a>
+                            <a href="/user/sub/barang"><img src="{{ asset('assets/img/icon_barang.png') }}" alt="..."></a>
                         </div>
                         <h4 class="title">
-                            <a href="/user/sub/baru">
+                            <a href="/user/sub/barang">
                                 Barang
                             </a>
                         </h4>
