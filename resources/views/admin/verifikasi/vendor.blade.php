@@ -1,5 +1,7 @@
 @extends('layouts_admin.main')
+
 @section('content')
+
 <section class="home-section">
     <div class="main">
 
@@ -7,12 +9,14 @@
             <div class="home-content">
                 <i class='bx bx-menu'></i>
             </div>
-            <div class="search" data-aos="fade-left" data-aos-duration="1000">
-                <label>
-                    <input type="text" placeholder="Cari Disini">
-                    <ion-icon name="search-outline"></ion-icon>
-                </label>
-            </div>
+            <form action="/admin/verifikasi/vendor">
+                <div class="search2" style="margin-top: 10px;">
+                    <label>
+                        <input type="text" class="form-control" name="search" placeholder="Cari Disini">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </form>
         </div>
 
         <!-- top nav -->
@@ -21,7 +25,7 @@
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Data vendor</h2>
+                    <h2>Verifikasi vendor</h2>
                 </div>
 
                 <table class="table-borderless mt-3 w-auto">
@@ -60,7 +64,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{$vendor->id}}"
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{ $vendor->id }}"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>

@@ -59,8 +59,8 @@
                 </div>
                 <div class="sub-menu" style="font-size: 13px">
                     <div class="drop-box">
-                        <a href="/admin/verifikasi/pengguna" >Customer</a>
-                        <a href="/admin/verifikasi/vendor">Vendor</a>
+                        <a href="/admin/verifikasi/pengguna" >Verifikasi Customer</a>
+                        <a href="/admin/verifikasi/vendor">Verifikasi Vendor</a>
                     </div>
                 </div>
             </li>
@@ -75,7 +75,7 @@
                 <div class="sub-menu" style="font-size: 13px">
                     <div class="drop-box">
                         <a href="/vendor/verifikasi_layanan">Verifikasi layanan</a>
-                        <a href="/vendor/data_vendor">Verifikasi Vendor</a>
+                        <a href="/vendor/data_vendor">Data Vendor</a>
                     </div>
                 </div>
             </li>
@@ -92,7 +92,6 @@
                         <a href="/data/data_customer">Data Customer</a>
                         <a href="/data/data_order/order">Data Order</a>
                         <a href="/data/data_payment">Data Payment</a>
-                        {{-- <a href="/vendor/data_vendor/kendaraan">Data Vendor</a> --}}
                     </div>
                 </div>
             </li>
@@ -104,10 +103,6 @@
                     </a>
 
                 </div>
-                {{-- <a href="{{ url ('/admin/transaksi/transaksi') }}">
-                    <i class="fa-thin fa-hands-holding-dollar"></i>
-                    <span class="link_name">Transaksi</span>
-                </a> --}}
             </li>
             <li class="list {{ Request::segment(2) == 'vendor' ? 'active' : '' }}">
                 <div class="iocn-link">

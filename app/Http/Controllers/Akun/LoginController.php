@@ -36,7 +36,7 @@ class LoginController extends Controller
                     return back()->with('gagal', 'Ups, Akun sedang diproses. Mohon tunggu sebentar!');
                 }
                 if ($user->status == 2) {
-                    return redirect('/login');
+                     return redirect('/login');
                 } else {
                     Auth::attempt($req);
                     if ($user->id_role == 1) {

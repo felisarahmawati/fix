@@ -32,6 +32,8 @@ use App\Models\Master\Vendor\VendorJasa;
                                             Lengkapi data diri untuk mempercepat verifikasi</b>
                                             <p>Kami melindungi informasi dan penggunaan data diri yang telah anda kirimkan untuk kenyaman pengguna.
                                             </div>
+                                            <label for="nama_vendor" class="form-label">Nama Vendor</label>
+                                            <input type="text" class="form-control" id="nama_vendor" placeholder="Masukan nama vendor" name="nama_vendor" value="{{ Auth::user()->nama_vendor }}">
                                             <label for="name" class="form-label">Nama Lengkap</label>
                                             <input type="text" class="form-control" id="name" placeholder="Masukan nama lengkap" name="name" value="{{ Auth::user()->name }}">
                                             <label for="alamat" class="form-label">Alamat</label>
@@ -44,45 +46,13 @@ use App\Models\Master\Vendor\VendorJasa;
                                             <input type="text" class="form-control" id="no_ktp" placeholder="Masukan no ktp" name="no_ktp" value="{{ Auth::user()->no_ktp }}">
                                             <label for="lokasi" class="form-label">Lokasi</label><br>
                                             <input type="text" class="form-control" id="lokasi" placeholder="Masukan lokasi anda" name="lokasi" value="{{ Auth::user()->lokasi }}">
-                                            <br>
-                                            <label for="dokumen" class="form-label">Dokumen Pelengkap</label>
-                                            <div class="alert text-left bg-info" style=" color:#fff;">
-                                                <b> Lengkapi data diri untuk mempercepat verifikasi</b>
-                                                <p>
-                                                    Kami melindungi informasi dan penggunaan data diri yang telah anda kirimkan untuk kenyaman pengguna.
-                                                </p>
-                                            </div>
-                                            <div class="input-group col-md-8">
-                                                <div class="input-group">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <label for="password-confirm">{{ __('Scan KTP') }}</label>
-                                                            <img src="{{ asset('storage/ktp/'.Auth::user()->image_ktp) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_ktp" type="file" class="form-control" name="image_ktp">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="password-confirm">{{ __('Scan KK') }}</label>
-                                                            <img src="{{ asset('storage/kk/'.Auth::user()->image_kk) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_kk" type="file" class="form-control" name="image_kk">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-4">
-                                                        <div class="col-md-6">
-                                                            <label for="password-confirm">{{ __('Scan SKCK') }}</label>
-                                                            <img src="{{ asset('storage/skck/'.Auth::user()->image_skck) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_skck" type="file" class="form-control" name="image_skck">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <h6 class="card-title fw-bold mt-4">
+                                                Lampirkan Dokumen Pendukung
+                                            </h6>
+                                            <hr>
+                                            <div class="col-12 mt-2">
+                                                <label for="inputLink" class="form-label">Scan KTP & KK</label>
+                                                <input type="text" class="form-control" id="inputLink" name="image_ktp" placeholder="Masukkan link google drive" value="{{ Auth::user()->image_ktp }}">
                                             </div>
                                             <br>
                                             <br>
@@ -106,7 +76,8 @@ use App\Models\Master\Vendor\VendorJasa;
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="POST" action="" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('datadiri.update', Auth::user()->id) }}" enctype="multipart/form-data">
+                                        @method('PATCH')
                                         @csrf
                                         <label for="nama" class="form-label">
                                             <div class="text-danger">Wajib di isi *</div>
@@ -115,7 +86,7 @@ use App\Models\Master\Vendor\VendorJasa;
                                         <label for="nama" class="form-label">Nama Vendor *</label>
                                         <input type="text" class="form-control" id="" placeholder="Masukan nama vendor" name="nama_vendor" value="{{ Auth::user()->nama_vendor }}">
                                         <label for="nama" class="form-label">Nama Lengkap *</label>
-                                        <input type="text" class="form-control" id="" placeholder="Masukan nama lengkap" name="nama_lengkap" value="{{ Auth::user()->nama_lengkap }}">
+                                        <input type="text" class="form-control" id="" placeholder="Masukan nama lengkap" name="name" value="{{ Auth::user()->name }}">
                                         <label for="alamat" class="form-label">Alamat *</label>
                                         <input type="text" class="form-control" id="" placeholder="Masukan alamat anda" name="alamat" value="{{ Auth::user()->alamat }}">
                                         <label for="tgl_lahir" class="form-label">Tanggal Lahir *</label>
@@ -127,56 +98,26 @@ use App\Models\Master\Vendor\VendorJasa;
                                         <label for="lokasi" class="form-label">Pilih Lokasi *</label><br>
                                         <input type="text" class="form-control" id="" placeholder="Masukan lokasi anda" name="lokasi" value="{{ Auth::user()->lokasi }}">
                                         <br>
-                                        <label for="dokumen" class="form-label">Dokumen Pelengkap *</label>
-                                        <div class="alert text-left bg-info" style=" color:#fff;">
-                                            <b>Lengkapi data diri untuk mempercepat verifikasi</b> <p>Kami melindungi informasi dan penggunaan data diri yang
-                                                telah anda kirimkan untuk kenyaman pengguna.
+                                        <div class="input-group col-md-8">
+                                            <h6 class="card-title fw-bold mt-4">
+                                                Lampirkan Dokumen Pendukung
+                                            </h6>
+                                            <hr>
+                                            <div class="col-12 mt-2">
+                                                <label for="inputLink" class="form-label">Scan KTP & KK</label>
+                                                <input type="text" class="form-control" id="inputLink" name="image_ktp" placeholder="Masukkan link google drive" value="{{ Auth::user()->image_ktp }}">
                                             </div>
-                                            <label for="scan" class="form-label">Scan KTP, Scan KK & SKCK </label>
-                                            <div class="input-group col-md-8">
-                                                <div class="input-group">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Scan KTP') }}</label>
-                                                            <img src="{{ asset('storage/ktp/'.Auth::user()->image_ktp) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_ktp" type="file" class="form-control" name="image_ktp">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            {{-- <img src="{{ asset('assets/img/placehold.jpg') }}" id="showgambar1" style="max-width:200px;max-height:200px;float:left;margin-bottom: 10px;" />
-                                                            <input type="file" id="inputkk" class="form-control validate" name="scan2" required> --}}
-                                                            <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Scan KK') }}</label>
-                                                            <img src="{{ asset('storage/kk/'.Auth::user()->image_kk) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_kk" type="file" class="form-control" name="image_kk">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            {{-- <img src="{{ asset('assets/img/placehold.jpg') }}" id="showgambar1" style="max-width:200px;max-height:200px;float:left;margin-bottom: 10px;" />
-                                                            <input type="file" id="inputkk" class="form-control validate" name="scan2" required> --}}
-                                                            <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Scan SKCK') }}</label>
-                                                            <img src="{{ asset('storage/skck/'.Auth::user()->image_skck) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                                                            <br>
-                                                            <div class="col mb-6">
-                                                                <input id="image_skck" type="file" class="form-control" name="image_skck">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <br>
+                                        <div class="row mb-0">
+                                            <div class="col-md-8 offset-md-4">
+                                                <button type="submit" class="btn btn-primary">
+                                                    {{ __('Update') }}
+                                                </button>
                                             </div>
-                                            <br>
-                                            <div class="row mb-0">
-                                                <div class="col-md-8 offset-md-4">
-                                                    <button type="submit" class="btn btn-primary">
-                                                        {{ __('Update') }}
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
+                                </div>
                                 </div>
                             </div>
                         </div>

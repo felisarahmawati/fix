@@ -96,5 +96,93 @@
         </div>
     </div>
 
+
+     {{-- modal detail --}}
+     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="{{ asset('assets/img/Rectangle 77.png') }}" class="img-detail rounded mx-auto d-block" alt="image">
+                    <p class="penitipan text-center" style="padding-top: 20px"><b>Detail Order</b></p>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>ID Transaksi</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            T1273382736237
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md">
+                            <p>Nama Customer</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            Pepi Yanto
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>No Telepon</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            0812748474837
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Jenis Layanan</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            Kendaraan
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Nama Barang</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            Motor
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Jumlah Barang</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            1
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Nama Vendor</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                           PT Maju Mundur
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Tanggal Penitipan</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            10-10-2022
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Tanggal Pengembalian</p>
+                        </div>
+                        <div class="col-md-5 text-end">
+                            15-10-2022
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success btn-sm" style="width: 100%">Tutup</button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
     </section>
 @endsection

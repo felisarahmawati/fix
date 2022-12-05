@@ -21,7 +21,7 @@
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Data Pengguna</h2>
+                    <h2>Verifikasi Pengguna</h2>
                 </div>
 
                 <table class="table-borderless mt-3 w-auto">

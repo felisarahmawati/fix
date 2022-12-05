@@ -150,6 +150,12 @@ Route::controller(VerifikasiPenggunaController::class)->group(function(){
 });
 
 
+//Lengkapi Data
+Route::controller(DataDiriVendorController::class)->group(function(){
+    Route::get('/vendor/login/datadiri', 'indexp');
+    Route::patch('/vendor/login/datadiri/{id}','update')->name('datadiri.update');
+});
+
 // Tampilan User
     Route::controller(UserLandingpageController::class)->group(function() {
         Route::prefix("user")->group(function() {
@@ -415,10 +421,7 @@ Route::controller(UpdatephotoCustomerController::class)->group(function(){
 });
 //route pengguna
 route::controller(DatapenggunaController::class)->group(function(){
-    // Route::get('/superadmin/akun/pengguna/users/admin', 'admin');
-    // Route::get('/superadmin/akun/pengguna/users/vendor', 'vendor');
     Route::get('/superadmin/akun/pengguna/users/finance', 'finance');
-    // Route::get('/superadmin/akun/pengguna/users/customer', 'customer');
     Route::get('/superadmin/verifikasi/data_vendor', 'verifikasi_vendor');
     Route::get('/superadmin/akun/pengguna/users/print_pdf', 'pdf');
 
@@ -454,13 +457,6 @@ Route::controller(FaqController::class)->group(function(){
     Route::get('/superadmin/master/faq/edit', 'edit');
 });
 Route::resource('/faq', FaqController::class);
-
-
-
-
-// Route::get("/layout", function() {
-//     return view("layouts_admin.admin_layout");
-// });
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/superadmin/master/home/index', 'index')->name('index');
