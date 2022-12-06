@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Akun;
+namespace App\Http\Controllers\Vendor;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Http;
 
-class LoginController extends Controller
+class AutentikasiController extends Controller
 {
     public function login()
     {
-        return view("auth.login");
+        return view("landing.autentikasi.v_login_vendor");
     }
 
     public function post_login(Request $request)
@@ -36,7 +35,7 @@ class LoginController extends Controller
                     return back()->with('gagal', 'Ups, Akun sedang diproses. Mohon tunggu sebentar!');
                 }
                 if ($user->status == 2) {
-                     return redirect('/login');
+                    return redirect('/login');
                 } else {
                     Auth::attempt($req);
                     if ($user->id_role == 1) {
@@ -57,37 +56,34 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
-    {
-        Auth::logout();
-
-        return redirect("/login");
-    }
-
     public function register()
     {
-        return view("auth.register");
+        return view("landing.autentikasi.v_register_vendor");
     }
 
-    public function buat_akun()
-    {
-        return view("auth.buat_akun");
-    }
-
-    public function post_register(Request $request)
+    public function post_vendor(Request $request)
     {
         $user = User::create([
             "name" => $request->name,
             "email" => $request->email,
             "no_telp" => $request->no_telp,
             "password" => bcrypt($request->password),
-            'id_role' => 2,
+            'id_role' => 4,
         ]);
 
         session()->put("id", $user["id"]);
         session()->put("nama", $user["name"]);
 
-        return redirect("/complete-data-personal");
+        return redirect("/register/complete-data-personal");
+    }
+
+    public function complete_data_personal(Request $request)
+    {
+        if ((empty(session()->get("id"))) && (empty(session()->get("nama")))) {
+            return redirect("/login");
+        } else {
+            return view("landing.autentikasi.v_complete_data_personal");
+        }
     }
 
     public function post_complete_data_personal(Request $request)
@@ -104,36 +100,6 @@ class LoginController extends Controller
         session()->forget("id");
         session()->forget("nama");
 
-        return redirect("/login")->with(["message" => '<script>swal("Verifikasi telah dikirim!", "Kami akan memproses dalam kurang waktu 1x24 jam!", "success");</script>' ]);
-    }
-
-    public function kecamatan(Request $request)
-    {
-        $id_kota_kab = $request->data;
-        $kec_kecamatan = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/districts/".$id_kota_kab.".json");
-        $kecamatan = $kec_kecamatan->json();
-        foreach ($kecamatan as $kec) {
-            echo "<option value='".$kec["id"]."'>".$kec["name"]."</option>";
-        }
-    }
-
-    public function kelurahan(Request $request)
-    {
-        $id_kecamatan = $request->id_kecamatan;
-        $kel_kelurahan = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/villages/".$id_kecamatan.".json");
-        $kelurahan = $kel_kelurahan->json();
-        foreach ($kelurahan as $kel) {
-            echo "<option value='".$kel["name"]."'>".$kel["name"]."</option>";
-        }
-    }
-
-    public function complete_data_personal(Request $request)
-    {
-        if ((empty(session()->get("id"))) && (empty(session()->get("nama")))) {
-            return redirect("/login");
-        } else {
-            return view("auth.complete_data_personal");
-        }
-
+        return redirect("/login/vendor")->with(["message" => '<script>swal("Verifikasi telah dikirim!", "Kami akan memproses dalam kurang waktu 1x24 jam!", "success");</script>' ]);
     }
 }

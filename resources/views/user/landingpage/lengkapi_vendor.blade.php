@@ -8,28 +8,28 @@
             <form class="row">
                 <h5 class="card-title fw-bold">Lengkapi Data Diri</h5><hr>
                 <div class="col-md-6">
-                  <label for="inputNamaVendor" class="form-label">Nama Vendor</label>
-                  <input type="text" class="form-control" id="inputNamaVendor">
+                    <label for="inputNamaVendor" class="form-label">Nama Vendor</label>
+                    <input type="text" class="form-control" id="inputNamaVendor">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputNamaLengkap" class="form-label">Nama Lengkap Pemilik</label>
-                  <input type="text" class="form-control" id="inputNamaLengkap">
+                    <label for="inputNamaLengkap" class="form-label">Nama Lengkap Pemilik</label>
+                    <input type="text" class="form-control" id="inputNamaLengkap">
                 </div>
                 <div class="col-12 mt-2">
-                  <label for="inputAlamat" class="form-label">Alamat Vendor</label>
-                  <input type="text" class="form-control" id="inputAlamat" placeholder="1234 Main St">
+                    <label for="inputAlamat" class="form-label">Alamat Vendor</label>
+                    <input type="text" class="form-control" id="inputAlamat" placeholder="1234 Main St">
                 </div>
                 <div class="col-md-6 mt-2">
                     <label for="inputTempat" class="form-label">Tempat</label>
                     <input type="text" class="form-control" id="inputTempat">
-                  </div>
+                </div>
                 <div class="col-md-6 mt-2">
                     <p for="tanggalmasuk" class="form-label">Tanggal Lahir</p>
                     <input type="date" class="form-control" id="tanggal">
                 </div>
                 <div class="col-md-6 mt-2">
-                  <label for="inputNIK" class="form-label">NIK</label>
-                  <input type="text" class="form-control" id="inputNIK">
+                    <label for="inputNIK" class="form-label">NIK</label>
+                    <input type="text" class="form-control" id="inputNIK">
                 </div>
                 <div class="col-md-6 mt-2">
                     <label for="inputLink" class="form-label">Lokasi</label>

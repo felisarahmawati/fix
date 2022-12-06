@@ -21,7 +21,7 @@
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Verifikasi Vendor</h2>
+                    <h2>Data Vendor</h2>
                 </div>
 
                 <table class="table-borderless mt-3 w-auto">
@@ -38,7 +38,7 @@
                         @foreach ($user as $data)
                         <tr>
                             <td>{{ $data->nama_vendor }}</td>
-                            <td>{{ $data->nama_lengkap }}</td>
+                            <td>{{ $data->name }}</td>
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>
                             <td class="td" style="size: 30px;">
@@ -80,88 +80,41 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Nama Pemilik</h5>
-                            <label for="">{{ $data->nama_lengkap }}</label>
+                            <label for="">{{ $data->name }}</label>
 
                             <h5 class="mt-4">NIK</h5>
                             <label for="">{{ $data->no_ktp }}</label>
 
                             <h5 class="mt-4">Tempat, Tanggal Lahir</h5>
-                            <label for="">{{ $data->tmpt_lahir }}, {{ $data->tmpt_lahir }}</label>
+                            <label for="">{{ $data->tmpt_lahir }}, {{ $data->tgl_lahir }}</label>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center mt-4">
+                            <b>Link google drive</b>
+                        </p>
+                        <p class="text-center">
+                            {{ $data->image_ktp }}
+                        </p>
+                    </div>
+                    {{-- <div class="row">
                         <div class="col-md-6 mt-4">
                             <p class="text-center">KTP</p>
-                            {{-- <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2"> --}}
                             <img src="{{ asset('storage/ktp/'.$data->image_ktp) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
                         </div>
 
                         <div class="col-md-6 mt-4">
                             <p class="text-center">SKCK</p>
-                            {{-- <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2"> --}}
                             <img src="{{ asset('storage/skck/'.$data->image_skck) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 text-end">
-                            <button onclick="verifikasi" type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
-                                Verifikasi
-                            </button>
-                        </div>
-                        <div class="col-md-6">
-                            <button onclick="tolak" type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak">
-                                 Tolak
-                            </button>
-                        </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
-            {{-- <div class="modal-footer d-md-block">
-                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" aria-label="Close">Kembali</button>
-            </div> --}}
         </div>
     </div>
 </div>
 @endforeach
 {{-- End --}}
-
-{{-- Verifikasi --}}
-<div class="modal fade" id="verifikasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" style="width:30%">
-        <div class="modal-content">
-            <h4 class="modal-title text-center" id="exampleModalLabel">Verifikasi Vendor</h4>
-            <div class="modal-body" id="modal-content-detail">
-                <div class="card-body text-center">
-                    <p><b> Yakin verifikasi vendor ini?</b></p>
-                    <button type="button" class="btn btn-success btn-sm" >verifikasi</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- End --}}
-
-{{-- Tolak --}}
-<div class="modal fade" id="tolak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" style="width:30%">
-        <div class="modal-content">
-            <h4 class="modal-title text-center" id="exampleModalLabel">Konfirmasi Tolak Pengguna</h4>
-            <div class="modal-body" id="modal-content-detail">
-                <div class="card-body text-center">
-                    <p><b>Alasan menolak pengguna ini?</b></p>
-                    <form>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Alasan"></textarea>
-                    </form>
-                    <button type="button" class="btn btn-success btn-sm" >verifikasi</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- End --}}
-
 @endsection
 
 @section('js')
@@ -182,8 +135,6 @@
             $("#tampilGambar").height("300");
         }
     }
-
-
 
     function detail{
         $.ajax({

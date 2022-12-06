@@ -8,10 +8,13 @@ use App\Http\Controllers\Controller;
 
 class VerifikasiVendorController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->search;
         $data = [
-            "user" => User::where("id_role", 4)->get()
+            "user" => User::where("id_role", 4)
+                    ->where('name', 'LIKE', '%' . $search . '%')
+                    ->get()
         ];
         return view('admin.verifikasi.vendor', $data);
     }

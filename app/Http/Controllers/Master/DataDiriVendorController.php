@@ -8,22 +8,19 @@ use App\Http\Controllers\Controller;
 use App\Models\Master\Jasa\JasaLayanan;
 use App\Models\Master\Vendor\VendorJasa;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class DataDiriVendorController extends Controller
 {
     public function indexp()
     {
-        $user = User::findOrFail(Auth::id());
-
         $data["jasa_layanan"] = JasaLayanan::get();
 
-        return view('vendor.login.datadiri',$data ,compact('user'));
+        return view('vendor.login.datadiri', $data);
     }
 
     public function update(Request $request, $id)
     {
+        dd($request->all());
         request()->validate([
             'nama_vendor'  => 'required|string|min:2|max:100',
             'nama_lengkap'  => 'required|string|min:2|max:100',
@@ -32,6 +29,7 @@ class DataDiriVendorController extends Controller
             'tmpt_lahir' => ['string', 'min:3', 'max:191'],
             'no_ktp' => ['string', 'min:3', 'max:191'],
             'lokasi' => ['string', 'min:3', 'max:255'],
+            'image_ktp' => ['string', 'min:3', 'max:255'],
         ]);
 
         $user = User::find($id);
@@ -43,42 +41,7 @@ class DataDiriVendorController extends Controller
         $user->tmpt_lahir = $request->tmpt_lahir;
         $user->no_ktp = $request->no_ktp;
         $user->lokasi = $request->lokasi;
-
-        if (request()->hasFile('image_ktp')) {
-            if($user->image_ktp && file_exists(storage_path('app/public/ktp/' . $user->photo))){
-                Storage::delete('app/public/ktp/'.$user->photo);
-            }
-
-            $file = $request->file('image_ktp');
-            $fileName = $file->hashName() . '.' . $file->getClientOriginalExtension();
-            $request->image_ktp->move(storage_path('app/public/ktp'), $fileName);
-            //foto yang sudah diupload akan masuk ke folder storage/public/ktp
-            $user->image_ktp = $fileName;
-        }
-
-        if (request()->hasFile('image_kk')) {
-            if($user->image_kk && file_exists(storage_path('app/public/kk/' . $user->photo))){
-                Storage::delete('app/public/kk/'.$user->photo);
-            }
-
-            $file = $request->file('image_kk');
-            $fileName = $file->hashName() . '.' . $file->getClientOriginalExtension();
-            $request->image_kk->move(storage_path('app/public/kk'), $fileName);
-            //foto yang sudah diupload akan masuk ke folder storage/public/kk
-            $user->image_kk = $fileName;
-        }
-
-        if (request()->hasFile('image_skck')) {
-            if($user->image_skck && file_exists(storage_path('app/public/skck/' . $user->photo))){
-                Storage::delete('app/public/skck/'.$user->photo);
-            }
-
-            $file = $request->file('image_skck');
-            $fileName = $file->hashName() . '.' . $file->getClientOriginalExtension();
-            $request->image_skck->move(storage_path('app/public/skck'), $fileName);
-            //foto yang sudah diupload akan masuk ke folder storage/public/skck
-            $user->image_skck = $fileName;
-        }
+        $user->image_ktp = $request->image_ktp;
 
         $user->save();
 
@@ -108,6 +71,17 @@ class DataDiriVendorController extends Controller
     public function aktifkan(Request $request)
     {
         VendorJasa::where("user_id", Auth::user()->id)->where("jasa_layanan_id", $request->jasa_layanan_id)->update([
+            "status" => 1
+        ]);
+
+        return back();
+    }
+
+    public function tambah_layanan(Request $request)
+    {
+        VendorJasa::create([
+            "user_id" => Auth::user()->id,
+            "jasa_layanan_id" => $request->jasa_layanan_id,
             "status" => 1
         ]);
 
