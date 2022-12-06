@@ -97,17 +97,6 @@
                             {{ $data->image_ktp }}
                         </p>
                     </div>
-                    {{-- <div class="row">
-                        <div class="col-md-6 mt-4">
-                            <p class="text-center">KTP</p>
-                            <img src="{{ asset('storage/ktp/'.$data->image_ktp) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                        </div>
-
-                        <div class="col-md-6 mt-4">
-                            <p class="text-center">SKCK</p>
-                            <img src="{{ asset('storage/skck/'.$data->image_skck) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>

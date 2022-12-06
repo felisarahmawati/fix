@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h6>Nama Pemilik</h6>
-                                    <label for="">{{ $data_vendor->nama_lengkap }}</label>
+                                    <label for="">{{ $data_vendor->name }}</label>
 
                                     <h6 class="mt-4">NIK</h6>
                                     <label for="">{{ $data_vendor->no_ktp }}</label>

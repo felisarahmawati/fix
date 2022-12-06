@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </li>
-            <li class="list {{ Request::segment(2) == 'Verifikasi' ? 'active' : '' }}">
+            <li class="list {{ Request::segment(2) == 'Vendor' ? 'active' : '' }}">
                 <div class="iocn-link">
                     <a>
                         <i class='bx bxs-shopping-bags'></i>

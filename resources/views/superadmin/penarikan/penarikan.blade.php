@@ -3,8 +3,8 @@
 <section class="home-section">
     <div class="main">
         <div class="topbar">
-            <div class="cardHeader-title">
-                <h2>Data Penarikan</h2>
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
             </div>
             <!-- Search -->
             <div class="search mb-2" data-aos="fade-left" data-aos-duration="1000">
