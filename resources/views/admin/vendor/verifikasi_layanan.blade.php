@@ -281,7 +281,7 @@
                             <h5 class="mt-4">Nama Penjaga Bangunan</h5>
                             <label for="">Asep Komarudin</label>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mt-4">
                             <h5>
                                 Foto Tempat
                             </h5>

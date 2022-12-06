@@ -113,47 +113,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-    <!-- Modal tambah data -->
-    {{-- <div class="modal fade" id="Modaltambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" style="width: 50%">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Tambah data</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="disabledTextInput" class="form-label">Tanggal</label>
-                            <input type="date" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledTextInput" class="form-label">ID Transaksi</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="1234567">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">ID User</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="1233333">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">Jenis Transaksi</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Pick up">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">Harga</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Rp200.000">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-success" data-bs-target="#exampleModalToggle"
-                        data-bs-toggle="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     {{-- modal detail --}}
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -245,59 +204,10 @@
                             <b>400.000</b>
                         </div>
                     </div>
-                    {{--
-                    <p class="bukti text-center" style="padding-top: 20px">
-                        <b>Anda dapat menyimpan tanda terima ini sebagai bukti transaksi
-                            yang sah<b>
-                    </p>
-                    <div class="modal-footer">
-                        <button class="btn btn-success col-sm-12" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal">Update</button>
-                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
-    {{-- <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Update data</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="disabledTextInput" class="form-label">Tanggal</label>
-                            <input type="date" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledTextInput" class="form-label">ID Transaksi</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="1234567">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">ID User</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="1233333">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">Jenis Transaksi</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Pick up">
-                        </div>
-                        <div class="mb-3">
-                            <label for="disabledSelect" class="form-label">Harga</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Rp200.000">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-success" data-bs-target="#exampleModalToggle"
-                        data-bs-toggle="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> --}}
 
     <!-- Modal filter by -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

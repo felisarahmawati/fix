@@ -38,7 +38,7 @@
                         @foreach ($vrfks_vendor as $vendor)
                         <tr>
                             <td>{{ $vendor->nama_vendor }}</td>
-                            <td>{{ $vendor->nama_lengkap }}</td>
+                            <td>{{ $vendor->name }}</td>
                             <td>{{ $vendor->name }}</td>
                             <td>{{ $vendor->email }}</td>
                             <td style="size: 20px;">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Nama Pemilik</h5>
-                            <label for="">{{ $vendor->nama_lengkap }}</label>
+                            <label for="">{{ $vendor->name }}</label>
 
                             <h5 class="mt-4">NIK</h5>
                             <label for="">{{ $vendor->no_ktp }}</label>
@@ -93,37 +93,16 @@
                             <label for="">{{ $vendor->tmpt_lahir }}, {{ $vendor->tgl_lahir }}</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 mt-4">
-                            <p class="text-center">KTP</p>
-                            <img src="{{ asset('storage/ktp/'.$vendor->image_ktp) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                            {{-- <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2"> --}}
-
-                        </div>
-
-                        <div class="col-md-6 mt-4">
-                            <p class="text-center">SKCK</p>
-                            {{-- <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block mt-2 mb-2"> --}}
-                            <img src="{{ asset('storage/skck/'.$vendor->image_skck) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
-                        </div>
+                    <div class="col-md-12">
+                        <p class="text-center mt-4">
+                            <b>Link google drive</b>
+                        </p>
+                        <p class="text-center">
+                            {{ $vendor->image_ktp }}
+                        </p>
                     </div>
-                    {{-- <div class="row">
-                        <div class="col-md-6 text-end">
-                            <button onclick="verifikasi" type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
-                                Verifikasi
-                            </button>
-                        </div>
-                        <div class="col-md-6">
-                            <button onclick="tolak" type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak">
-                                 Tolak
-                            </button>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
-            {{-- <div class="modal-footer d-md-block">
-                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" aria-label="Close">Kembali</button>
-            </div> --}}
         </div>
     </div>
 </div>
