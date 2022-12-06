@@ -29,13 +29,11 @@
                 <li>
                     <a class="nav-link scrollto" href="{{ url('/login') }}">
                         Login
-                        <i class="bi bi-box-arrow-in-right"></i>
                     </a>
                 </li>
                 <li>
                     <a class="nav-link scrollto" href="{{ url('/login/vendor') }}">
                         Masuk Vendor
-                        <i class="bi bi-box-arrow-in-right"></i>
                     </a>
                 </li>
             </ul>

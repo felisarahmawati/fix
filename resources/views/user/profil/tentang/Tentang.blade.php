@@ -7,8 +7,8 @@
                 @include('user.partials.p_customer')
                 <div class="" style="width: 730px">
                     <div class="shadow p-3 mb-5 bg-body rounded">
-                        <h5 class="card-title"><i class="bi bi-arrow-left px-2 "></i>Tentang</h5>
-                            <hr width="100%" color="#c0c0c0">
+                        <h5 class="card-title fw-bold">Tentang</h5>
+                        <hr width="100%" color="#c0c0c0">
                             <div class="row">
                                 <div class="col-md-10">
                                     <div class="tentang" style="margin-left: 120px">

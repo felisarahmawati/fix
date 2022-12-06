@@ -44,7 +44,7 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <button type="button" class="btn btn-success btn-sm" disabled>Layanan Selesai</button>
-                                            <button type="button" class="btn btn-outline-danger btn-sm">Batalkan Layanan</button>
+                                            <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#batalkan">Batalkan Layanan</button>
                                         </div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                     <div class="row g-0">
                         <p class="fw-bold">Layanan saat ini</p>
                         <div class="col-md-5 mt-2">
-                            <img src="{{ asset('assets/img/mtor4.jpg') }}" class="img-fluid rounded-start" style="width: 100%">
+                            <img src="{{ asset('assets/img/parkirmotor.jpg') }}" class="img-fluid rounded-start" style="width: 100%">
                         </div>
                         <div class="col-md-6">
                             <div class="card-body">
@@ -201,5 +201,22 @@
             </div>
         </div>
     </div>
+
+    <!--Batalkan-->
+    <div class="modal fade" id="batalkan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-white bg-success">
+                <h5 class="modal-title" id="exampleModalLabel"><b>Pembatalan layanan</b></h5>
+                <button type="button" class="btn-close bg-white rounded" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Anda yakin membatalkan pesanan ini?</p>
+              <button type="button" class="btn btn-secondary">Tidak</button>
+              <button type="button" class="btn btn-success">Iya</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </section>
 @endsection

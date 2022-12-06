@@ -43,7 +43,7 @@
                 </div>
                 <div class="d-grid gap-2 col-4 mx-auto mb-3">
                     <a class="btn btn btn-success" href="/user/layanan" role="button">Pesan Lagi</a>
-                    <a class="btn btn-outline-success btn-sm" href="/user/pemesanan/History/onn" role="button">Pesanan Saya</a>
+                    <a class="btn btn-outline-success btn-sm" href="/user/pemesanan/history/on_progress" role="button">Pesanan Saya</a>
                 </div>
             </div>
         </div>

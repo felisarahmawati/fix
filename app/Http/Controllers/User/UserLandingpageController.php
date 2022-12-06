@@ -22,16 +22,6 @@ class UserLandingpageController extends Controller
         return view("user.landingpage.tentang");
     }
 
-    public function vendor_center()
-    {
-        return view("user.landingpage.vendor_center");
-    }
-
-    public function lengkapi_vendor()
-    {
-        return view("user.landingpage.lengkapi_vendor");
-    }
-
     public function layanan()
     {
         return view("user.layanan.layanan");
