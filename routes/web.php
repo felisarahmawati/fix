@@ -63,6 +63,7 @@ use App\Http\Controllers\Master\UpdatephotoFinanceController;
 use App\Http\Controllers\Admin\VerifikasiDataVendorController;
 use App\Http\Controllers\Master\TambahAlamatCustomerController;
 use App\Http\Controllers\Admin\PengembalianUangVendorController;
+use App\Http\Controllers\Admin\RiwayatOrderController;
 use App\Http\Controllers\Master\UpdatephotoSuperadminController;
 use App\Http\Controllers\Admin\VerifikasiLayananVendorController;
 use App\Http\Controllers\Master\HomeAwalController as MasterHomeAwalController;
@@ -93,6 +94,7 @@ Route::controller(AdminController::class)->group(function(){
     });
     Route::prefix("data")->group(function(){
         Route::resource("data_customer", DataCustomerController::class);
+        Route::resource("riwayat_order", RiwayatOrderController::class);
         Route::resource("data_payment", DataPaymentController::class);
         Route::controller(DataOrderController::class)->group(function(){
             Route::prefix("data_order")->group(function(){

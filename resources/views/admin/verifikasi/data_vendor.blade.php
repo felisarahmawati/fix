@@ -38,7 +38,7 @@
                         @foreach ($user as $data)
                         <tr>
                             <td>{{ $data->nama_vendor }}</td>
-                            <td>{{ $data->nama_lengkap }}</td>
+                            <td>{{ $data->name }}</td>
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>
                             <td class="td" style="size: 30px;">
@@ -80,13 +80,13 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Nama Pemilik</h5>
-                            <label for="">{{ $data->nama_lengkap }}</label>
+                            <label for="">{{ $data->name }}</label>
 
                             <h5 class="mt-4">NIK</h5>
                             <label for="">{{ $data->no_ktp }}</label>
 
                             <h5 class="mt-4">Tempat, Tanggal Lahir</h5>
-                            <label for="">{{ $data->tmpt_lahir }}, {{ $data->tmpt_lahir }}</label>
+                            <label for="">{{ $data->tmpt_lahir }}, {{ $data->tgl_lahir }}</label>
                         </div>
                     </div>
                     <div class="col-md-12">

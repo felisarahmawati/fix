@@ -14,35 +14,32 @@
             </div>
         </div>
 
-        <!-- data list -->
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Data Customer</h2>
+                    <h2>Riwayat Order</h2>
                 </div>
-                <table class="table-borderless mt-3 w-auto">
+                <table class="table-borderless">
                     <thead>
                         <tr>
-                            <td>Nama</td>
-                            <td>Username</td>
-                            <td>Email</td>
-                            <td>No Telpon</td>
-                            <td>Alamat</td>
-                            <td>Aksi</td>
+                            <td>ID Transaksi</td>
+                            <td>Jenis Layanan</td>
+                            <td>jumlah</td>
+                            <td>Tanggal Penitipan</td>
+                            <td>Tanggal Kembali</td>
+                            <td>Vendor</td>
+                            <td>Harga</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Rebbecca Abadi</td>
-                            <td>rebbecca</td>
-                            <td>beca@gmail.com</td>
-                            <td>0895648980</td>
-                            <td>Planet Mars</td>
-                            <td>
-                                <a href="/data/riwayat_order" class="btn btn-info text-white">
-                                    Detail
-                                </button>
-                            </td>
+                            <td>KD123</td>
+                            <td>Kendaraan</td>
+                            <td>2</td>
+                            <td>10-10-2022</td>
+                            <td>12-10-2022</td>
+                            <td>Parkir Aman</td>
+                            <td>Rp 40.000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -51,4 +48,3 @@
     </div>
 </section>
 @endsection
-
