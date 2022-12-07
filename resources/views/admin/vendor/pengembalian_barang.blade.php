@@ -155,10 +155,6 @@
                             Bangunan
                         </label>
                     </div><br>
-                    <label for="filter" class="form-label">FILTER RANGE HARGA</label>
-                    <div class="range">
-                        <input type="range" class="form-range" id="customRange1" />
-                    </div>
                     <label for="filter" class="form-label">FILTER BERDASARKAN TANGGAL</label>
                     <div class="col-12 mb-3">
                         <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Tanggal Awal</p>

@@ -114,8 +114,7 @@
                 </div>
                 <div class="sub-menu" style="font-size: 13px">
                     <div class="drop-box">
-                        <a href="/vendor/transaksi_pengambilan_uang/berlangsung">Penarikan Dana</a>
-                        <a href="/vendor/pengembalian_uang">Pengembalian Uang</a>
+                        <a href="/vendor/pengembalian_uang">Pengambilan Uang</a>
                         <a href="/vendor/pemesanan_pickup">Pemesanan Pick Up</a>
                         <a href="/vendor/pengembalian_barang">Pengembalian Barang</a>
                     </div>

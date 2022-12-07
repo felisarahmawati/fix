@@ -25,13 +25,17 @@
 
             <div class="details1 ">
                 <div class="recentOrders">
-                    <div class="cardHeader" >
-                        <h4>Data Pengguna</h4>
-                        <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-primary fw-bold rounded-pill px-4 shadow float-end">Tambah +</a>
-                    </div>
-                    <div class="rpw">
-                        <div class="col-md-12 mt-2 text-end">
-                            <a href="{{ url ('/superadmin/akun/pengguna/print_pdf') }}" class="btn btn-danger btn-sm"><i class="bi bi-printer p-2"></i>cetak</a>
+                    <div class="row">
+                        <div class="col-6 text-end">
+                            <div class="cardHeader" >
+                                <h4>Data Pengguna</h4>
+                                <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-primary fw-bold rounded-pill px-4 shadow btn-sm">Tambah</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mt-2 text-end">
+                                <a href="{{ url ('/superadmin/akun/pengguna/print_pdf') }}" class="btn btn-danger">cetak</a>
+                            </div>
                         </div>
                     </div>
                     <br>

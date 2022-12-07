@@ -127,10 +127,6 @@
         <div class="modal-dialog modal-lg" style="width: 30%">
             <div class="modal-content">
                 <div class="modal-body">
-                    <label for="filter" class="form-label">FILTER RANGE HARGA</label>
-                    <div class="range">
-                        <input type="range" class="form-range" id="customRange1" />
-                    </div>
                     <label for="filter" class="form-label">FILTER BERDASARKAN TANGGAL</label>
                     <div class="col-12 mb-3">
                         <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Tanggal Awal</p>
