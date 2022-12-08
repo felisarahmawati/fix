@@ -52,35 +52,22 @@
             </li>
 
             <li class="list {{ Request::segment(2) == 'transaksi' ? 'active' : '' }}">
-                <div class="iocn-link">
-                    <a>
-                        <i class='bx bx-data'></i>
-                        <span class="link_name dropBtn">Transaksi</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <div class="sub-menu">
-                    <div class="drop-box">
-                        {{-- <a href="/finance/transaksi/transaksiuser">Data User</a> --}}
-                        <a href="/finance/transaksi/transaksiuser">Data Transaksi</a>
-                        <a href="#">Status Orderan</a>
-                    </div>
-                </div>
+                <a href="/finance/transaksi/transaksiuser">
+                    <i class='bx bx-data'></i>
+                    <span class="link_name dropBtn">Transaksi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/finance/transaksi/transaksiuser">Transaksi</a></li>
+                </ul>
             </li>
             <li class="list {{ Request::segment(2) == 'DataPenarikan' ? 'active' : '' }}">
-                <div class="iocn-link">
-                    <a>
-                        <i class="bi bi-folder"></i>
-                        <span class="link_name dropBtn">Penarikan</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <div class="sub-menu">
-                    <div class="drop-box">
-                        <a href="/finance/DataPenarikan/penarikan">Penarikan</a>
-                        <a href="/finance/DataPenarikan/history">History</a>
-                    </div>
-                </div>
+                <a href="/finance/DataPenarikan/penarikan">
+                    <i class="bi bi-folder"></i>
+                    <span class="link_name dropBtn">Penarikan</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/finance/DataPenarikan/penarikan">Profile</a></li>
+                </ul>
             </li>
             <li class="list {{ Request::segment(2) == 'laporan' ? 'active' : '' }}">
                 <div class="iocn-link">
@@ -92,9 +79,9 @@
                 </div>
                 <div class="sub-menu">
                     <div class="drop-box">
-                        <a href="/finance/laporan/laporan">Laporan</a>
-                        <a href="/finance/laporan/laporansistem">Laporan sistem</a>
-                        <a href="/finance/laporan/laporanfinance">Laporan finance</a>
+                        <a href="/finance/laporan/laporan">Laporan Vendor</a>
+                        {{-- <a href="/finance/laporan/laporansistem">Laporan Sistem</a> --}}
+                        <a href="/finance/laporan/laporanfinance">Laporan Finance</a>
                     </div>
                 </div>
             </li>

@@ -40,7 +40,7 @@
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body">
-                                                            <p>D**A T*****I</p>
+                                                            <p>P**I P*******N</p>
                                                             <p style="font-size: 15px"><b>BNK MANDIRI</b></p>
                                                             <p>35363463245</p>
                                                         </div>
@@ -61,7 +61,7 @@
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body">
-                                                            <p>D**A T*****I</p>
+                                                            <p>P**I P*******N</p>
                                                             <p style="font-size: 15px"><b>BCA</b> <span
                                                                     class="badge rounded-pill bg-danger">
                                                                     utama
@@ -84,7 +84,7 @@
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body">
-                                                            <p>D**A T*****I</p>
+                                                            <p>P**I P*******N</p>
                                                             <p style="font-size: 15px"><b>BRI</b></p>
                                                             <p>35363463245</p>
                                                         </div>

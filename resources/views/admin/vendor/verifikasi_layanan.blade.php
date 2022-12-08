@@ -19,7 +19,10 @@
             <div class="details1 ">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Verifikasi Layanan</h2>
+                        <h4 class="fw-bold">Verifikasi Layanan</h4>
+                        <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#Filter">
+                            FilterBy
+                        </a>
                     </div>
                     <table class="table-borderless mt-3 w-auto">
                         <thead class="text-start">
@@ -192,7 +195,6 @@
 </div>
 {{-- End --}}
 
-
 {{-- Detail Layanan --}}
 <div class="modal fade" id="kendaraan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="width: 60%">
@@ -358,6 +360,42 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal filter by -->
+<div class="modal fade" id="Filter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width: 30%">
+        <div class="modal-content">
+            <div class="modal-body">
+                <label for="filter" class="form-label">FILTER BERDASARKAN JENIS</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Kendaraan
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Bangunan
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Barang
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Pick Up
+                    </label>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-sm" style="width: 100%">OK</button>
         </div>
     </div>
 </div>

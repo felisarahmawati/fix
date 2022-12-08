@@ -1,18 +1,20 @@
-@extends('finance.finance.dashboard_finance')
-
+@extends('layouts_finance.main')
 @section('content')
+
     <section class="home-section">
         <div class="main">
             <div class="topbar">
                 <div class="home-content">
                     <i class='bx bx-menu'></i>
                 </div>
-                <!-- Search -->
-                <div class="search" data-aos="fade-left" data-aos-duration="1000">
-                    <label>
-                        <input type="text" placeholder="Cari Disini">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                <div class="home-content" id="liveToastBtn">
+                    <i class='bx bx-bell' style="font-size: 35px; cursor: pointer; margin-top:13px; margin-left:1400%"></i>
+                </div>
+                <div class="home-content">
+                    <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="rounded-circle" alt="profile" style="cursor: pointer; margin-top:13px; margin-left:400%">
+                </div>
+                <div class="home-content">
+                    <p class="fw-bold" style="font-size: 20px; cursor: pointer; margin-top:28px;">Hallo,Finance</p>
                 </div>
             </div>
 

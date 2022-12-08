@@ -1,336 +1,180 @@
-@extends('finance.finance.dashboard_finance')
+@extends('layouts_finance.main')
 @section('content')
+
     <section class="home-section">
         <div class="main">
             <div class="topbar">
-                <div class="cardHeader-title">
-                    <h2>Data Penarikan</h2>
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
                 </div>
-                <!-- Search -->
-                <div class="search mb-2" data-aos="fade-left" data-aos-duration="1000">
-                    <label>
-                        <input type="text" placeholder="Cari Disini">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                <div class="home-content" id="liveToastBtn">
+                    <i class='bx bx-bell' style="font-size: 35px; cursor: pointer; margin-top:13px; margin-left:1400%"></i>
+                </div>
+                <div class="home-content">
+                    <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="rounded-circle" alt="profile" style="cursor: pointer; margin-top:13px; margin-left:400%">
+                </div>
+                <div class="home-content">
+                    <p class="fw-bold" style="font-size: 20px; cursor: pointer; margin-top:28px;">Hallo,Finance</p>
                 </div>
             </div>
-            <div class="details1">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Data Penarikan Vendor</h2>
-                        <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#Filter">Filter
-                            By</a>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <form class="form" type="date">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="date" class="btn btn-outline-secondary">
+            <div class="row">
+                <div class="col-xs-10">
+                    <div class="recentOrders">
+                        <div class="details3">
+                            <div class="recentOrders3">
+                                <div class="cardHeader">
+                                    <div class="col-md" style="padding-top: 10px">
+                                        <h3>Data Penarikan</h3>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="date" class="btn btn-outline-secondary">
+                                    <div class="rincian d-inline mt-3">
+                                    {{-- <a href="#" class="btn btn-thema">Filter All<i class="bi bi-caret-down"></i></a> --}}
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#Filter" class="btn btn-success fw-bold rounded-pill px-4 shadow float-end">Filter By</button>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="col-md-8 text-end">
-                            <a href="#" class="btn btn-thema"><i class="bi bi-printer p-2"></i>cetak</a>
-                        </div>
-                    </div>
-                    <table class="table-borderless mt-3 w-auto">
-                        <thead>
-                            <tr>
-                                <td>Nama Vendor</td>
-                                <td>ID Transaksi</td>
-                                <td>Jenis rekening</td>
-                                <td>Tanggal</td>
-                                <td>Jumlah Penarikan</td>
-                                <td class="text-center">Action</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bently</td>
-                                <td>T120917243434</td>
-                                <td>Bank BCA</td>
-                                <td>15/10/2022</td>
-                                <td>Rp 200.000</td>
-                                <td class="text-end">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal"
-                                        data-bs-target="#DetailUser">
-                                        Detail
-                                    </button>
-                                    <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
-                                        data-bs-target="#Detailverify">
-                                        Verifikasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>William</td>
-                                <td>T120917243434</td>
-                                <td>Bank BRI</td>
-                                <td>15/10/2022</td>
-                                <td>Rp 200.000</td>
-                                <td class="text-end">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal"
-                                        data-bs-target="#DetailUser">
-                                        Detail
-                                    </button>
-                                    <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
-                                        data-bs-target="#Detailverify">
-                                        Verifikasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Justine</td>
-                                <td>T120917243434</td>
-                                <td>Bank Mandiri</td>
-                                <td>15/10/2022</td>
-                                <td>Rp 200.000</td>
-                                <td class="text-end">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal"
-                                        data-bs-target="#DetailUser">
-                                        Detail
-                                    </button>
-                                    <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
-                                        data-bs-target="#Detailverify">
-                                        Verifikasi
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal detail cek profile -->
-        <div class="modal fade" id="DetailUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content px-4 py-4 ">
-                    <img src="{{ asset('assets/img/Rectangle 77.png') }}" class="img-detail rounded mx-auto d-block mt-2"
-                        alt="image">
-                    <p class="penitipan text-center" style="padding-top: 20px"><b>17/05/2022 08:30:00 WIB</b></p>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>Nama Vendor</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Bently
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md">
-                            <p>ID Transaksi</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            TWI3U43Y2R3
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>No.Rek Penerima</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            2345743762
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>Bank</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            BCA
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p> Nama pemilik rek</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Dila
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md">
-                            <b>
-                                <p>Jumlah Penarikan</p>
-                            </b>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            <b> Rp 200.000</b>
-                        </div>
-                    </div>
-
-                    {{-- <div class="row">
-                        <div class="col-md">
-                            <p>Biaya Admin</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Rp 10.000
-                        </div>
-                    </div> --}}
-                    <hr>
-                    <div class="row" style="font-size: 25px; color:rgb(58, 214, 108)">
-                        <div class="col-md">
-                            <p><b>Total</b></p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            <b>210.000</b>
+                                <div class="cardHeader">
+                                    <!-- Search -->
+                                    <div class="search mb-4" data-aos="fade-left" data-aos-duration="1000">
+                                        <label>
+                                            <input type="text" placeholder="Cari Disini">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </label>
+                                    </div>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Nama Vendor</td>
+                                            <td>ID Transaksi</td>
+                                            <td>Total</td>
+                                            <td>Tanggal</td>
+                                            <td>Status</td>
+                                            <td>Action</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pepi Penitipan</td>
+                                            <td>T120917243434</td>
+                                            <td>Rp 500.000</td>
+                                            <td>14/08/2022</td>
+    
+                                            <td>
+                                                <p class="mt-3"><i class="bi bi-circle-fill p-2 text-success"></i>Done</p>
+                                            </td>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#DetailUser">
+                                                    Detail
+                                                </button>
+    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="DetailUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <img src="{{ asset('assets/img/Rectangle 77.png') }}" class="img-detail rounded mx-auto d-block" alt="image">
+                                                            <p class="penitipan text-center" style="padding-top: 10px"><b>Penarikan</b></p>
+                                                            <div class="row">
+                                                                <div class="col-md">
+                                                                    <p>Id Transaksi</p>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    T120917243434
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md">
+                                                                    <p>Tanggal Penarikan</p>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <p>14/08/2022</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md">
+                                                                    <p>Rekening Tujuan</p>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <p>Bank BCA</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md">
+                                                                    <p>Nama Vendor</p>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <p>Pepi Penitipan</p>
+                                                                </div>
+                                                            </div>
+                                                            <p class="jenis" style="padding-top: 20px"><b>Transaksi</b></p>
+                                                            <div class="row">
+                                                                <div class="col-md">
+                                                                    <p>Saldo Ditarik</p>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <p>Rp 500.000</p>
+                                                                </div>
+                                                            </div>
+                                                            <p class="bukti text-center" style="padding-top: 20px">
+                                                                <b>Anda dapat menyimpan tanda terima ini sebagai bukti transaksi yang sah<b>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wijaya Penitipan</td>
+                                            <td>T120917243434</td>
+                                            <td>Rp 500.000</td>
+                                            <td>12/12/2022</td>
+    
+                                            <td>
+                                                <p class="mt-3"><i class="bi bi-circle-fill p-2 text-success"></i>Done</p>
+                                            </td>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#DetailUser">
+                                                    Detail
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abah Titipsini</td>
+                                            <td>T120917243434</td>
+                                            <td>Rp 500.000</td>
+                                            <td>11/11/2022</td>
+    
+                                            <td>
+                                                <<p class="mt-3"><i class="bi bi-circle-fill p-2 text-success"></i>Done</p>
+                                            </td>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#Cancel">
+                                                    Detail
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal detail verivikasi -->
-        <div class="modal fade" id="Detailverify" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content px-4 py-4 ">
-                    <img src="{{ asset('assets/img/Rectangle 77.png') }}" class="img-detail rounded mx-auto d-block mt-2"
-                        alt="image">
-                    <p class="penitipan text-center" style="padding-top: 20px"><b>17/05/2022 08:30:00 WIB</b></p>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>Nama Vendor</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Bently
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md">
-                            <p>ID Transaksi</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            TWI3U43Y2R3
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>No.Rek Penerima</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            2345743762
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p>Bank</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            BCA
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <p> Nama pemilik rek</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Dila
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md">
-                            <b>
-                                <p>Jumlah Penarikan</p>
-                            </b>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            <b> Rp 200.000</b>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md">
-                            <p>Biaya Admin</p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            Rp 10.000
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row" style="font-size: 25px; color:rgb(58, 214, 108)">
-                        <div class="col-md">
-                            <p><b>Total</b></p>
-                        </div>
-                        <div class="col-md-5 text-end">
-                            <b>210.000</b>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 text-end">
-                            <a class="btn btn-success col-md-6" href="/finance/DataPenarikan/vendor">Verifikasi</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a class="btn btn-danger col-md-6" href="" data-bs-toggle="modal"
-                                data-bs-target="#Detailtolak">Tolak</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal tolak -->
-        <div class="modal fade" id="Detailtolak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="px-2 py-2" style="font-size: 20px">
-                        <label class="form-label mt-3">Alasan menolak penarikan</label>
-                        <textarea type="text" class="form-control"></textarea>
-
-                    </div>
-                    <div class="footer text-end">
-                        <a class="btn btn-success" href="/finance/DataPenarikan/vendor" role="button"
-                            data-bs-toggle="modal" data-bs-target="">Simpan</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
         <div class="modal fade" id="Filter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" style="width: 30%">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <label for="filter" class="form-label">FILTER BERDASARKAN RENTANG WAKTU</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                id="flexRadioDefault1" />
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Enable
-                            </label>
+                        <label for="filter" class="form-label">FILTER BERDASARKAN TANGGAL</label>
+                        <div class="col-12 mb-3">
+                            <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Tanggal Awal</p>
+                            <input type="date" class="form-control" id="tanggal">
                         </div>
-                        <div class="row">
-                            <div class="col-5">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Terbaru</option>
-                                    <option value="1">Terlama</option>
-                                </select>
-                            </div>
-                            <div class="col-5">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Tahun</option>
-                                    <option value="1">2019</option>
-                                    <option value="1">2020</option>
-                                    <option value="1">2021</option>
-                                    <option value="1">2022</option>
-                                </select>
-                            </div>
-
+                        <div class="col-12 mb-3">
+                            <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Tanggal Akhir</p>
+                            <input type="date" class="form-control" id="tanggal">
                         </div>
                     </div>
                     <button type="button" class="btn btn-success btn-sm" style="width: 100%">OK</button>

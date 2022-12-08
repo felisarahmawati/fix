@@ -1,10 +1,20 @@
-@extends('finance.finance.dashboard_finance')
+@extends('layouts_finance.main')
 @section('content')
+
 <section class="home-section">
     <div class="main">
         <div class="topbar">
-            <div class="cardHeader-title">
-                <h2>Laporan Keuangan Vendor</h2>
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="home-content" id="liveToastBtn">
+                <i class='bx bx-bell' style="font-size: 35px; cursor: pointer; margin-top:13px; margin-left:1400%"></i>
+            </div>
+            <div class="home-content">
+                <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="rounded-circle" alt="profile" style="cursor: pointer; margin-top:13px; margin-left:400%">
+            </div>
+            <div class="home-content">
+                <p class="fw-bold" style="font-size: 20px; cursor: pointer; margin-top:28px;">Hallo,Finance</p>
             </div>
         </div>
         <div class="row">
@@ -13,27 +23,30 @@
                     <div class="details3">
                         <div class="recentOrders3">
                             <div class="cardHeader">
-                                <div class="cardHeader">
-                                    <!-- Search -->
-                                    <div class="col-3 mb-3">
-                                        <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Dari Tanggal</p>
-                                        <input type="date" class="form-control" id="tanggal">
-                                    </div>
-                                    <div class="col-3 mb-3" style="margin-left: 35px">
-                                        <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Sampai Tanggal</p>
-                                        <input type="date" class="form-control" id="tanggal">
-                                    </div>
-                                    <div class="col-3 mb-3" style="margin-left: 35px">
-                                        <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Periode</p>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Perminggu</option>
-                                            <option value="1">Perbulan</option>
-                                            <option value="2">Pertahun</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-2 mt-4" style="margin-left: 25px">
-                                        <button type="button" class="btn btn-success">Tampilkan</button>
-                                    </div>
+                                <div class="col-6" style="padding-top: 5px; padding-bottom: 8px">
+                                    <h3>Laporan Keuangan Vendor</h3>
+                                </div>
+                            </div>
+                            <div class="cardHeader">
+                                <!-- Search -->
+                                <div class="col-3 mb-3">
+                                    <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Dari Tanggal</p>
+                                    <input type="date" class="form-control" id="tanggal">
+                                </div>
+                                <div class="col-3 mb-3" style="margin-left: 35px">
+                                    <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Sampai Tanggal</p>
+                                    <input type="date" class="form-control" id="tanggal">
+                                </div>
+                                <div class="col-3 mb-3" style="margin-left: 35px">
+                                    <p for="tanggalmasuk" class="form-label" style="font-size: 14px">Periode</p>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Perminggu</option>
+                                        <option value="1">Perbulan</option>
+                                        <option value="2">Pertahun</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 mt-4" style="margin-left: 25px">
+                                    <button type="button" class="btn btn-success">Tampilkan</button>
                                 </div>
                             </div>
                         </div>

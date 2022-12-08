@@ -8,6 +8,15 @@
             <div class="home-content">
                 <i class='bx bx-menu'></i>
             </div>
+            <div class="home-content" id="liveToastBtn">
+                <i class='bx bx-bell' style="font-size: 35px; cursor: pointer; margin-top:13px; margin-left:1400%"></i>
+            </div>
+            <div class="home-content">
+                <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="rounded-circle" alt="profile" style="cursor: pointer; margin-top:13px; margin-left:400%">
+            </div>
+            <div class="home-content">
+                <p class="fw-bold" style="font-size: 20px; cursor: pointer; margin-top:28px;">Hallo,Finance</p>
+            </div>
         </div>
 
         <div class="container-fluid mt-4">
