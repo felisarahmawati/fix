@@ -29,11 +29,11 @@
                         <div class="col-6 text-end">
                             <div class="cardHeader" >
                                 <h4>Data Pengguna</h4>
-                                <a href="#" class="btn btn-thema" data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-primary fw-bold rounded-pill px-4 shadow btn-sm">Tambah</a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-end">
                             <div class="mt-2 text-end">
+                                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-success fw-bold rounded-pill px-4 shadow btn-sm">Tambah</a>
                                 <a href="{{ url ('/superadmin/akun/pengguna/print_pdf') }}" class="btn btn-danger">cetak</a>
                             </div>
                         </div>
