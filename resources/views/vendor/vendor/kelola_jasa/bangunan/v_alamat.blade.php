@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">
-                Atur Mohammad
+                Atur Alamat
             </h5>
             <hr width="100%" color="#c0c0c0">
             <form action="{{ url('/vendor/kelola/'.$data_jasa->id.'/atur_alamat') }}" method="POST">
