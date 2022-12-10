@@ -31,9 +31,9 @@
                             class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
                             <div class="col-md-15">
                                 @if($user->photo)
-                                    <img src="{{ asset('storage/photos/'.$user->photo) }}" alt="" style="width: 50%;" class="img-thumbnail rounded mx-auto d-block">
+                                    <img src="{{ asset('storage/photos/'.$user->photo) }}" alt="" style="width: 130px; height:130px" class="img-thumbnail rounded-circle mx-auto d-block">
                                 @else
-                                    <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 20%;" class="img-thumbnail rounded mx-auto d-block">
+                                    <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 130px; height:130px" class="img-thumbnail rounded-circle mx-auto d-block">
                                 @endif
 
                             </div>

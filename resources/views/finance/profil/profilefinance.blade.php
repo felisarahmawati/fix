@@ -29,8 +29,13 @@
                     data-aos-duration="1000">
                     <div class="col-lg-4 col-md-6 mt-4 pe-2">
                         <div class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
-                            <div class="person-img px-xl-5">
-                                <img src="{{ asset('assets/img/foto1.jpg') }}" class="img-fluid rounded-circle" alt="">
+                            <div class="col-md-15">
+                                @if($user->photo)
+                                <img src="{{ asset('storage/photos/'.$user->photo) }}" alt="" style="width: 130px; height:130px" class="rounded-circle">
+                            @else
+                                <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 130px; height:130px" class="rounded-circle">
+                            @endif
+                                {{-- <img src="{{ asset('assets/img/foto1.jpg') }}" style="width: 130px; height:130px" class="img-thumbnail rounded-circle " alt=""> --}}
                             </div>
                             <div class="person-name">
                                 <h2 class="text-center fs-4 my-2">{{Auth::user()->name}}</h2>
