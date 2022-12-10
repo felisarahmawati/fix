@@ -19,7 +19,7 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col mt-2">
-                                                <p class="Pesanan fs-5"><b>Pepi Penitipan</b></p>
+                                                <p class="Pesanan fs-5"><b>Abah Titipsini</b></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -59,7 +59,7 @@
 
                         <h6 class="fw-bold mt-4">Data Pemesanan</h6><hr>
                         <div class="col-6">
-                            <p style="font-size: 15px"><b>Alvi Nurbaetri (Rumah)</b><br>
+                            <p style="font-size: 15px"><b>Angel Silubun (Rumah)</b><br>
                                 0832553141241
                             </p>
                         </div>

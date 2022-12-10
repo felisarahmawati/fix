@@ -30,7 +30,7 @@ class LayananController extends Controller
         ]);
 
         if($request->file("image")) {
-            $data = $request->file("image")->store("layanan");
+            $data = $request->file("image")->store("layan");
         }
 
         Layanan::create([
@@ -87,7 +87,7 @@ class LayananController extends Controller
                 Storage::delete($request->gambarLama);
             }
 
-            $data = $request->file("image_new")->store("sublayanan");
+            $data = $request->file("image_new")->store("layan");
         } else {
             $data = $request->gambarLama;
         }

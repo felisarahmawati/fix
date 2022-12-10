@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="nama-vendor">
-                        <p class="fw-bold fs-5">Pepi Penitipan</p>
+                        <p class="fw-bold fs-5">Abah Titipsini</p>
                     </div>
                     <div class="hstack gap-2">
                         <div class="text-muted justify-content-start">1,4 Km</div>
@@ -36,7 +36,7 @@
                             <dd class="col-sm-9 text-success" style="font-size: 13px">Layanan Kendaraan Roda 2</dd>
                             <dd class="col-sm-3 text-muted" style="font-size: 13px">Alamat</dd>
                             <dd class="col-sm-9 text-success" style="font-size: 13px"><span class="d-inline-block text-truncate text-muted" style="max-width: 250px;">
-                                Jl. Perkutut Gg. Rumah Pengadilan No.1, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221
+                                Jl. Demangan Baru Jl. Cenderawasih No.13, Demangan Baru, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
                               </span></dd>
                         </div>
     

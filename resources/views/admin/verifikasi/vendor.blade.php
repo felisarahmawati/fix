@@ -9,14 +9,13 @@
             <div class="home-content">
                 <i class='bx bx-menu'></i>
             </div>
-            <form action="/admin/verifikasi/vendor">
-                <div class="search2" style="margin-top: 10px;">
-                    <label>
-                        <input type="text" class="form-control" name="search" placeholder="Cari Disini">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-            </form>
+            <!-- Search -->
+            <div class="search" data-aos="fade-left" data-aos-duration="1000">
+                <label>
+                    <input type="text" placeholder="Cari Disini">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
         </div>
 
         <!-- top nav -->
@@ -25,7 +24,7 @@
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Verifikasi vendor</h2>
+                    <h3>Verifikasi vendor</h3>
                 </div>
 
                 <table class="table-borderless mt-3 w-auto">
@@ -64,8 +63,10 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{ $vendor->id }}"
-                                        class="btndetail">
+                                    {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDetail{{$vendor->id}}" class="btndetail">
+                                        <i class='bx bx-detail'></i>
+                                    </button> --}}
+                                    <button type="button" class="btndetail" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class='bx bx-detail'></i>
                                     </button>
                                 </td>
@@ -75,40 +76,10 @@
                 </table>
             </div>
         </div>
-
-        <div class="modal fade" id="exampleModal{{$vendor->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" style="width: 60%">
-                <div class="modal-content">
-                    <div class="modal-header hader text-center">
-                        <h3 class="modal-title" id="exampleModalLabel">Detail Vendor</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="modal-content-detail">
-                        <div class="card-body">
-                            <form action="{{ url('/superadmin/akun/role/simpan') }}" method="POST">
-                                @method('PUT')
-                                @csrf
-                                <div class="modal-body" id="modal-content-edit">
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-times"></i> Batal
-                                    </button>
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-plus"></i> Tambah
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
-<div class="modal fade" id="exampleModalDetail{{$vendor->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{-- <div class="modal fade" id="exampleModalDetail{{$vendor->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="width: 60%">
         <div class="modal-content">
             <div class="modal-header hader text-center">
@@ -182,6 +153,104 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width: 60%">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Data Vendor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Nama Vendor</h5>
+                    <label>Hamkoo</label>
+
+                    <h5 class="mt-4">Email</h5>
+                    <label>hamko29@gmail.com</label>
+
+                    <h5 class="mt-4">Kecamatan</h5>
+                    <label>Banguntapan</label>
+                </div>
+                <div class="col-md-6">
+                    <h5>Kota / Kabupaten</h5>
+                    <label>Bantul</label>
+
+                    <h5 class="mt-4">Kelurahan</h5>
+                    <label>Karang Jambe</label>
+
+                    <h5 class="mt-4">No Telp</h5>
+                    <label>0821312412412</label>
+                </div>
+                <div class="col-md-12">
+                    <h5 class="mt-4">Alamat</h5>
+                    <label>Jln Raya Janti. Banguntapan,Yogyakarta</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-end">
+                    <button type="button" class="btn btn-success mt-4 end" data-bs-toggle="modal" data-bs-target="#verifikasi">
+                        Verifikasi
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-danger mt-4 end" data-bs-toggle="modal" data-bs-target="#tolak">
+                        Tolak
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="verifikasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:30%">
+        <div class="modal-content">
+            <h4 class="modal-title text-center" id="exampleModalLabel">Verifikasi Vendor</h4>
+            <div class="modal-body" id="modal-content-detail">
+                <div class="card-body text-center">
+                    <p>
+                        <b>
+                            Yakin Verifikasi Vendor
+                            Hamkoo ?
+                        </b>
+                    </p>
+                    <button type="submit" class="btn btn-success btn-sm" >
+                        Verifikasi
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="tolak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:30%">
+        <div class="modal-content">
+            <h4 class="modal-title text-center" id="exampleModalLabel">Konfirmasi Tolak Vendor</h4>
+            <div class="modal-body" id="modal-content-detail">
+                <div class="card-body text-center">
+                    <p>
+                        <b>
+                            Alasan Menolak Vendor Hamkoo ?
+                        </b>
+                    </p>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Alasan"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-success btn-sm">
+                        Simpan
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalDetail" aria-label="Close">Kembali</button>
                 </div>
             </div>
         </div>

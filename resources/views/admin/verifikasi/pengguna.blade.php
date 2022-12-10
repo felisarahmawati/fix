@@ -8,20 +8,19 @@
             <div class="home-content">
                 <i class='bx bx-menu'></i>
             </div>
-            <form action="/admin/verifikasi/pengguna">
-                <div class="search2" style="margin-top: 10px;">
-                    <label>
-                        <input type="text" class="form-control" name="search" placeholder="Cari Disini">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-            </form>
+            <!-- Search -->
+            <div class="search" data-aos="fade-left" data-aos-duration="1000">
+                <label>
+                    <input type="text" placeholder="Cari Disini">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
         </div>
 
         <div class="details1">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Verifikasi Pengguna</h2>
+                    <h3>Verifikasi Customer</h3>
                 </div>
 
                 <table class="table-borderless mt-3 w-auto">
@@ -124,14 +123,13 @@
                                 {{ $pengguna->tmpt_lahir }}, {{ $pengguna->tmpt_lahir }}
                             </label>
                         </div>
-
-                        <div class="col-md-12">
-                            <p class="text-center">
-                                <b>Link google drive</b>
-                            </p>
-                            <p class="text-center">
+                        <div class="col-12">
+                            <h5 class="mt-4">
+                                Link Google Drive
+                            </h5>
+                            <label>
                                 {{ $pengguna->image_ktp }}
-                            </p>
+                            </label>
                         </div>
                     </div>
 

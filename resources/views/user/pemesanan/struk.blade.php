@@ -34,7 +34,7 @@
                             <dd class="col-sm-9">Bank BRI/Alvi Nurbaetri</dd>
                           
                             <dt class="col-sm-3 text-truncate">Rekening tujuan :</dt>
-                            <dd class="col-sm-9">Bank BCA/Pepi Penitipan</dd>
+                            <dd class="col-sm-9">Bank BCA/Abah Titipsini</dd>
                           
                             <dt class="col-sm-3">Total pembayaran :</dt>
                             <dd class="col-sm-9">Rp 155.000.851</dd>

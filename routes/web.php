@@ -211,6 +211,7 @@ Route::controller(DataDiriVendorController::class)->group(function(){
         Route::get('/user/pemesanan/pemesananB', [UserLandingpageController::class, 'pmsnB']);
         Route::get('/user/pemesanan/pemesananBarang', [UserLandingpageController::class, 'pmsnBarang']);
         Route::get('/user/pemesanan/pembayaran', [UserLandingpageController::class, 'pembayaran']);
+        Route::get('/user/pemesanan/cod', [UserLandingpageController::class, 'cod']);
         //User Sub
         Route::get('/user/sub/bangunan', [UserLandingpageController::class, 'subbangunan']);
         Route::get('/user/sub/barang', [UserLandingpageController::class, 'subbarang']);

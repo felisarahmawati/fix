@@ -637,7 +637,7 @@
 .details3 {
     position: relative;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 2 1fr;
     grid-gap: 30px;
@@ -646,7 +646,7 @@
 
 .details3 .recentOrders3 {
     position: relative;
-    margin-top: 10px;
+    margin-top: 5;
     display: grid;
     max-height: auto;
     background: var(--white);

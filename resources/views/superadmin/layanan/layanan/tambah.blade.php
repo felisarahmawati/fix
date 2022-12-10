@@ -6,17 +6,22 @@
     <body>
         <div class="main">
             <div class="topbar">
+                <!-- Extend Navbar >> bermasalah khusus dashboard -->
                 <div class="home-content">
                     <i class='bx bx-menu'></i>
                 </div>
-                <div class="cardHeader-title">
-                    <h2>Kategori Layanan</h2>
+                <!-- Search -->
+                <div class="search" data-aos="fade-left" data-aos-duration="100">
+                    <label>
+                        <input type="text" placeholder="Cari Disini">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
                 </div>
             </div>
             <div class="details1 ">
                 <div class="recentOrders">
                     <div class="cardHeader" >
-                        <h4>Layanan</h4>
+                        <h4>CRUD LAYANAN</h4>
                         <a href="#" class="btn btn-thema"data-bs-toggle="modal" data-bs-target="#exampleModalTambah" class="btn btn-primary fw-bold rounded-pill px-4 shadow float-end">Tambah</a>
                     </div>
                     <br>

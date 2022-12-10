@@ -32,7 +32,7 @@
                 <img src="{{ asset('assets/img/bca.png') }}" class="card-img-top" alt="bca" style="width: 35%; margin-left: 33%; margin-top: 25px">
                 <div class="card-body">
                     <p class="text-center fw-bold fs-5">86 000 442 79 00</p>
-                    <p class="text-center text-muted fs-6 fw-bold">Atas Nama : Pepi Penitipan</p>
+                    <p class="text-center text-muted fs-6 fw-bold">Atas Nama : Abah Titipsini</p>
                 </div>
             </div>
             <!-- Button trigger modal -->

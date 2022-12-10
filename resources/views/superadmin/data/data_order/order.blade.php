@@ -39,48 +39,48 @@
                                 <td>082743837284</td>
                                 <td>Bangunan</td>
                                 <td>Rp 254.000</td>
-                                <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
+                                <td>10-05-2022</td>
+                                <td>Jl.Gatot Subroto Simpang 4 No.10</td>
                             </tr>
                             <tr>
-                                <td>Pepi Jojo</td>
-                                <td>082743837284</td>
+                                <td>Dila</td>
+                                <td>082743837230</td>
+                                <td>Barang</td>
+                                <td>Rp 54.000</td>
+                                <td>23-09-2022</td>
+                                <td>Jl.Sudimampir Sawah Sekotak No.32</td>
+                            </tr>
+                            <tr>
+                                <td>Sharkirman</td>
+                                <td>089786543456</td>
+                                <td>Kendaraan</td>
+                                <td>Rp 106.000</td>
+                                <td>18-10-2022</td>
+                                <td>Jl.Sudirman No.08</td>
+                            </tr>
+                            <tr>
+                                <td>Taylor Swift</td>
+                                <td>0875647890824</td>
                                 <td>Bangunan</td>
                                 <td>Rp 254.000</td>
                                 <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
+                                <td>Jl.Waru Kedokankotak No.24</td>
                             </tr>
                             <tr>
-                                <td>Pepi Jojo</td>
-                                <td>082743837284</td>
-                                <td>Bangunan</td>
-                                <td>Rp 254.000</td>
-                                <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
+                                <td>Sulaiman</td>
+                                <td>082567890406</td>
+                                <td>Kendaraan</td>
+                                <td>Rp 1.004.000</td>
+                                <td>12-11-2022</td>
+                                <td>Jl.Ahmad Yani Indramayu No.05</td>
                             </tr>
                             <tr>
-                                <td>Pepi Jojo</td>
-                                <td>082743837284</td>
+                                <td>Sudirman Atmojo</td>
+                                <td>088743837284</td>
                                 <td>Bangunan</td>
-                                <td>Rp 254.000</td>
-                                <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
-                            </tr>
-                            <tr>
-                                <td>Pepi Jojo</td>
-                                <td>082743837284</td>
-                                <td>Bangunan</td>
-                                <td>Rp 254.000</td>
-                                <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
-                            </tr>
-                            <tr>
-                                <td>Pepi Jojo</td>
-                                <td>082743837284</td>
-                                <td>Bangunan</td>
-                                <td>Rp 254.000</td>
-                                <td>10-10-2022</td>
-                                <td>Jl.Sudirman No.11</td>
+                                <td>Rp 54.000</td>
+                                <td>21-11-2022</td>
+                                <td>Jl.Bunga Bangkai Harum No.07</td>
                             </tr>
                         </tbody>
                     </table>
