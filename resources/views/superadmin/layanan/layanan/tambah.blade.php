@@ -35,7 +35,7 @@
                             <tr>
                                 <td>No</td>
                                 <td class="col-md-2">Gambar</td>
-                                <td>Judul</td>
+                                <td>Jenis Layanan</td>
                                 <td>Slug</td>
                                 <td>Deskripsi</td>
                                 <td class="col-md-3 text-center">Aksi</td>
@@ -97,7 +97,7 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Judul</label>
+                        <label>Jenis Layanan</label>
                         <input type="text" name="judul" class="form-control @error('judul') is-invalid @enderror" value="{{ old('judul') }}">
                         @error('judul')
                         <div class="alert alert-danger">{{ $message }}</div>
